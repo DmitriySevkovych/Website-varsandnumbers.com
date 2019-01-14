@@ -1,0 +1,113 @@
+// Tags
+header nav
+  position: absolute
+  top: 10px
+  left: 30px
+  display: inline-block
+  padding-top: 10px
+  width: 75vw
+  z-index: 2
+
+  a
+    margin: auto 6%
+    font-weight: 500
+    color: $col_font
+    &:hover
+      color: $col_link
+
+  #line-upper
+    margin-top: 5px
+    z-index: 3
+    +size(75vw,1vh)
+    path
+      fill: $col_link
+
+p
+  +transform(rotate(-10deg))
+
+// Classes
+.main
+  height: 100vh
+  padding-top: 5vh
+
+.light-box, .dark-box
+  display: inline-block
+  width: 48vw
+
+  +transform(rotate(10deg))
+  z-index: 1
+
+.dark-box
+  position: absolute
+  height: 85vh
+  top: -10vh
+  left: 2vw
+  background-color: $col_accent_dark
+
+  .intro p
+    position: absolute
+    left: 50px
+    padding: 20px
+    color: white
+
+  p:nth-child(1)
+    bottom: 30%
+    left: 10%
+    font-size: 1.5rem
+    font-weight: 500
+
+  p:nth-child(2)
+    bottom: 15%
+    left: 5%
+    width: 400px
+    text-align: justify
+
+
+.light-box
+  position: absolute
+  height: 77vh
+  top: 18vh
+  right: 2vw
+  background-color: $col_accent_light
+
+  .title-box
+    width: 30vw
+    height: 30vw
+    border: 5px solid $col_font
+    position: relative
+    top: -7vh
+    right: -11vw
+    +transform(rotate(-10deg))
+    z-index: 3
+    &:hover
+      background-color: $col_font
+      #title, #subtitle
+        color: $col_accent_light
+        border-color: $col_accent_light
+
+// .intro:nth-child(0)
+
+
+// ID's
+#lets-talk
+  position: absolute
+  top: 10px
+  right: 50px
+  padding: 10px 20px
+  z-index: 3
+  &:hover
+    background-color: $col_link
+    color: $col_bg
+    border-radius: 2px
+    font-weight: 500
+
+#title
+  margin-top: 10px
+  margin-left: 10px
+  text-transform: uppercase
+
+#subtitle
+  position: absolute
+  margin: 0 auto 10px 10px
+  bottom: 0
+  font-weight: 300
