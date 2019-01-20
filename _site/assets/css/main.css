@@ -484,19 +484,6 @@ template {
   display: none;
 }
 
-body {
-  box-sizing: border-box;
-  overflow: hidden;
-  background-color: #fff;
-  line-height: 1.6;
-  color: #222;
-  font-size: 18px;
-  font-weight: 300;
-  font-family: "Libre Franklin";
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-}
-
 ::selection {
   background: #ddd;
 }
@@ -515,6 +502,19 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #FFF498;
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+  line-height: 1.6;
+  color: #222;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Libre Franklin";
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -585,31 +585,34 @@ hr {
   height: 0;
 }
 
+header a {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
 header nav {
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: 30px;
   display: inline-block;
   padding-top: 10px;
-  width: 80vw;
+  width: 100vw;
   z-index: 2;
 }
 header nav a {
-  margin: auto 3.5vw;
-  font-weight: 500;
+  margin: auto 3vw;
   color: #222;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
 }
 header nav a:hover {
   color: #FF851B;
 }
 header nav #svg-line-upper {
-  position: absolute;
+  position: fixed;
   left: -30px;
-  margin-top: 10px;
+  top: 70px;
   z-index: 3;
-  width: 80vw;
+  width: 100vw;
 }
 header nav #svg-line-upper path {
   fill: #FF851B;
@@ -621,9 +624,6 @@ header nav #svg-line-upper path {
   right: 50px;
   padding: 10px 20px;
   z-index: 3;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 500;
 }
 #lets-talk:hover {
   background-color: #FF851B;
@@ -631,6 +631,103 @@ header nav #svg-line-upper path {
   border-radius: 2px;
 }
 
+#navigate {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  padding: 10px 20px;
+  z-index: 3;
+  background-color: #ddd;
+  color: #555;
+  border-radius: 2px;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (width < 1200px) {
+  a {
+    font-size: 12px;
+  }
+}
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (width < 992px) {
+  header nav a {
+    display: none;
+  }
+
+  #lets-talk {
+    font-size: 3vw;
+    background-color: #FF851B;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+@media only screen and (width < 992px) and (max-width: 400px) {
+  #lets-talk {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 992px) and (min-width: 533.3333333333px) {
+  #lets-talk {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 992px) {
+  #navigate {
+    display: inline-block;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 992px) and (max-width: 400px) {
+  #navigate {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 992px) and (min-width: 533.3333333333px) {
+  #navigate {
+    font-size: 16px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (width < 768px) {
+  #lets-talk {
+    right: 20px;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 768px) and (max-width: 400px) {
+  #lets-talk {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 768px) and (min-width: 533.3333333333px) {
+  #lets-talk {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 768px) {
+  #navigate {
+    left: 20px;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 768px) and (max-width: 400px) {
+  #navigate {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 768px) and (min-width: 533.3333333333px) {
+  #navigate {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 768px) {
+  #svg-line-upper {
+    display: none;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
 @keyframes slide {
   10%, 100% {
     opacity: 0.1;
@@ -811,8 +908,7 @@ header nav #svg-line-upper path {
   width: 10rem;
   max-width: 25%;
   text-align: center;
-  font-variant: small-caps;
-  font-weight: 600;
+  font-weight: 500;
   color: #FF851B;
   letter-spacing: 0.1rem;
 }

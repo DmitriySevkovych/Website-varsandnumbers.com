@@ -1,27 +1,29 @@
+header a
+  font-weight: 500
+  text-transform: uppercase
+  letter-spacing: 0.125rem
+
 header nav
-  position: absolute
+  position: fixed
   top: 10px
   left: 30px
   display: inline-block
   padding-top: 10px
-  width: 80vw
+  width: 100vw
   z-index: 2
 
   a
-    margin: auto 3.5vw
-    font-weight: 500
+    margin: auto 3vw
     color: $col_font
-    text-transform: uppercase
-    letter-spacing: 1.5px
     &:hover
       color: $col_link
 
   #svg-line-upper
-    position: absolute
+    position: fixed
     left: -30px
-    margin-top: 10px
+    top: 70px
     z-index: 3
-    width: 80vw
+    width: 100vw
     path
       fill: $col_link
 
@@ -31,11 +33,61 @@ header nav
   right: 50px
   padding: 10px 20px
   z-index: 3
-  text-transform: uppercase
-  letter-spacing: 1.5px
-  font-weight: 500
   &:hover
     background-color: $col_link
     color: $col_bg
     border-radius: 2px
-    // font-weight: 500
+
+#navigate
+  display: none
+  position: absolute
+  top: 10px
+  left: 50px
+  padding: 10px 20px
+  z-index: 3
+  background-color: $col_accent_light
+  color: $col_accent_dark
+  border-radius: 2px
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// As designed
+
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (width < 1200px)
+  a
+    font-size: 12px
+
+  #lets-talk
+
+
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (width < 992px)
+  header nav a
+    display: none
+
+  #lets-talk
+    +responsive-font(3vw,12px,16px)
+    background-color: $col_link
+    color: $col_bg
+    border-radius: 2px
+
+  #navigate
+    display: inline-block
+    +responsive-font(3vw,12px,16px)
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (width < 768px)
+  #lets-talk
+    right: 20px
+    +responsive-font(3vw,12px,16px)
+
+  #navigate
+    left: 20px
+    +responsive-font(3vw,12px,16px)
+
+  #svg-line-upper
+    display: none
+
+/* Extra small devices (phones, 600px and down) */
+// As small
