@@ -594,14 +594,14 @@ header a {
 header nav {
   position: fixed;
   top: 10px;
-  left: 30px;
+  left: 50px;
   display: inline-block;
   padding-top: 10px;
   width: 100vw;
   z-index: 2;
 }
 header nav a {
-  margin: auto 3vw;
+  margin-right: 5vw;
   color: #222;
 }
 header nav a:hover {
@@ -616,6 +616,24 @@ header nav #svg-line-upper {
 }
 header nav #svg-line-upper path {
   fill: #FF851B;
+}
+
+#header-logo {
+  display: inline-block;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #222;
+  padding: 5px 0 0 5px;
+  top: 5px;
+  left: 25px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+#header-logo:hover {
+  color: #FF851B;
+  border-color: #FF851B;
 }
 
 #lets-talk {
@@ -734,6 +752,34 @@ header nav #svg-line-upper path {
 }
 .main h1, .main h3, .main p {
   text-align: center;
+}
+
+footer {
+  height: 125px;
+  width: 100vw;
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
+footer div {
+  display: block;
+  float: left;
+  margin: 0 20px;
+}
+footer .footer-text {
+  font-size: 12px;
+  opacity: 0.7;
+  padding-bottom: 0;
+}
+footer #footer-logo {
+  width: 75px;
+  height: 75px;
+  border: 3px solid black;
+  padding: 5px 0 0 5px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=legal.css.map */
