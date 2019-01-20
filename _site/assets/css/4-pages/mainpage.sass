@@ -1,38 +1,8 @@
-// Tags
-header nav
-  position: absolute
-  top: 10px
-  left: 30px
-  display: inline-block
-  padding-top: 10px
-  width: 80vw
-  z-index: 2
-
-  a
-    margin: auto 3.5vw
-    font-weight: 500
-    color: $col_font
-    text-transform: uppercase
-    letter-spacing: 1.5px
-    &:hover
-      color: $col_link
-
-  #svg-line-upper
-    position: absolute
-    left: -30px
-    margin-top: 10px
-    z-index: 3
-    width: 80vw
-    path
-      fill: $col_link
-
-p
-  +transform(rotate(-10deg))
-
-// Classes
 .main
   height: 100vh
   padding-top: 5vh
+  p
+    +transform(rotate(-10deg))
 
 .light-box, .dark-box
   display: inline-block
@@ -64,24 +34,25 @@ p
     width: 400px
     text-align: justify
 
-
-
 .light-box
-  position: absolute
+  position: fixed
   height: 77vh
   top: 18vh
   right: 2vw
   background-color: $col_accent_light
 
   .title-box
-    width: 440px
-    height: 440px
-    border: 5px solid $col_font
-    position: relative
-    top: -7vh
-    right: -11vw
+    position: absolute
+    top: -75px
+    right: 75px
     +transform(rotate(-10deg))
     z-index: 3
+    width: 30vw
+    height: 30vw
+    max-width: 440px
+    max-height: 440px
+    border: 5px solid $col_font
+
     &:hover
       background-color: $col_font
       #title, #subtitle
@@ -89,6 +60,7 @@ p
         border-color: $col_accent_light
 
 
+// Attach animations
 .highlight
   transition: all 300ms ease-in-out
 
@@ -116,53 +88,26 @@ p
     animation: slide 8s ease-in-out 10s infinite alternate
     background-color: $col_accent_dark
 
-@keyframes slide
-  10%, 100%
-    opacity: 0.1
-    width: 1px
-    transform: translate(12rem, -50%)
-  0%
-    width: 1px
-    opacity: 0.1
-  5%
-    width: 20px
-    opacity: 1
-
-@keyframes blink-parent
-  0%,25%
-    transform: scale(1) rotate(-10deg)
-  10%
-    transform: scale(1.2) rotate(0deg)
-  20%
-    transform: scale(1) rotate(-12deg)
-
+.main .svg-parent
+  position: absolute
+  z-index: 3
+  bottom: -2vh
+  right: 0
 
 // ID's
-#lets-talk
-  position: absolute
-  top: 10px
-  right: 50px
-  padding: 10px 20px
-  z-index: 3
-  text-transform: uppercase
-  letter-spacing: 1.5px
-  font-weight: 500
-  &:hover
-    background-color: $col_link
-    color: $col_bg
-    border-radius: 2px
-    // font-weight: 500
-
 #title
   margin-top: 10px
   margin-left: 10px
   text-transform: uppercase
+  +responsive-font(3vmax, 26px, 48px)
+
 
 #subtitle
   position: absolute
   margin: 0 auto 10px 10px
   bottom: 0
   font-weight: 300
+  +responsive-font(1.5vw, 14px, 22px, 14px)
 
 #maths, #software
   position: absolute
@@ -182,3 +127,8 @@ p
   bottom: 10%
   left: 20%
   border: solid $col_accent_dark 1px
+
+#svg-line-lower
+  width: 100%
+  path
+    fill: pink
