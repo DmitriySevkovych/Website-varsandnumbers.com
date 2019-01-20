@@ -765,7 +765,7 @@ footer {
 }
 footer div {
   display: block;
-  float: left;
+  float: right;
   margin: 0 20px;
 }
 footer .footer-text {
