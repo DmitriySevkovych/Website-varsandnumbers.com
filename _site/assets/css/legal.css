@@ -728,35 +728,12 @@ header nav #svg-line-upper path {
   }
 }
 /* Extra small devices (phones, 600px and down) */
-@keyframes slide {
-  10%, 100% {
-    opacity: 0.1;
-    width: 1px;
-    transform: translate(12rem, -50%);
-  }
-  0% {
-    width: 1px;
-    opacity: 0.1;
-  }
-  5% {
-    width: 20px;
-    opacity: 1;
-  }
-}
-@keyframes blink-parent {
-  0%, 25% {
-    transform: scale(1) rotate(-10deg);
-  }
-  10% {
-    transform: scale(1.2) rotate(0deg);
-  }
-  20% {
-    transform: scale(1) rotate(-12deg);
-  }
-}
 .main {
   height: 100vh;
-  padding-top: 5vh;
+  padding-top: 15vh;
+}
+.main h1, .main h3, .main p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=legal.css.map */
