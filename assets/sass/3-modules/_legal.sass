@@ -1,18 +1,26 @@
+body
+    overflow: scroll
+
 .main
+  z-index: 2
+  position: absolute
+  top: 75px
+  left: 0
   height: calc(100vh - 75px)
-  +transform(translate(0,75px))
   width: 80vw
   margin: 0 10vw 10vh 10vw
-  overflow: scroll
 
   h1
-    padding-top: 10vh
+    z-index: 2
+    padding-top: 5vh
     text-align: center
 
   h3
+    z-index: 2
     margin-bottom: 5px
 
   p
+    z-index: 2
     text-align: justify
 
 
@@ -25,13 +33,14 @@
 
 /* Large devices (laptops/desktops, 992px to 1200px) */
 @media only screen and (width < 1200px)
-  footer div
-    left: 50%
-    bottom: 0
-    +transform(translate(-20px,0))
-
   .main
     height: calc(100vh - 200px)
+
+  footer
+    display: none
+
+  .fake-footer
+    display: inline-block
 
 
 /* Medium devices (landscape tablets, 768px to 992px) */
@@ -48,7 +57,11 @@
     font-size: 12px
 
   h1
-    padding-top: 5vh
+    padding-top: 0
     font-size: 30px
+
+  #imprint
+    padding-top: 0
+
   h3
     font-size: 18px

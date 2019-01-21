@@ -1,18 +1,7 @@
-footer
+footer, .fake-footer
   height: 125px
-  width: 100vw
   z-index: 3
-  position: fixed
-  bottom: 0
-  left: 0
   background-color: transparent
-
-  > div
-    display: block
-    position: absolute
-    bottom: 0
-    right: 20px
-    // margin: 0 20px
 
   .footer-text
     font-size: 12px
@@ -28,3 +17,27 @@ footer
     padding: 5px 0 0 5px
     font-weight: 700
     line-height: 1
+
+footer
+  width: 100vw
+  position: absolute
+  right: 0
+  bottom: 0
+
+  > div
+    display: block
+    position: fixed
+    bottom: 0
+    right: 20px
+
+.fake-footer
+  display: none
+  width: 80vw
+  position: relative
+  // +transform(translate(-50%,0))
+  > div
+    display: block
+    position: absolute
+    bottom: 0
+    left: 50%
+    +transform(translate(-50%,0))

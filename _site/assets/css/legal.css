@@ -586,6 +586,12 @@ hr {
 }
 
 /* My reusable modules */
+header .nav-bar {
+  background-color: #fff;
+  z-index: 999;
+  height: 75px;
+}
+
 header a {
   font-weight: 500;
   text-transform: uppercase;
@@ -614,6 +620,7 @@ header nav #svg-line-upper {
   top: 70px;
   z-index: 3;
   width: 100vw;
+  height: 5px;
 }
 header nav #svg-line-upper path {
   fill: #FF851B;
@@ -638,7 +645,7 @@ header nav #svg-line-upper path {
 }
 
 #lets-talk {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 50px;
   padding: 10px 20px;
@@ -652,7 +659,7 @@ header nav #svg-line-upper path {
 
 #navigate {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: 50px;
   padding: 10px 20px;
@@ -749,28 +756,18 @@ header nav #svg-line-upper path {
   }
 }
 /* Extra small devices (phones, 600px and down) */
-footer {
+footer, .fake-footer {
   height: 125px;
-  width: 100vw;
   z-index: 3;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   background-color: transparent;
 }
-footer > div {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-}
-footer .footer-text {
+footer .footer-text, .fake-footer .footer-text {
   font-size: 12px;
   opacity: 0.7;
   padding-bottom: 0;
   margin: 0;
 }
-footer #footer-logo {
+footer #footer-logo, .fake-footer #footer-logo {
   width: 75px;
   height: 75px;
   border: 3px solid black;
@@ -780,24 +777,59 @@ footer #footer-logo {
   line-height: 1;
 }
 
-/* The page-specific sass module */
-.main {
-  height: calc(100vh - 75px);
-  -webkit-transform: translate(0, 75px);
-  -ms-transform: translate(0, 75px);
-  transform: translate(0, 75px);
+footer {
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+footer > div {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+.fake-footer {
+  display: none;
   width: 80vw;
-  margin: 0 10vw 10vh 10vw;
+  position: relative;
+}
+.fake-footer > div {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* The page-specific sass module */
+body {
   overflow: scroll;
 }
+
+.main {
+  z-index: 2;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  height: calc(100vh - 75px);
+  width: 80vw;
+  margin: 0 10vw 10vh 10vw;
+}
 .main h1 {
-  padding-top: 10vh;
+  z-index: 2;
+  padding-top: 5vh;
   text-align: center;
 }
 .main h3 {
+  z-index: 2;
   margin-bottom: 5px;
 }
 .main p {
+  z-index: 2;
   text-align: justify;
 }
 
@@ -806,16 +838,16 @@ footer #footer-logo {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* Large devices (laptops/desktops, 992px to 1200px) */
 @media only screen and (width < 1200px) {
-  footer div {
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translate(-20px, 0);
-    -ms-transform: translate(-20px, 0);
-    transform: translate(-20px, 0);
-  }
-
   .main {
     height: calc(100vh - 200px);
+  }
+
+  footer {
+    display: none;
+  }
+
+  .fake-footer {
+    display: inline-block;
   }
 }
 /* Medium devices (landscape tablets, 768px to 992px) */
@@ -832,8 +864,12 @@ footer #footer-logo {
   }
 
   h1 {
-    padding-top: 5vh;
+    padding-top: 0;
     font-size: 30px;
+  }
+
+  #imprint {
+    padding-top: 0;
   }
 
   h3 {
