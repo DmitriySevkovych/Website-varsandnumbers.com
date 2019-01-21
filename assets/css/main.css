@@ -662,6 +662,8 @@ header nav #svg-line-upper path {
   border-radius: 2px;
 }
 
+/* * Media queries
+ * */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* Large devices (laptops/desktops, 992px to 1200px) */
 @media only screen and (width < 1200px) {
