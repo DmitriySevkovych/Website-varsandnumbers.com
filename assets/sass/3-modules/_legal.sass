@@ -1,6 +1,20 @@
-.main
-  height: 100vh
-  padding-top: 15vh
+body
+  overflow: scroll
 
-  h1,h3,p
+.main
+  height: calc(100vh - 75px)
+  +transform(translate(0,75px))
+  width: 80vw
+  margin: 0 10vw 10vh 10vw
+  overflow: scroll
+
+  h1
+    padding-top: 10vh
     text-align: center
+
+  h3
+    margin-bottom: 5px
+
+  p
+    overflow: scroll
+    text-align: justify

@@ -89,17 +89,22 @@
 
 .main .svg-parent
   position: absolute
-  z-index: 3
-  bottom: -2vh
+  bottom: 0
   right: 0
+  z-index: -1
 
 // ID's
+#header-logo
+  visibility: hidden
+
+footer div
+  left: 20px
+
 #title
   margin-top: 10px
   margin-left: 10px
   text-transform: uppercase
   +responsive-font(3vmax, 26px, 48px)
-
 
 #subtitle
   position: absolute
@@ -128,6 +133,7 @@
   border: solid $col_accent_dark 1px
 
 #svg-line-lower
-  width: 100%
+  width: 150%
+  +transform(translate(15%,0))
   path
-    fill: pink
+    fill: $col_accent_dark
