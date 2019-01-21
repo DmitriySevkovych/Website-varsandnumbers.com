@@ -1,0 +1,38 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>{{site.data.vars.title_tab}}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{site.data.vars.description}}">
+  <meta name="keywords" content="{{site.data.vars.keywords}}">
+  <meta name="author" content="{{site.data.vars.author}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{site.data.vars.favicon}}">
+  <link rel="stylesheet" href="/assets/css/services.css">
+</head>
+
+<body>
+  {% include eng/header.html %}
+
+  <div class="main">
+    <div class="background"></div>
+    <div class="background-light"></div>
+    <div class="graphics"> </div>
+    <div class="graphics-2"> </div>
+
+    <div class="content">
+      {% include eng/services.html %}
+    </div>
+  </div>
+
+  {% include eng/footer.html %}
+
+  <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/main.js"> </script>
+</body>
+
+</html>

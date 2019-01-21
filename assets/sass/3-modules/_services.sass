@@ -1,0 +1,88 @@
+.main
+  display: inline-block
+  height: 100vh
+
+.background
+  position: absolute
+  left: 5vw
+  top: 0
+  z-index: -1
+  width: 50vw
+  height: 100vw
+  background-color: $col_accent_dark
+  opacity: 0.9
+
+.background-light
+  position: absolute
+  left: 0
+  top: 50vh
+  +transform(translate(0,-50%))
+  z-index: -1
+  height: 50vh
+  width: 100vw
+  background-color: $col_accent_light
+  opacity: 0.9
+
+.graphics, .graphics-2
+  position: absolute
+  left: 15vw
+  top: 50vh
+  +transform(translate(0,-50%))
+  height: 300px
+  width: 300px
+  border: solid 3px $col_bg
+  z-index: 2
+
+.graphics-2
+  +transform(translate(0,-50%) rotate(45deg))
+  transform-origin: center center
+
+.content
+  position: absolute
+  height: calc(100vh - 100px)
+  width: 60vw
+  top: 100px
+  left: 30vw
+
+  .scrollable
+    overflow: scroll
+    position: absolute
+    top: auto
+    left: 100px
+    height: 200%
+    width: 100%
+
+  .get-attention ul
+    list-style: none
+
+    li
+      text-align: justify
+
+  .focused
+    opacity: 1
+    font-size: 24px
+    font-weight: 300
+    color: $col_link
+    margin: 50px
+
+  .fading
+    opacity: 0.7
+    font-size: 22px
+    margin: 35px
+
+  .faded
+    opacity: 0.3
+    margin: 15px
+
+  .yet-to-show
+    visibility: hidden
+
+  .round-up
+    position: absolute
+    left: -15vw
+    bottom: 5vh
+    a
+      color: $col_font
+      &:hover
+        color: lighten($col_accent_dark, 10%)
+        cursor: pointer

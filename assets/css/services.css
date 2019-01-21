@@ -782,63 +782,106 @@ footer #footer-logo {
 
 /* The page-specific sass module */
 .main {
-  height: calc(100vh - 75px);
-  -webkit-transform: translate(0, 75px);
-  -ms-transform: translate(0, 75px);
-  transform: translate(0, 75px);
-  width: 80vw;
-  margin: 0 10vw 10vh 10vw;
+  display: inline-block;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  left: 5vw;
+  top: 0;
+  z-index: -1;
+  width: 50vw;
+  height: 100vw;
+  background-color: #555;
+  opacity: 0.9;
+}
+
+.background-light {
+  position: absolute;
+  left: 0;
+  top: 50vh;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: -2;
+  height: 50vh;
+  width: 100vw;
+  background-color: #ddd;
+  opacity: 0.9;
+}
+
+.graphics, .graphics-2 {
+  position: absolute;
+  left: 15vw;
+  top: 50vh;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  height: 300px;
+  width: 300px;
+  border: solid 3px #fff;
+  z-index: 2;
+}
+
+.graphics-2 {
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+  -ms-transform: translate(0, -50%) rotate(45deg);
+  transform: translate(0, -50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.content {
+  position: absolute;
+  height: calc(100vh - 100px);
+  width: 60vw;
+  top: 100px;
+  left: 30vw;
+}
+.content .scrollable {
   overflow: scroll;
+  position: absolute;
+  top: auto;
+  left: 100px;
+  height: 200%;
+  width: 100%;
 }
-.main h1 {
-  padding-top: 10vh;
-  text-align: center;
+.content .get-attention ul {
+  list-style: none;
 }
-.main h3 {
-  margin-bottom: 5px;
-}
-.main p {
+.content .get-attention ul li {
   text-align: justify;
 }
-
-/* * Media queries
- * */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* Large devices (laptops/desktops, 992px to 1200px) */
-@media only screen and (width < 1200px) {
-  footer div {
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translate(-20px, 0);
-    -ms-transform: translate(-20px, 0);
-    transform: translate(-20px, 0);
-  }
-
-  .main {
-    height: calc(100vh - 200px);
-  }
+.content .focused {
+  opacity: 1;
+  font-size: 24px;
+  font-weight: 300;
+  color: #FF851B;
+  margin: 50px;
 }
-/* Medium devices (landscape tablets, 768px to 992px) */
-/* Small devices (portrait tablets and large phones, 600px to 768px) */
-@media only screen and (width < 768px) {
-  div {
-    font-size: 14px;
-  }
+.content .fading {
+  opacity: 0.7;
+  font-size: 22px;
+  margin: 35px;
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (width < 600px) {
-  div {
-    font-size: 12px;
-  }
-
-  h1 {
-    padding-top: 5vh;
-    font-size: 30px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
+.content .faded {
+  opacity: 0.3;
+  margin: 15px;
+}
+.content .yet-to-show {
+  visibility: hidden;
+}
+.content .round-up {
+  position: absolute;
+  left: -15vw;
+  bottom: 5vh;
+}
+.content .round-up a {
+  color: #222;
+}
+.content .round-up a:hover {
+  color: #6f6f6f;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=legal.css.map */
+/*# sourceMappingURL=services.css.map */
