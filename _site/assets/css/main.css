@@ -587,7 +587,6 @@ hr {
 
 /* My reusable modules */
 header .nav-bar {
-  background-color: #fff;
   z-index: 999;
   height: 75px;
 }
@@ -852,11 +851,16 @@ footer > div {
 }
 
 .dark-box {
+  display: flex;
   position: absolute;
   height: 85vh;
   top: -10vh;
   left: 2vw;
   background-color: #555;
+}
+.dark-box .intro {
+  z-index: 2;
+  background-color: transparent;
 }
 .dark-box .intro p {
   position: absolute;
@@ -872,13 +876,14 @@ footer > div {
 .dark-box p:nth-child(2) {
   bottom: 20%;
   left: 5%;
-  width: 400px;
+  width: 60%;
   text-align: justify;
 }
 
 .light-box {
-  position: fixed;
-  height: 77vh;
+  display: flex;
+  position: absolute;
+  height: 85vh;
   top: 18vh;
   right: 2vw;
   background-color: #ddd;
@@ -895,6 +900,8 @@ footer > div {
   height: 30vw;
   max-width: 440px;
   max-height: 440px;
+  min-width: 250px;
+  min-height: 250px;
   border: 5px solid #222;
 }
 .light-box .title-box:hover {
@@ -950,26 +957,19 @@ footer div {
 }
 
 #title {
-  margin-top: 10px;
-  margin-left: 10px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 0;
   text-transform: uppercase;
-  font-size: 3vmax;
-}
-@media (max-width: 866.6666666667px) {
-  #title {
-    font-size: 26px;
-  }
-}
-@media (min-width: 1600px) {
-  #title {
-    font-size: 48px;
-  }
 }
 
 #subtitle {
   position: absolute;
-  margin: 0 auto 10px 10px;
   bottom: 0;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  margin: 0;
   font-weight: 300;
   font-size: 14px;
   font-size: 1.5vw;
@@ -1014,5 +1014,117 @@ footer div {
 #svg-line-lower path {
   fill: #555;
 }
+
+/* * Media queries
+ * */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (width < 1200px) {
+  a {
+    font-size: 12px;
+  }
+}
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (width < 992px) {
+  header nav a, #maths, #software {
+    display: none;
+  }
+
+  #lets-talk {
+    font-size: 3vw;
+    background-color: #FF851B;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+@media only screen and (width < 992px) and (max-width: 400px) {
+  #lets-talk {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 992px) and (min-width: 533.3333333333px) {
+  #lets-talk {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 992px) {
+  #navigate {
+    display: inline-block;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 992px) and (max-width: 400px) {
+  #navigate {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 992px) and (min-width: 533.3333333333px) {
+  #navigate {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 992px) {
+  #intro-text {
+    padding-left: 10vw;
+    color: #222;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (width < 768px) {
+  #lets-talk {
+    right: 20px;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 768px) and (max-width: 400px) {
+  #lets-talk {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 768px) and (min-width: 533.3333333333px) {
+  #lets-talk {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 768px) {
+  #navigate {
+    left: 20px;
+    font-size: 3vw;
+  }
+}
+@media only screen and (width < 768px) and (max-width: 400px) {
+  #navigate {
+    font-size: 12px;
+  }
+}
+@media only screen and (width < 768px) and (min-width: 533.3333333333px) {
+  #navigate {
+    font-size: 16px;
+  }
+}
+@media only screen and (width < 768px) {
+  #svg-line-upper {
+    display: none;
+  }
+}
+@media only screen and (width < 768px) {
+  .dark-box {
+    background-color: transparent;
+  }
+}
+@media only screen and (width < 768px) {
+  .light-box {
+    width: 100vw;
+    height: 75vh;
+    top: 150px;
+  }
+}
+@media only screen and (width < 768px) {
+  .title-box {
+    left: 25%;
+    top: 0;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
 
 /*# sourceMappingURL=main.css.map */

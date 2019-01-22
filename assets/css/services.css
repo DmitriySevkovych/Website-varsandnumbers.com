@@ -587,7 +587,6 @@ hr {
 
 /* My reusable modules */
 header .nav-bar {
-  background-color: #fff;
   z-index: 999;
   height: 75px;
 }
@@ -811,13 +810,21 @@ footer > div {
   height: 100vh;
 }
 
+.section-header {
+  position: absolute;
+  left: 15vw;
+  top: 10vh;
+  font-size: 38px;
+  color: #FF851B;
+}
+
 .background {
   position: absolute;
   left: 5vw;
   top: 0;
   z-index: -1;
   width: 50vw;
-  height: 100vw;
+  height: 100vh;
   background-color: #555;
   opacity: 0.9;
 }
@@ -830,7 +837,7 @@ footer > div {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   z-index: -2;
-  height: 50vh;
+  height: 55vh;
   width: 100vw;
   background-color: #ddd;
   opacity: 0.9;
@@ -860,22 +867,38 @@ footer > div {
   position: absolute;
   height: calc(100vh - 100px);
   width: 60vw;
-  top: 100px;
+  top: 0;
   left: 30vw;
 }
 .content .scrollable {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: absolute;
-  top: auto;
+  top: 50%;
   left: 100px;
-  height: 200%;
+  height: 50%;
   width: 100%;
+  padding-right: 70px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.content #scroll-prompt {
+  padding-top: 40%;
+  width: 100%;
+}
+.content #scroll-prompt p {
+  text-align: center;
 }
 .content .get-attention ul {
   list-style: none;
 }
 .content .get-attention ul li {
   text-align: justify;
+  -webkit-transition: all 1000ms ease-in-out;
+  -moz-transition: all 1000ms ease-in-out;
+  -o-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .content .focused {
   opacity: 1;
@@ -887,19 +910,19 @@ footer > div {
 .content .fading {
   opacity: 0.7;
   font-size: 22px;
-  margin: 35px;
+  margin: 25px;
 }
 .content .faded {
   opacity: 0.3;
   margin: 15px;
 }
 .content .yet-to-show {
-  visibility: hidden;
+  opacity: 0;
 }
 .content .round-up {
   position: absolute;
   left: -15vw;
-  bottom: 5vh;
+  bottom: -5vh;
 }
 .content .round-up a {
   color: #222;

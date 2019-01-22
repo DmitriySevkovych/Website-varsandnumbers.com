@@ -2,13 +2,20 @@
   display: inline-block
   height: 100vh
 
+.section-header
+  position: absolute
+  left: 15vw
+  top: 10vh
+  font-size: 38px
+  color: $col_link
+
 .background
   position: absolute
   left: 5vw
   top: 0
   z-index: -1
   width: 50vw
-  height: 100vw
+  height: 100vh
   background-color: $col_accent_dark
   opacity: 0.9
 
@@ -17,8 +24,8 @@
   left: 0
   top: 50vh
   +transform(translate(0,-50%))
-  z-index: -1
-  height: 50vh
+  z-index: -2
+  height: 55vh
   width: 100vw
   background-color: $col_accent_light
   opacity: 0.9
@@ -41,22 +48,32 @@
   position: absolute
   height: calc(100vh - 100px)
   width: 60vw
-  top: 100px
+  top: 0
   left: 30vw
 
   .scrollable
-    overflow: scroll
+    overflow-y: scroll
+    overflow-x: hidden
     position: absolute
-    top: auto
+    top: 50%
     left: 100px
-    height: 200%
+    height: 50%
     width: 100%
+    padding-right: 70px
+    +transform(translate(0,-50%))
+
+  #scroll-prompt
+    padding-top: 40%
+    width: 100%
+    p
+      text-align: center
 
   .get-attention ul
     list-style: none
 
     li
       text-align: justify
+      +transition(all,1000ms,ease-in-out)
 
   .focused
     opacity: 1
@@ -68,19 +85,19 @@
   .fading
     opacity: 0.7
     font-size: 22px
-    margin: 35px
+    margin: 25px
 
   .faded
     opacity: 0.3
     margin: 15px
 
   .yet-to-show
-    visibility: hidden
+    opacity: 0
 
   .round-up
     position: absolute
     left: -15vw
-    bottom: 5vh
+    bottom: -5vh
     a
       color: $col_font
       &:hover

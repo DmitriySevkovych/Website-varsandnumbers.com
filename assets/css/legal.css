@@ -587,7 +587,6 @@ hr {
 
 /* My reusable modules */
 header .nav-bar {
-  background-color: #fff;
   z-index: 999;
   height: 75px;
 }

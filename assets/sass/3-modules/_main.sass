@@ -11,11 +11,16 @@
   +transform(rotate(10deg))
 
 .dark-box
+  display: flex
   position: absolute
   height: 85vh
   top: -10vh
   left: 2vw
   background-color: $col_accent_dark
+
+  .intro
+    z-index: 2
+    background-color: transparent
 
   .intro p
     position: absolute
@@ -31,12 +36,13 @@
   p:nth-child(2)
     bottom: 20%
     left: 5%
-    width: 400px
+    width: 60%
     text-align: justify
 
 .light-box
-  position: fixed
-  height: 77vh
+  display: flex
+  position: absolute
+  height: 85vh
   top: 18vh
   right: 2vw
   background-color: $col_accent_light
@@ -51,6 +57,8 @@
     height: 30vw
     max-width: 440px
     max-height: 440px
+    min-width: 250px
+    min-height: 250px
     border: 5px solid $col_font
     &:hover
       background-color: $col_font
@@ -101,15 +109,19 @@ footer div
   left: 20px
 
 #title
-  margin-top: 10px
-  margin-left: 10px
+  width: 100%
+  padding-top: 10px
+  padding-left: 10px
+  margin: 0
   text-transform: uppercase
-  +responsive-font(3vmax, 26px, 48px)
+  // +responsive-font(3vmax, 26px, 48px)
 
 #subtitle
   position: absolute
-  margin: 0 auto 10px 10px
   bottom: 0
+  width: 100%
+  padding: 0 10px 10px 10px
+  margin: 0
   font-weight: 300
   +responsive-font(1.5vw, 14px, 22px, 14px)
 
@@ -137,3 +149,67 @@ footer div
   +transform(translate(15%,0))
   path
     fill: $col_accent_dark
+
+
+
+/*
+ * Media queries
+ */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// As designed
+
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (width < 1200px)
+  a
+    font-size: 12px
+
+  // #lets-talk
+
+
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (width < 992px)
+  header nav a, #maths, #software
+    display: none
+
+  #lets-talk
+    +responsive-font(3vw,12px,16px)
+    background-color: $col_link
+    color: $col_bg
+    border-radius: 2px
+
+  #navigate
+    display: inline-block
+    +responsive-font(3vw,12px,16px)
+
+  #intro-text
+    padding-left: 10vw
+    color: $col_font
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (width < 768px)
+  #lets-talk
+    right: 20px
+    +responsive-font(3vw,12px,16px)
+
+  #navigate
+    left: 20px
+    +responsive-font(3vw,12px,16px)
+
+  #svg-line-upper
+    display: none
+
+  .dark-box
+    background-color: transparent
+
+  .light-box
+    width: 100vw
+    height: 75vh
+    top: 150px
+
+  .title-box
+    left: 25%
+    top: 0
+
+/* Extra small devices (phones, 600px and down) */
+// As small
