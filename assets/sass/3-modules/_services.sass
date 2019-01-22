@@ -1,13 +1,14 @@
 .main
   display: inline-block
   height: 100vh
+  width: 100vw
 
 .section-header
   position: absolute
   left: 15vw
   top: 10vh
   font-size: 38px
-  color: $col_link
+  color: $col_font
 
 .background
   position: absolute
@@ -46,60 +47,91 @@
 
 .content
   position: absolute
-  height: calc(100vh - 100px)
-  width: 60vw
+  height: 100vh
+  width: 60%
   top: 0
-  left: 30vw
+  left: 40%
 
   .scrollable
+    z-index: 5
     overflow-y: scroll
     overflow-x: hidden
     position: absolute
-    top: 50%
-    left: 100px
-    height: 50%
+    top: 0
+    left: 0
+    height: 200%
     width: 100%
-    padding-right: 70px
-    +transform(translate(0,-50%))
+    padding-right: 25px
+    background-color: transparent
+    .scroll-prompt
+      +transition(all,1000ms,ease-in-out)
+      position: relative
+      top: 25%
+      left: 0
+      +transform(translate(0,-50%))
+      width: 100%
+      font-size: 38px
+      color: $col_link
+      letter-spacing: 2px
+      p
+        text-align: center
 
-  #scroll-prompt
-    padding-top: 40%
+    .filler
+      height: 5000px
+
+  .get-attention
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
     width: 100%
-    p
-      text-align: center
-
-  .get-attention ul
-    list-style: none
-
+    ul
+      list-style: none
     li
       text-align: justify
       +transition(all,1000ms,ease-in-out)
 
   .focused
     opacity: 1
-    font-size: 24px
+    font-size: 28px
     font-weight: 300
     color: $col_link
-    margin: 50px
+    padding: 50px auto
 
   .fading
     opacity: 0.7
     font-size: 22px
-    margin: 25px
+    padding: 25px auto
 
   .faded
     opacity: 0.3
-    margin: 15px
+    padding: 15px auto
 
   .yet-to-show
     opacity: 0
 
   .round-up
-    position: absolute
-    left: -15vw
-    bottom: -5vh
-    a
+    // +transition(all,1000ms,ease-in-out)
+    +transform(rotate(25deg))
+    position: fixed
+    width: 50vw
+    left: 10vw
+    bottom: 30px
+    background-color: $col_accent_light
+    border: 3px solid $col_font
+    padding: 30vmin 10vmin
+    z-index: 4
+    p
+      +transform(rotate(-25deg))
+      font-size: 24px
+      font-weight: 300
       color: $col_font
-      &:hover
-        color: lighten($col_accent_dark, 10%)
-        cursor: pointer
+      padding: 50px auto
+
+      text-align: justify
+      a
+        color: $col_link
+        &:hover
+          color: $col_highlight
+          cursor: pointer

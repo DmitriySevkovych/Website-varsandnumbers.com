@@ -808,6 +808,7 @@ footer > div {
 .main {
   display: inline-block;
   height: 100vh;
+  width: 100vw;
 }
 
 .section-header {
@@ -815,7 +816,7 @@ footer > div {
   left: 15vw;
   top: 10vh;
   font-size: 38px;
-  color: #FF851B;
+  color: #222;
 }
 
 .background {
@@ -865,35 +866,57 @@ footer > div {
 
 .content {
   position: absolute;
-  height: calc(100vh - 100px);
-  width: 60vw;
+  height: 100vh;
+  width: 60%;
   top: 0;
-  left: 30vw;
+  left: 40%;
 }
 .content .scrollable {
+  z-index: 5;
   overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
-  top: 50%;
-  left: 100px;
-  height: 50%;
+  top: 0;
+  left: 0;
+  height: 200%;
   width: 100%;
-  padding-right: 70px;
+  padding-right: 25px;
+  background-color: transparent;
+}
+.content .scrollable .scroll-prompt {
+  -webkit-transition: all 1000ms ease-in-out;
+  -moz-transition: all 1000ms ease-in-out;
+  -o-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+  position: relative;
+  top: 25%;
+  left: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
-}
-.content #scroll-prompt {
-  padding-top: 40%;
   width: 100%;
+  font-size: 38px;
+  color: #FF851B;
+  letter-spacing: 2px;
 }
-.content #scroll-prompt p {
+.content .scrollable .scroll-prompt p {
   text-align: center;
+}
+.content .scrollable .filler {
+  height: 5000px;
+}
+.content .get-attention {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .content .get-attention ul {
   list-style: none;
 }
-.content .get-attention ul li {
+.content .get-attention li {
   text-align: justify;
   -webkit-transition: all 1000ms ease-in-out;
   -moz-transition: all 1000ms ease-in-out;
@@ -902,33 +925,51 @@ footer > div {
 }
 .content .focused {
   opacity: 1;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 300;
   color: #FF851B;
-  margin: 50px;
+  padding: 50px auto;
 }
 .content .fading {
   opacity: 0.7;
   font-size: 22px;
-  margin: 25px;
+  padding: 25px auto;
 }
 .content .faded {
   opacity: 0.3;
-  margin: 15px;
+  padding: 15px auto;
 }
 .content .yet-to-show {
   opacity: 0;
 }
 .content .round-up {
-  position: absolute;
-  left: -15vw;
-  bottom: -5vh;
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+  position: fixed;
+  width: 50vw;
+  left: 10vw;
+  bottom: 30px;
+  background-color: #ddd;
+  border: 3px solid #222;
+  padding: 30vmin 10vmin;
+  z-index: 4;
 }
-.content .round-up a {
+.content .round-up p {
+  -webkit-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  font-size: 24px;
+  font-weight: 300;
   color: #222;
+  padding: 50px auto;
+  text-align: justify;
 }
-.content .round-up a:hover {
-  color: #6f6f6f;
+.content .round-up p a {
+  color: #FF851B;
+}
+.content .round-up p a:hover {
+  color: #ffa04e;
   cursor: pointer;
 }
 
