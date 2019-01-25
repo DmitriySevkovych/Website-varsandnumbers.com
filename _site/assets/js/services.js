@@ -1,10 +1,16 @@
+/*
+Document ready function
+*/
 $(function() {
+  var $navbar = $('header .nav-bar');
   var $services = $('li');
   var $scrollContainer = $('.scrollable');
 
-  var scrollDelta = 200;
+  var scrollDelta = 250;
   var scrollPosition = -1;
   var lastScrollTop = scrollPosition * scrollDelta;
+
+  updateNavbar(scrollPosition, $navbar);
 
   $scrollContainer.scroll(function(event) {
     var st = $(this).scrollTop();
@@ -26,6 +32,7 @@ $(function() {
 
     lastScrollTop = st;
 
+    updateNavbar(scrollPosition, $navbar);
     updateScrollPrompt(scrollPosition);
     $.each($services, function() {
       updateService(scrollPosition, $(this));
@@ -34,7 +41,13 @@ $(function() {
   });
 });
 
+/*
+Event handlers, TODO: extract the scroll handler
+*/
 
+/*
+ Helper functions
+*/
 function updateScrollPrompt(scrollPosition) {
   var $scrollPrompt = $('.scroll-prompt');
   if (scrollPosition < 1 || scrollPosition > 7) {
@@ -80,7 +93,7 @@ function positionService(scrollPosition, service) {
   } else if (index == scrollPosition - 1) {
     positionString = 'center center-' + y;
   } else if (index < scrollPosition - 1) {
-    positionString = 'center center-' + 2*y;
+    positionString = 'center center-' + 2 * y;
   }
 
   service.position({
@@ -93,11 +106,32 @@ function positionService(scrollPosition, service) {
 
 function updateRoundup(scrollPosition) {
   var $roundup = $('.round-up');
+  var $blend = $(".blend");
+  var $plainTermsItems = $('.plain-terms li');
 
   if (scrollPosition == 9) {
-    $roundup.removeClass('yet-to-show');
-    $roundup.slideDown(1000)
+    // $roundup.delay(1000).fadeIn(500);
+    $roundup.delay(500).fadeIn(1000);
+    $blend.fadeIn(1000);
   } else {
-    $roundup.slideUp(1000)
+    $roundup.slideUp(700);
+    $blend.fadeOut(1500);
   }
+
+}
+
+function updateNavbar(scrollPosition, navbar) {
+
+  // var zIndex = 3;
+
+  if (scrollPosition == 9 || scrollPosition == -1) {
+    navbar.css({
+      'z-index': 2
+    });
+  } else {
+    navbar.css({
+      'z-index': 999
+    });
+  }
+
 }

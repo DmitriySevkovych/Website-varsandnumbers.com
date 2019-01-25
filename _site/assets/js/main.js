@@ -1,4 +1,13 @@
+/*
+Document ready function
+*/
 $( function() {
+  
+  // Update navbar z-index (bring navbar to front)
+  var $navbar = $('header .nav-bar');
+  navbar.css({
+    'z-index': 999
+  });
 
   $("#title").fitText(1, { minFontSize: '14px', maxFontSize: '48px' });
 
