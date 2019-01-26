@@ -9749,18 +9749,36 @@ footer {
   position: absolute;
   z-index: -1;
 }
-.background #darkBox {
-  height: 80vh;
-  -webkit-transform: rotate(14deg);
-  -ms-transform: rotate(14deg);
-  transform: rotate(14deg);
-  background-color: #555;
-}
-.background #lightBox {
+.background #darkBox, .background #lightBox {
+  position: relative;
+  box-sizing: content-box;
+  padding: 30px;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
+}
+.background #darkBox {
+  top: -300px;
+  height: 100vh;
+  background-color: #555;
+}
+.background #lightBox {
+  top: 50px;
+  height: 80vh;
   background-color: #ddd;
+}
+.background #containerLowerLine {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.background #svg-line-lower {
+  width: 1300px;
+  float: right;
+}
+.background #svg-line-lower path {
+  fill: #555;
 }
 
 .foreground {
