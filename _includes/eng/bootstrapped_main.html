@@ -1,37 +1,41 @@
-<div class="container-fluid background">
-  <div class="row">
-    <div class="col-md-6 mx-auto" id="darkBox">
-      <p id="maths" class="animate-maths">Mathematics</p>
-      <!-- <img src="" alt=""> -->
+<div class="main">
+
+  <div class="container-fluid background">
+    <div class="row">
+      <div class="col-md-6 mx-auto" id="darkBox">
+        <p id="maths" class="animate-maths">Mathematics</p>
+        <!-- <img src="" alt=""> -->
+      </div>
+
+      <div class="col-md-5 mx-auto" id="lightBox">
+        <p id="software" class="animate-software">Software</p>
+        <!-- <img src="" alt=""> -->
+      </div>
     </div>
 
-    <div class="col-md-5 mx-auto" id="lightBox">
-      <p id="software" class="animate-software">Software</p>
-      <!-- <img src="" alt=""> -->
+    <div class="container-fluid" id="containerLowerLine">
+      {% include icons/Line_lower.html %}
+    </div>
+  </div>
+
+
+  <div class="container-fluid foreground">
+    <div class="row padding">
+      <div class="col-md-6 mx-auto" id="intro">
+        <p class="lead">Hi there!</p>
+
+        <p class="text-justify"> I am a self-employed software developer with a master's degree in
+          mathematics. Sounds like two different things? Quite so. Which is the one
+          that I can help you with?
+        </p>
+      </div>
+
+
+      <div class="col-md-4 mx-auto" id="titleBox">
+        <h1 id="title">{{site.data.vars.title}}</h1>
+        <h4 id="subtitle">{{site.data.vars.subtitle}}</h3>
+      </div>
     </div>
   </div>
 
-  <div class="container-fluid" id="containerLowerLine">
-    {% include icons/Line_lower.html %}
-  </div>
-</div>
-
-
-<div class="container-fluid foreground">
-  <div class="row padding">
-    <div class="col-md-6 mx-auto" id="intro">
-      <p class="lead">Hi there!</p>
-
-      <p class="text-justify"> I am a self-employed software developer with a master's degree in
-        mathematics. Sounds like two different things? Quite so. Which is the one
-        that I can help you with?
-      </p>
-    </div>
-
-
-    <div class="col-md-4 mx-auto" id="titleBox">
-      <h1 id="title">{{site.data.vars.title}}</h1>
-      <h4 id="subtitle">{{site.data.vars.subtitle}}</h3>
-    </div>
-  </div>
 </div>

@@ -14,6 +14,7 @@ header a
   font-weight: 500
   line-height: 1
   cursor: pointer
+  +transition(all,300ms,ease-in-out)
   &:hover
     color: $col_link
     border-color: $col_link
@@ -27,8 +28,20 @@ header a
     color: white
     border-radius: 3px
 
+#containerUpperLine
+  z-index: 1029
 
 #svg-line-upper
+  margin: 75px 0 0 0
   width: 100vw
+  height: 5px
   path
-    fill: pink
+    fill: $col_link
+
+
+/*
+ * Media queries
+ */
+// @include media-breakpoint-down(md)
+  nav
+    background-color: $white !important

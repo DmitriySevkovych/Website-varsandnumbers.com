@@ -9665,6 +9665,10 @@ header a:hover {
   font-weight: 500;
   line-height: 1;
   cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 .logo-small:hover {
   color: #FF851B;
@@ -9682,13 +9686,21 @@ header a:hover {
   border-radius: 3px;
 }
 
-#svg-line-upper {
-  width: 100vw;
-}
-#svg-line-upper path {
-  fill: pink;
+#containerUpperLine {
+  z-index: 1029;
 }
 
+#svg-line-upper {
+  margin: 75px 0 0 0;
+  width: 100vw;
+  height: 5px;
+}
+#svg-line-upper path {
+  fill: #FF851B;
+}
+
+/* * Media queries
+ * */
 footer, .fake-footer {
   height: 125px;
   z-index: 3;
