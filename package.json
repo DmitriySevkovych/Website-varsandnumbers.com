@@ -1,0 +1,17 @@
+{
+  "name": "website_varsandnumbers",
+  "version": "1.0.0",
+  "description": "I am a freelancer and this is my professional website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriy Sevkovych",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "typey": "^1.1.2"
+  }
+}

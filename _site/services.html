@@ -14,15 +14,46 @@
 
 <body>
   <header>
-  <div class="nav-bar">
-    <nav>
-        <a href="./index.html"><div id="header-logo" class="highlight" >V<br>&N</div></a>
-        <a href="./services.html">Services</a>
-        <a href="#">Expertise</a>
-        <a href="#">About Me</a>
-        <a href="#">References</a>
-        <a href="./legal.html">Legal</a>
-        <div class="svg-parent"> <?xml version="1.0" encoding="utf-8"?>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" name="menu" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo-small">V<br>&N</div>
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item mr-2 mx-xl-4">
+            <a class="nav-link mx-3 active" href="services.html">Services</a>
+          </li>
+          <li class="nav-item mx-3 mx-xl-4">
+            <a class="nav-link" href="#">Expertise</a>
+          </li>
+          <li class="nav-item mx-3 mx-xl-4">
+            <a class="nav-link" href="#"><span class="text-nowrap">About Me</span></a>
+          </li>
+          <li class="nav-item mx-3 mx-xl-4">
+            <a class="nav-link" href="#">References</a>
+          </li>
+          <li class="nav-item mx-3 ml-xl-4">
+            <a class="nav-link" href="legal.html">Legal</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-item ml-auto">
+        <a class="navbar-brand" href="#" id="talk">
+          Let's Talk
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container-fluid d-none d-lg-block" id="containerUpperLine">
+    <div class="col">
+      <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="svg-line-upper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 style="enable-background:new 0 0 1281 5.2;" xml:space="preserve" >
 <g>
@@ -30,10 +61,8 @@
 		c-106.8,1.4-213.5,1.8-320.3,2.3C854,5.4,747.3,4.9,640.5,4.6L0,2.9V2.4z"/>
 </g>
 </svg>
- </div>
-    </nav>
-    <a id="navigate" class="highlight" href="#">Explore</a>
-    <a id="lets-talk" class="highlight" href="#">Let's Talk!</a>
+
+    </div>
   </div>
 </header>
 

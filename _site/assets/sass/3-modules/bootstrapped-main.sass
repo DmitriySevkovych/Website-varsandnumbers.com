@@ -1,0 +1,50 @@
+@import '../1-tools/colors'
+@import '../2-basics/mixins'
+
+.background
+  position: absolute
+  z-index: -1
+
+  #darkBox
+    height: 80vh
+    +transform(rotate(14deg))
+    background-color: $col_accent_dark
+
+  #lightBox
+    +transform(rotate(15deg))
+    background-color: $col_accent_light
+
+.foreground
+  position: absolute
+  background: none
+  height: 80vh
+  z-index: 2000
+
+  #titleBox
+    width: 30vmin
+    height: 30vmin
+    max-width: 440px
+    max-height: 440px
+    min-width: 250px
+    min-height: 250px
+    border: 5px solid $col_font
+    &:hover
+      background-color: $col_font
+      #title, #subtitle
+        color: $col_accent_light
+        border-color: $col_accent_light
+
+  #title
+    width: 100%
+    padding-top: 10px
+    padding-left: 10px
+    margin: 0
+    text-transform: uppercase
+
+  #subtitle
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 0 10px 10px 10px
+    margin: 0
+    font-weight: 300
