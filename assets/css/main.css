@@ -9712,6 +9712,38 @@ footer {
   bottom: 0;
 }
 
+#langContainer {
+  height: 100%;
+  margin: 0;
+}
+
+.lang {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+.lang a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.lang a:hover {
+  color: #FF851B;
+}
+
 .logo-small {
   width: 75px;
   height: 75px;
@@ -9734,13 +9766,22 @@ footer {
     left: 0;
     right: 0;
   }
-  footer .logo-group {
+  footer #logoContainer {
     float: right !important;
   }
 }
 @media (max-width: 991.98px) {
-  footer {
+  .lang {
+    top: -50%;
+    -webkit-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+  }
+
+  #logoContainer {
+    position: absolute;
     left: 50%;
+    bottom: 10px;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
@@ -9833,7 +9874,6 @@ footer {
   color: #ddd;
   border-color: #ddd;
   width: 100%;
-  margin: 0;
 }
 #titleContainer #titleBox #title {
   padding-top: 10px;
