@@ -9749,7 +9749,7 @@ footer {
 /* The page-specific sass module */
 /* * Local mixins
  * */
-/* * Sass
+/* * General page style
  * */
 .main {
   padding-top: 110px;
@@ -9760,15 +9760,15 @@ footer {
   z-index: -1;
 }
 .background #darkBox, .background #lightBox {
+  overflow: hidden;
   position: relative;
   box-sizing: content-box;
-  padding: 30px;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 .background #darkBox {
-  top: -300px;
+  top: -15vmax;
   height: 100vh;
   background-color: #555;
 }
@@ -9776,6 +9776,22 @@ footer {
   top: 50px;
   height: 80vh;
   background-color: #ddd;
+}
+.background #imageLeft {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  -webkit-transform: rotate(-15deg) translate(55%, 0);
+  -ms-transform: rotate(-15deg) translate(55%, 0);
+  transform: rotate(-15deg) translate(55%, 0);
+}
+.background #imageRight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: rotate(-15deg) translate(-50%, 0);
+  -ms-transform: rotate(-15deg) translate(-50%, 0);
+  transform: rotate(-15deg) translate(-50%, 0);
 }
 .background #containerLowerLine {
   position: absolute;
@@ -9796,7 +9812,6 @@ footer {
   top: 0;
   left: 0;
   background: none;
-  z-index: 1050;
 }
 
 #titleContainer {
@@ -9817,21 +9832,35 @@ footer {
 #titleContainer #titleBox:hover #title, #titleContainer #titleBox:hover #subtitle {
   color: #ddd;
   border-color: #ddd;
-}
-#titleContainer #title {
   width: 100%;
+  margin: 0;
+}
+#titleContainer #titleBox #title {
   padding-top: 10px;
   padding-left: 10px;
-  margin: 0;
   text-transform: uppercase;
 }
-#titleContainer #subtitle {
+#titleContainer #titleBox #subtitle {
   position: absolute;
   bottom: 0;
-  width: 100%;
   padding: 0 10px 10px 10px;
-  margin: 0;
   font-weight: 300;
+}
+
+#contentContainer {
+  height: 100%;
+}
+#contentContainer #contentBox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 50px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+#contentContainer #contentBox p {
+  color: #fff;
 }
 
 /* * Media queries
@@ -9848,10 +9877,19 @@ footer {
     font-size: 26px;
   }
 }
+@media (min-width: 992px) {
+  #lightBox {
+    left: -20px;
+  }
+
+  #contentBox p {
+    width: 80%;
+  }
+}
 @media (max-width: 1199.98px) {
   #titleBox {
-    width: 350px;
-    height: 350px;
+    width: 375px;
+    height: 375px;
   }
   #titleBox #title {
     font-size: 42px;
@@ -9862,18 +9900,34 @@ footer {
 }
 @media (max-width: 767.98px) {
   #titleBox {
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
   }
   #titleBox #title {
-    font-size: 26px;
+    font-size: 22px;
   }
   #titleBox #subtitle {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+  #darkBox {
+    height: 120vh;
   }
 
   #titleContainer {
     padding: 0;
+  }
+
+  #contentContainer {
+    padding: 0 10px;
+  }
+  #contentContainer p {
+    width: 100%;
+    color: #222;
   }
 }
 

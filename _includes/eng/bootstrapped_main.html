@@ -3,32 +3,36 @@
   <div class="container-fluid background">
     <div class="row">
       <div class="col-md-6 mx-auto" id="darkBox">
-        <p id="maths" class="animate-maths">Mathematics</p>
-        <!-- <img src="" alt=""> -->
+        <!-- <p id="maths" class="d-none d-md-block animate-maths">Mathematics</p> -->
+        <img class="d-none d-md-block image" id="imageLeft" src="./assets/img/me.png" alt="Vars&Numbers">
       </div>
 
-      <div class="col-md-5 mx-auto" id="lightBox">
-        <p id="software" class="animate-software">Software</p>
-        <!-- <img src="" alt=""> -->
+      <div class="col-md-5 mx-auto d-none d-md-block" id="lightBox">
+        <!-- <p id="software" class="d-none d-md-block animate-software">Software</p> -->
+        <img class="d-none d-md-block image" id="imageRight" src="./assets/img/me.png" alt="Vars&Numbers">
       </div>
     </div>
 
-    <div class="container-fluid" id="containerLowerLine">
+    <div class="container-fluid d-none d-md-block" id="containerLowerLine">
       {% include icons/Line_lower.html %}
     </div>
   </div>
 
 
-  <div class="container-fluid foreground" id="contentBox">
+  <div class="container-fluid foreground" id="contentContainer">
     <div class="row">
-      <div class="col-md-5 mr-auto" id="intro">
-        <p class="lead">Hi there!</p>
+
+      <div class="col-md-6 mx-auto" id="contentBox">
+        <p class="display-4 align-middle">Hi there!</p>
 
         <p class="text-justify"> I am a self-employed software developer with a master's degree in
           mathematics. Sounds like two different things? Quite so. Which is the one
           that I can help you with?
         </p>
       </div>
+
+      <div class="col-md-5"></div>
+
     </div>
   </div>
 
