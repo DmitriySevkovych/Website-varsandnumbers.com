@@ -1,3 +1,5 @@
 #ignore folders
 _site/
+_site/*
 node_modules/
+
