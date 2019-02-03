@@ -2,22 +2,21 @@ header a
     text-transform: uppercase
     color: $col_font
     // font-weight: 500
+    +transition()
     &:hover
       color: $col_link
 
 .logo-small
   width: 75px
   height: 75px
-  border: 2px solid $col_font
-  padding: 5px 0 0 5px
-  margin-right: 0
-  font-weight: 500
-  line-height: 1
   cursor: pointer
-  +transition(all,300ms,ease-in-out)
+  +transition()
+  path
+    +transition(fill)
+
   &:hover
-    color: $col_link
-    border-color: $col_link
+    path
+      fill: $col_link
 
 #talk
   color: $col_link
