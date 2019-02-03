@@ -9654,6 +9654,13 @@ hr {
 }
 
 /* My reusable modules */
+header .navbar-nav {
+  height: 75px;
+}
+header .navbar-nav a {
+  position: relative;
+  top: 5px;
+}
 header a {
   text-transform: uppercase;
   color: #222;
@@ -9686,6 +9693,9 @@ header a:hover {
 }
 
 #talk {
+  position: fixed;
+  top: 13px;
+  right: 25px;
   color: #FF851B;
   text-align: center;
   padding: 10px 20px;
