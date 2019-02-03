@@ -1,0 +1,68 @@
+/* First, hide the "Let's Talk"-button */
+#talk
+  display: none
+
+#contactForm
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 60%
+
+  form
+    padding-top: 150px
+    label
+      display: inline-block
+      width: 100%
+
+    #customerContact label
+      width: 48%
+
+      &:last-child
+        float: right
+
+    span
+      display: block
+
+    textarea
+      height: 10em
+
+    input, textarea
+      border: 2px solid $col_accent_dark
+      border-radius: 0
+      width: 100%
+      padding: 10px
+      margin-bottom: 1em
+
+      &:focus
+        outline: none
+        background-color: $col_accent_light
+
+    [type="submit"]
+      width: 30%
+
+      margin: 1.5em 35%
+      text-transform: uppercase
+      font-weight: 500
+      background-color: $col_accent_light
+      +transition()
+
+      &:hover
+        background-color: $col_link
+        color: $col_bg
+
+#contactInfo
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 40%
+  background-color: $col_accent_light
+
+  #mailBig
+    color: $col_bg
+    font-size: $desktop_biggest
+    font-weight: 500
+    letter-spacing: $desktop_big
+    margin: 50px auto
+    text-align: center
