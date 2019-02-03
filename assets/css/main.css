@@ -9710,14 +9710,15 @@ header a:hover {
 footer {
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #langContainer {
   height: 100%;
   margin: 0;
 }
-
-.lang {
+#langContainer .lang {
   display: inline-block;
   position: relative;
   top: 50%;
@@ -9728,8 +9729,15 @@ footer {
   height: 50px;
   background-color: #ddd;
   border-radius: 50%;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
-.lang a {
+#langContainer .lang:hover {
+  background-color: #FF851B;
+}
+#langContainer .lang a {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9740,11 +9748,11 @@ footer {
   text-decoration: none;
   color: white;
 }
-.lang a:hover {
-  color: #FF851B;
-}
 
-.logo-small {
+#logoContainer {
+  float: right !important;
+}
+#logoContainer .logo-small {
   width: 75px;
   height: 75px;
   border: 2px solid #222;
@@ -9753,40 +9761,13 @@ footer {
   font-weight: 500;
   line-height: 1;
 }
-
-.footer-text {
+#logoContainer .footer-text {
   font-size: 12px;
   opacity: 0.7;
 }
 
 /* * Media queries
  * */
-@media (min-width: 992px) {
-  footer {
-    left: 0;
-    right: 0;
-  }
-  footer #logoContainer {
-    float: right !important;
-  }
-}
-@media (max-width: 991.98px) {
-  .lang {
-    top: -50%;
-    -webkit-transform: translate(0, 50%);
-    -ms-transform: translate(0, 50%);
-    transform: translate(0, 50%);
-  }
-
-  #logoContainer {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-}
 /* The page-specific sass module */
 /* * Local mixins
  * */
@@ -9955,7 +9936,7 @@ footer {
   }
 
   #darkBox {
-    height: 120vh;
+    height: 130vh;
   }
 
   #titleContainer {
@@ -9963,7 +9944,11 @@ footer {
   }
 
   #contentContainer {
+    margin-top: 200px;
+    min-width: 360px;
     padding: 0 10px;
+    mix-blend-mode: difference;
+    color: #222;
   }
   #contentContainer p {
     width: 100%;

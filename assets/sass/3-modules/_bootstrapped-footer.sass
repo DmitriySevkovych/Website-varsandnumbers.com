@@ -1,72 +1,74 @@
 footer
   position: fixed
   bottom: 0
+  left: 0
+  right: 0
 
 #langContainer
   height: 100%
   margin: 0
 
-.lang
-  display: inline-block
-  position: relative
-  top: 50%
-  +transform(translate(0,-50%))
-  width: 50px
-  height: 50px
-  background-color: $col_accent_light
-  border-radius: 50%
-
-  a
-    position: absolute
+  .lang
+    display: inline-block
+    position: relative
     top: 50%
-    left: 50%
-    +transform(translate(-50%,-50%))
-    font-weight: 500
-    text-decoration: none
-    color: white
+    +transform(translate(0,-50%))
+    width: 50px
+    height: 50px
+    background-color: $col_accent_light
+    border-radius: 50%
+    +transition()
     &:hover
-      color: $col_link
+      background-color: $col_link
 
+    a
+      position: absolute
+      top: 50%
+      left: 50%
+      +transform(translate(-50%,-50%))
+      font-weight: 500
+      text-decoration: none
+      color: white
 
-.logo-small
-  width: 75px
-  height: 75px
-  border: 2px solid $col_font
-  padding: 5px 0 0 5px
-  margin-right: 0
-  font-weight: 500
-  line-height: 1
+#logoContainer
+  @include float-right
 
-.footer-text
-  font-size: 12px
-  opacity: 0.7
+  .logo-small
+    width: 75px
+    height: 75px
+    border: 2px solid $col_font
+    padding: 5px 0 0 5px
+    margin-right: 0
+    font-weight: 500
+    line-height: 1
+
+  .footer-text
+    font-size: 12px
+    opacity: 0.7
 
 
 /*
  * Media queries
  */
-@include media-breakpoint-up(lg)
-  footer
-    left: 0
-    right: 0
+// @include media-breakpoint-up(lg)
+//   footer
+//     left: 0
+//     right: 0
+//
+//     #logoContainer
+//       @include float-right
 
-    #logoContainer
-      @include float-right
-
-@include media-breakpoint-down(md)
-
-  .lang
-    // margin-bottom: 15px
-    top: -50%
-    +transform(translate(0,50%))
-
-  // #logoContainer div
-  //   position: relative
-  //   left: 50%
-  //   bottom: 10px
-  //   +transform(translate(-50%,0))
-  #logoContainer
-    position: absolute
-    left: 50%
-    bottom: 10px
-    +transform(translate(-50%,0))
+// @include media-breakpoint-down(md)
+//   .lang
+//     top: -50%
+//     +transform(translate(0,50%) scale(0.8))
+//
+//   #logoContainer
+//     position: absolute
+//     left: 50%
+//     bottom: 10px
+//     +transform(translate(-50%,0))
+//
+// @include media-breakpoint-down(xs)
+//   #logoContainer
+//     @include float-right
