@@ -2,6 +2,13 @@
 #talk
   display: none
 
+/* Customize the footer */
+.lang
+  background-color: $col_accent_dark
+
+/*
+ * General page style
+ */
 #contactForm
   position: absolute
   top: 0
@@ -12,12 +19,10 @@
   form
     padding-top: 150px
     label
-      // display: inline-block
       width: 100%
 
     #customerContact label
       width: 48%
-
       &:last-child
         float: right
 
@@ -33,20 +38,17 @@
       width: 100%
       padding: 10px
       margin-bottom: 1em
-
       &:focus
         outline: none
         background-color: $col_accent_light
 
     [type="submit"]
       width: 30%
-
       margin: 1.5em 35%
       text-transform: uppercase
       font-weight: 500
       background-color: $col_accent_light
       +transition()
-
       &:hover
         background-color: $col_link
         color: $col_bg
@@ -56,16 +58,32 @@
   bottom: 0
   left: 0
   right: 0
-  height: 40%
-  background-color: $col_accent_light
+  height: 30%
+  background-color: $col_accent_dark
 
-  #mailBig
+  #mBig
     color: $col_bg
     // font-size: $desktop_biggest
-    font-weight: 500
-    // letter-spacing: 1rem
-    margin: 75px auto
+    // font-weight: 600
+    // margin: 75px auto
+    margin-top: 75px
     text-align: center
+
+    span
+      color: $col_link
+
+  #socialMediaLinks
+    a
+      display: inline-block
+      width: 50px
+      height: 50px
+
+    #twitterLogo path
+      fill: $aqua
+
+    #githubLogo path
+      fill: black
+
 
 
 /*
@@ -76,18 +94,25 @@
     label
       display: inline-block
 
-  #mailBig
-    // font-size: $desktop_biggest
+  #mBig
+    font-size: $desktop_big
+    letter-spacing: $desktop_normal
+    font-weight: 500
+
+@include media-breakpoint-up(xl)
+  #mBig
     font-size: 62px
-    letter-spacing: $desktop_big
+    font-weight: 600
+
 
 @include media-breakpoint-down(sm)
   form
     label
       display: block
+      +clearfix()
 
   #contactInfo
-    #mailBig
+    #mBig
       font-size: $mobile_biggest
 
 // @include media-breakpoint-down(sm)

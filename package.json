@@ -13,5 +13,8 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
     "typey": "^1.1.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.1"
   }
 }

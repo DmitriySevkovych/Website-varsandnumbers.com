@@ -9775,34 +9775,52 @@ footer {
 /* * Media queries
  * */
 /* The page-specific sass module */
-body {
-  overflow: scroll;
-}
-
-.main {
-  padding-top: 110px;
-}
-
-/* * Media queries
+/* * Local mixins
  * */
-@media (min-width: 992px) {
-  p {
-    padding-right: 50px;
-  }
-}
-@media (max-width: 991.98px) {
-  .main {
-    padding-bottom: 50px;
-  }
-}
-@media (max-width: 767.98px) {
-  h3 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
-  }
+/* * General page style
+ * */
+#thanksHeader h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/*# sourceMappingURL=legal.css.map */
+#titleBox {
+  width: 440px;
+  height: 440px;
+}
+#titleBox #title {
+  font-size: 48px;
+}
+#titleBox #subtitle {
+  font-size: 26px;
+}
+
+#titleBox {
+  border: 5px solid #222;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+#titleBox:hover {
+  background-color: #222;
+}
+#titleBox:hover #title, #titleBox:hover #subtitle {
+  color: #ddd;
+  border-color: #ddd;
+  width: 100%;
+}
+#titleBox #title {
+  padding-top: 10px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+#titleBox #subtitle {
+  position: absolute;
+  bottom: 0;
+  padding: 0 10px 10px 10px;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=thanks.css.map */

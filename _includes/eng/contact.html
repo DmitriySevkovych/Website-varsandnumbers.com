@@ -5,20 +5,22 @@
     <div class="col-2"></div>
 
     <div class="col-8">
-      <form class="" action="#" method="post">
+      <form id="formaction" method="post">
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_next" value="thanks.html" />
 
         <div id="customerContact">
           <label><span>Your name</span>
-          <input type="text" name="name" placeholder="Enter your name here"></label>
+            <input type="text" name="name" placeholder="Enter your name here"></label>
 
           <label><span>How to contact you</span>
-          <input type="text" name="email" placeholder="Enter your e-mail here"></label>
+            <input type="text" name="email" placeholder="Enter your e-mail here"></label>
         </div>
 
         <label><span>What do you want to talk about</span>
-        <textarea name="message" cols="1"></textarea></label>
+          <textarea name="message" cols="1"></textarea></label>
 
-        <input type="submit" name="submit" value="Let's go!">
+        <input type="submit" value="Let's go!">
       </form>
     </div>
 
@@ -27,12 +29,14 @@
 
   <!-- the lower part of the page, containing some links -->
   <div class="row" id="contactInfo">
-    <div class="col-12" id="mailBig"> {{ site.data.vars.email }} </div>
+    <div class="col-12" id="mBig"></div>
 
-    <div class="col-2"></div>
     <div class="col-4"></div>
+    <div class="col-4" id="socialMediaLinks">
+      <a href="https://twitter.com/VarsAndNumbers">{% include icons/Fontawesome_twitter.html %}</a>
+      <a href="https://github.com/DmitriySevkovych">{% include icons/Fontawesome_github.html %}</a>
+    </div>
     <div class="col-4"></div>
-    <div class="col-2"></div>
   </div>
 
 </div>

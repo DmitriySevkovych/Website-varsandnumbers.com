@@ -9743,7 +9743,6 @@ footer {
   width: 50px;
   height: 50px;
   background-color: #ddd;
-  border-radius: 50%;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
