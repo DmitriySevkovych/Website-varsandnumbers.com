@@ -9813,7 +9813,7 @@ footer {
   height: 60%;
 }
 #contactForm form {
-  padding-top: 250px;
+  padding-top: 275px;
 }
 #contactForm form label {
   width: 100%;
@@ -9831,7 +9831,7 @@ footer {
   height: 10em;
 }
 #contactForm form input, #contactForm form textarea {
-  border: 2px solid #555;
+  border: 3px solid #555;
   border-radius: 0;
   width: 100%;
   padding: 10px;
@@ -9843,7 +9843,7 @@ footer {
 }
 #contactForm form [type=submit] {
   width: 30%;
-  margin: 1.5em 35%;
+  margin: 1em 35%;
   text-transform: uppercase;
   font-weight: 500;
   background-color: #ddd;
