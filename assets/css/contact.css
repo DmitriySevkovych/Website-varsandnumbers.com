@@ -9787,6 +9787,24 @@ footer {
 
 /* * General page style
  * */
+#contactText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 150px;
+  z-index: 1010;
+}
+#contactText a {
+  display: inline;
+}
+#contactText a #twitterLogo path {
+  fill: #7FDBFF;
+}
+#contactText a #githubLogo path {
+  fill: black;
+}
+
 #contactForm {
   position: absolute;
   top: 0;
@@ -9795,7 +9813,7 @@ footer {
   height: 60%;
 }
 #contactForm form {
-  padding-top: 150px;
+  padding-top: 250px;
 }
 #contactForm form label {
   width: 100%;
@@ -9844,16 +9862,18 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30%;
+  height: 25%;
   background-color: #555;
 }
 #contactInfo #mBig {
   color: #fff;
+  font-weight: 300;
   margin-top: 75px;
   text-align: center;
+  color: #aaaaaa;
 }
 #contactInfo #mBig span {
-  color: #FF851B;
+  color: #fff;
 }
 #contactInfo #socialMediaLinks a {
   display: inline-block;
