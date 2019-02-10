@@ -118,19 +118,11 @@
 
   #mBig
     font-size: $desktop_big
-    letter-spacing: $desktop_normal
 
 
 @include media-breakpoint-up(lg)
   #mBig
     font-size: $desktop_biggest
-
-@include media-breakpoint-down(md)
-  #langContainer, #logoContainer
-    +transform(scale(0.8))
-
-  #langContainer
-    float: left
 
 @include media-breakpoint-down(sm)
   #contactText
@@ -149,7 +141,7 @@
   #contactInfo
     #mBig
       font-size: $mobile_biggest
-      letter-spacing: 2px
+      top: 2rem
 
 
 @include media-breakpoint-down(xs)
@@ -164,23 +156,29 @@
   #contactInfo
     #mBig
       font-size: $mobile_biggest
-      letter-spacing: 1px
 
-@media (max-height: 799px), (max-width: 500px)
-  .contact-upper-container
+@media (max-height: 799px), (max-width: 575px)
+  body
     overflow-y: scroll
-    height: 650px
 
+  .contact-upper-container
     #contactText
       padding-top: 100px
+      background-color: $col_bg
+
 
     #contactForm
-      height: 100%
+      overflow-y: scroll
+      height: 640px
       form
         padding-top: 225px
 
   #contactInfo
     height: 150px
+    bottom: -75px
 
-    #mBig
-      top: 2rem
+
+
+  footer
+    position: absolute
+    bottom: -65px

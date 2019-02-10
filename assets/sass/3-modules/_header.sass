@@ -52,6 +52,9 @@ header
 /*
  * Media queries
  */
-// @include media-breakpoint-down(md)
-  nav
-    background-color: $white !important
+@include media-breakpoint-down(md)
+  header
+    .navbar-nav, .navbar-collapse
+      height: 100vh
+      background-color: $col_bg
+      opacity: 0.9

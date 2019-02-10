@@ -9723,6 +9723,13 @@ header a:hover {
 
 /* * Media queries
  * */
+@media (max-width: 991.98px) {
+  header .navbar-nav, header .navbar-collapse {
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0.9;
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -9775,6 +9782,17 @@ footer {
 
 /* * Media queries
  * */
+@media (max-width: 992px) {
+  #langContainer, #logoContainer {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  #langContainer {
+    float: left;
+  }
+}
 /* The page-specific sass module */
 /* First, hide the "Let's Talk"-button */
 #talk {
@@ -9905,23 +9923,11 @@ footer {
 
   #mBig {
     font-size: 26px;
-    letter-spacing: 18px;
   }
 }
 @media (min-width: 992px) {
   #mBig {
     font-size: 48px;
-  }
-}
-@media (max-width: 991.98px) {
-  #langContainer, #logoContainer {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-
-  #langContainer {
-    float: left;
   }
 }
 @media (max-width: 767.98px) {
@@ -9942,7 +9948,7 @@ footer {
 
   #contactInfo #mBig {
     font-size: 22px;
-    letter-spacing: 2px;
+    top: 2rem;
   }
 }
 @media (max-width: 575.98px) {
@@ -9956,19 +9962,20 @@ footer {
 
   #contactInfo #mBig {
     font-size: 22px;
-    letter-spacing: 1px;
   }
 }
-@media (max-height: 799px), (max-width: 500px) {
-  .contact-upper-container {
+@media (max-height: 799px), (max-width: 575px) {
+  body {
     overflow-y: scroll;
-    height: 650px;
   }
+
   .contact-upper-container #contactText {
     padding-top: 100px;
+    background-color: #fff;
   }
   .contact-upper-container #contactForm {
-    height: 100%;
+    overflow-y: scroll;
+    height: 640px;
   }
   .contact-upper-container #contactForm form {
     padding-top: 225px;
@@ -9976,9 +9983,12 @@ footer {
 
   #contactInfo {
     height: 150px;
+    bottom: -75px;
   }
-  #contactInfo #mBig {
-    top: 2rem;
+
+  footer {
+    position: absolute;
+    bottom: -65px;
   }
 }
 

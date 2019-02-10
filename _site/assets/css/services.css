@@ -9723,6 +9723,13 @@ header a:hover {
 
 /* * Media queries
  * */
+@media (max-width: 991.98px) {
+  header .navbar-nav, header .navbar-collapse {
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0.9;
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -9775,6 +9782,17 @@ footer {
 
 /* * Media queries
  * */
+@media (max-width: 992px) {
+  #langContainer, #logoContainer {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  #langContainer {
+    float: left;
+  }
+}
 /* The page-specific sass module */
 .main {
   display: inline-block;

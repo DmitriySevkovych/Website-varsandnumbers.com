@@ -42,25 +42,9 @@ footer
 /*
  * Media queries
  */
-// @include media-breakpoint-up(lg)
-//   footer
-//     left: 0
-//     right: 0
-//
-//     #logoContainer
-//       @include float-right
+@media (max-width: 992px)
+   #langContainer, #logoContainer
+     +transform(scale(0.8))
 
-// @include media-breakpoint-down(md)
-//   .lang
-//     top: -50%
-//     +transform(translate(0,50%) scale(0.8))
-//
-//   #logoContainer
-//     position: absolute
-//     left: 50%
-//     bottom: 10px
-//     +transform(translate(-50%,0))
-//
-// @include media-breakpoint-down(xs)
-//   #logoContainer
-//     @include float-right
+   #langContainer
+     float: left
