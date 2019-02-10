@@ -9591,7 +9591,8 @@ a {
   outline: 0;
 }
 a:hover, a:focus {
-  color: #ffa04e;
+  color: #e76b00;
+  text-decoration: none;
 }
 
 .gigantic, .huge, .large, .bigger, .big,

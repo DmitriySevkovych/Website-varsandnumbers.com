@@ -3,8 +3,17 @@
   display: none
 
 /* Customize the footer */
-.lang
-  background-color: $col_accent_dark
+#langContainer .lang
+  background-color: transparent
+  border: 1px solid $col_bg
+
+#logoContainer
+  .footer-text
+    color: $col_bg
+
+  #logoFooter
+    path
+      fill: $col_accent_light
 
 /*
  * General page style
@@ -16,6 +25,7 @@
   right: 0
   padding-top: 150px
   z-index: 1010
+  text-align: justify
 
   a
     display: inline
@@ -38,14 +48,6 @@
     label
       width: 100%
 
-    #customerContact label
-      width: 48%
-      &:last-child
-        float: right
-
-    span
-      display: block
-
     textarea
       height: 10em
 
@@ -61,7 +63,8 @@
 
     [type="submit"]
       width: 30%
-      margin: 1em 35%
+      min-width: 150px
+      float: right
       text-transform: uppercase
       font-weight: 500
       background-color: $col_accent_light
@@ -75,21 +78,19 @@
   bottom: 0
   left: 0
   right: 0
-  height: 25%
+  height: 20%
   background-color: $col_accent_dark
 
   #mBig
+    position: absolute
+    top: 50%
+    +transform(translate(0,-50%))
     color: $col_bg
-    // font-size: $desktop_biggest
     font-weight: 300
-    // margin: 75px auto
-    margin-top: 75px
     text-align: center
-    // color: $col_accent_light
     color: darken($col_accent_light,20%)
 
     span
-      // color: darken($col_accent_light,30%)
       color: $col_bg
 
   #socialMediaLinks
@@ -110,32 +111,76 @@
  * Media queries
  */
 @include media-breakpoint-up(md)
-  form
-    label
-      display: inline-block
+  form  #customerContact label
+    width: 48%
+    &:last-child
+      float: right
 
   #mBig
     font-size: $desktop_big
     letter-spacing: $desktop_normal
-    font-weight: 500
 
-@include media-breakpoint-up(xl)
+
+@include media-breakpoint-up(lg)
   #mBig
-    font-size: 62px
-    font-weight: 600
+    font-size: $desktop_biggest
 
+@include media-breakpoint-down(md)
+  #langContainer, #logoContainer
+    +transform(scale(0.8))
+
+  #langContainer
+    float: left
 
 @include media-breakpoint-down(sm)
+  #contactText
+    p
+      font-size: $mobile_big
+
   form
     label
       display: block
-      +clearfix()
+    input, textarea
+      font-size: $mobile_big
+
+  #customerContact label
+    width: 100%
 
   #contactInfo
     #mBig
       font-size: $mobile_biggest
+      letter-spacing: 2px
 
-// @include media-breakpoint-down(sm)
-//   #contactInfo
-//     #mailBig
-//       font-size: $mobile_big
+
+@include media-breakpoint-down(xs)
+  #contactText
+    p
+      font-size: $mobile_normal
+
+  form
+    input, textarea
+      font-size: $mobile_normal
+
+  #contactInfo
+    #mBig
+      font-size: $mobile_biggest
+      letter-spacing: 1px
+
+@media (max-height: 799px), (max-width: 500px)
+  .contact-upper-container
+    overflow-y: scroll
+    height: 650px
+
+    #contactText
+      padding-top: 100px
+
+    #contactForm
+      height: 100%
+      form
+        padding-top: 225px
+
+  #contactInfo
+    height: 150px
+
+    #mBig
+      top: 2rem

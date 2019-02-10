@@ -9591,7 +9591,8 @@ a {
   outline: 0;
 }
 a:hover, a:focus {
-  color: #ffa04e;
+  color: #e76b00;
+  text-decoration: none;
 }
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -9957,7 +9958,7 @@ footer {
   color: #FF851B;
 }
 .content .round-up div a:hover, .content .round-up p a:hover {
-  color: #ffa04e;
+  color: #e76b00;
   cursor: pointer;
 }
 .content .round-up .plain-terms {
