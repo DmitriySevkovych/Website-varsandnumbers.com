@@ -16,8 +16,19 @@ body
   .main
     padding-bottom: 50px
 
+  h3
+    margin-top: 30px
+
 @include media-breakpoint-down(sm)
   h3
-    font-size: 22px
+    font-size: $mobile_biggest
   p
-    font-size: 14px
+    font-size: $mobile_big
+
+@include media-breakpoint-down(xs)
+  h1
+    font-size: 32px
+  h3
+    font-size: $mobile_big
+  p
+    font-size: $mobile_normal

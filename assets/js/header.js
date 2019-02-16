@@ -9,6 +9,8 @@ $( function() {
   $navBlend = $('.nav-blend');
 
   $logo.on('click', function(){
-    $navBlend.fadeToggle(300);
+    if($md) {
+      $navBlend.fadeToggle(300);
+    }
   });
 });

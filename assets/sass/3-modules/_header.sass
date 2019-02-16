@@ -49,12 +49,30 @@ header
     fill: $col_link
 
 
+
+
+
 /*
  * Media queries
  */
 @include media-breakpoint-down(md)
-  header
-    .navbar-nav, .navbar-collapse
-      height: 100vh
-      background-color: $col_bg
-      opacity: 0.9
+  // Customize dropdown behaviour for the collapsed navbar
+  .nav-blend
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $col_bg
+    opacity: 0.9
+    z-index: 1029
+
+  .custom-collapse
+    display: none
+
+  // header
+  //   .navbar-nav, .navbar-collapse
+  //     +transition($duration:500ms)
+  //     height: 90vh
+  //     background-color: $col_bg
+  //     opacity: 0.95
