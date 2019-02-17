@@ -1,167 +1,90 @@
-.main
-  display: inline-block
-  height: 100vh
-  width: 100vw
-  z-index: 1
+/*
+ * General page style
+ */
+.main-container
+  position: relative
+  min-height: 100vh
+  padding-top: 100px
 
-.section-header
-  position: absolute
-  left: 5vw
-  top: 75px
-  width: 50vw
-  text-align: center
-  box-sizing: border-box
-  padding: 0 1vw
-  font-size: 36px
-  color: $col_font
-  z-index: 1
-
-.background
-  position: absolute
-  left: 5vw
-  top: 0
-  z-index: -1
-  width: 50vw
-  height: 100vh
-  background-color: $col_accent_dark
-  opacity: 0.9
-
-.background-light
-  position: absolute
-  left: 0
-  top: 50vh
-  +transform(translate(0,-50%))
-  z-index: -2
-  height: 55vh
-  width: 100vw
-  background-color: darken($col_accent_light,20%)
-  opacity: 0.9
-
-.graphics, .graphics-2
-  position: absolute
-  left: 15vw
-  top: 50vh
-  +transform(translate(0,-50%))
-  height: 300px
-  width: 300px
-  border: solid 3px $col_accent_light
-  z-index: 2
-
-.graphics-2
-  transform-origin: center center
-  +transform(translate(0,-50%) rotate(45deg))
-  // border-color: $col_link
-
-.content
-  position: absolute
-  height: 100vh
-  width: 60vw
-  top: 0
-  left: 40vw
-
-  .scrollable
-    z-index: 4
-    overflow-y: scroll
-    overflow-x: hidden
+  /*
+   * Background styles
+   */
+  .background-light
     position: absolute
-    top: 0
-    left: -40vw
-    height: 200%
-    width: 100vw
-    padding-right: 25px
-    background-color: transparent
-    .scroll-prompt
-      +transition(all,500ms,ease-in-out)
-      position: relative
-      top: 25%
-      left: 0
-      +transform(translate(0,-50%))
-      width: 100%
-      font-size: 38px
-      color: $col_link
-      letter-spacing: 2px
-      p
-        text-align: center
-
-    .filler
-      height: 10000px
-
-  .get-attention
-    z-index: 2
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
     width: 100%
-    ul
-      list-style: none
-    li
-      width: 75%
-      text-align: justify
-      +transition(all,1500ms,ease-in-out)
-
-  .focused
-    opacity: 1
-    font-size: 28px
-    font-weight: 300
-    // color: $col_link
-    padding: 50px auto
-
-  .fading
-    opacity: 0.7
-    color: $col_bg
-    font-size: 22px
-    padding: 25px auto
-
-  .faded
-    opacity: 0.3
-    padding: 15px auto
-
-  .yet-to-show
-    opacity: 0
-
-  .blend
-    position: fixed
+    top: 50vh
     left: 0
+    +transform(translate(0,-50%))
+    background-color: $col_accent_light
+    z-index: -1
+
+  .background
+    position: absolute
     top: 0
-    width: 100vw
+    // left: 100px
     height: 100vh
-    background-color: darken($col_accent_dark,20%)
-    opacity: 0.95
-    z-index: 3
+    background-color: $col_accent_dark
+    z-index: -1
+    // +transform(rotate(10deg))
 
-  .round-up
-    // +transition(all,1000ms,ease-in-out)
-    display: none
-    position: fixed
-    width: 50vw
-    left: 50%
-    bottom: 30px
-    +transform(translate(-50%,0) rotate(15deg))
-    // transform-origin: center center
-    background-color: darken($col_accent_dark,15%)
-    border: 2px solid $col_accent_light
-    padding: 15vmin 10vmin
-    z-index: 4
-    div, p
-      +transform(rotate(-15deg))
-      font-size: 24px
-      font-weight: 300
-      color: $col_bg
-      padding: 20px auto
-
-      text-align: justify
-      a
-        color: $col_link
-        &:hover
-          color: $col_highlight
-          cursor: pointer
-
-    .plain-terms
-      +transform(translate(-50%,0) rotate(-15deg))
-      position: relative
+  /*
+   * Foreground (content) styles
+   */
+  .services-icons-container
+    background-color: pink
+    height: 50vh
+    min-height: 200px
+    max-height: 400px
+    .services-icons
+      position: absolute
+      top: 50%
       left: 50%
-      width: 50%
-      p
-        color: $col_link
-        padding: 10px auto
+      +transform(translate(-50%,-50%))
+      height: 10px
+      width: 10px
+      background-color: red
+
+  .services-scrollable
+    div
+      margin: 10px
+    // background-color: pink
+
+  .slick-current
+    // +transition()
+    text-align: justify
+    color: $col_link
+    font-size: $desktop_big
+    // margin: 20px auto
+    font-weight: 600
+
+
+/*
+ * Media queries
+ */
+@include media-breakpoint-down(md)
+  .background
+    left: 50%
+    +transform(translate(-50%,0))
+    opacity: 0.5
+
+  .background-light
+    height: 75vh
+
+  .services-header
+    font-size: $mobile-biggest
+
+@include media-breakpoint-down(sm)
+  .services-header
+    font-size: $mobile-biggest
+
+@include media-breakpoint-up(lg)
+  .background
+    left: 100px
+
+  .background-light
+    height: 50vh
+
+  .services-header
+    padding-left: 100px
+    color: $col_bg
+    font-weight: 700

@@ -9734,13 +9734,9 @@ header a:hover {
     opacity: 0.9;
     z-index: 1029;
   }
-
-  .custom-collapse {
-    display: none;
-  }
 }
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;

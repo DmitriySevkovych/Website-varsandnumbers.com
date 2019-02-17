@@ -9734,13 +9734,9 @@ header a:hover {
     opacity: 0.9;
     z-index: 1029;
   }
-
-  .custom-collapse {
-    display: none;
-  }
 }
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -9807,8 +9803,11 @@ body {
   overflow: scroll;
 }
 
-.main {
+.main-container {
+  position: relative;
   padding-top: 110px;
+  min-height: 100%;
+  padding-bottom: 50px;
 }
 
 /* * Media queries

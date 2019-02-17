@@ -20,27 +20,17 @@ ref: services
 <body>
   {% include eng/header.html %}
 
-  <div class="main">
-    <h3 class="section-header">
-      <!-- Everybody knows what vars and numbers are good for... <br> Or do they? -->
-      Vars&Numbers can serve a lot of purposes. But which ones exactly?!
-    </h3>
-
-    <div class="background"></div>
-    <div class="background-light"></div>
-    <div class="graphics"> </div>
-    <div class="graphics-2"> </div>
-
-    <div class="content">
-      {% include eng/services.html %}
-    </div>
+  <div class="main-container">
+    {% include eng/services_background.html %}
+    {% include eng/services_content.html %}
+    {% include eng/footer.html %}
   </div>
 
-  {% include eng/footer.html %}
-
   <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
+  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <!-- <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script> -->
   <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/slick.min.js"></script>
   <script type="text/javascript" src="/assets/js/services.js"> </script>
 </body>
 
