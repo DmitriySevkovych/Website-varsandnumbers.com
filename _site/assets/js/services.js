@@ -68,17 +68,25 @@ $(function() {
     var $serviceIndex = $('.slick-current').data('slick-index');
     var $icon = $('.services-icons');
 
-    //Update the icon
-    if ($serviceIndex > 0 && $serviceIndex < 8) {
-      $icon.innerHTML = $serviceIndex;
-    }
-
     //Move to the next slick element
     var delta = event.originalEvent.deltaY;
     if (delta < 0) {
       $services.slick("slickPrev");
     } else {
       $services.slick("slickNext");
+    }
+
+    //Update the icon
+    $icon.fadeToggle(500, function() {
+      updateIcon($icon, $serviceIndex, delta > 0);
+    });
+  }
+
+  function updateIcon(control, index, next) {
+    if (index >= 0 && index < 7) {
+      var newIndex = next ? index + 1 : index - 1;
+      control.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
+      control.fadeToggle(500);
     }
   }
 });

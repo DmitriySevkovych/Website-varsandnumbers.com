@@ -9922,7 +9922,13 @@ footer {
   z-index: -1;
 }
 .main-container .services-icons-container {
-  background-color: pink;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(-25%, -50%);
+  -ms-transform: translate(-25%, -50%);
+  transform: translate(-25%, -50%);
   height: 50vh;
   min-height: 200px;
   max-height: 400px;
@@ -9934,9 +9940,8 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 10px;
-  width: 10px;
-  background-color: red;
+  height: 100%;
+  width: 100%;
 }
 .main-container .services-scrollable div {
   margin: 10px;
