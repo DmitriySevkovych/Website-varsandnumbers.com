@@ -1,24 +1,20 @@
-/*
- * Local mixins
- */
+/* Local mixins */
 =titleSize($width, $title-size: $desktop_biggest, $subtitle-size: $desktop_big)
   #titleBox
     width: $width
     height: $width
+
     #title
       font-size: $title-size
+
     #subtitle
       font-size: $subtitle-size
 
-/*
- * General page style
- */
+/* General page style */
 .main-container
   padding-top: 110px
 
-/*
- * Background styles
- */
+/* Background styles */
 .background
   position: absolute
   z-index: -1
@@ -27,48 +23,32 @@
     overflow: hidden
     position: relative
     box-sizing: content-box
+
     +transform(rotate(15deg))
 
   #darkBox
-    // top: -300px
-    // height: 100vh
     top: -15vmax
     height: 100vh
     background-color: $col_accent_dark
 
   #lightBox
     top: 50px
-    // left: -50px
     height: 80vh
     background-color: $col_accent_light
 
   #imageLeft
     position: absolute
-    bottom: -100px
+    bottom: -120px
     right: 0
-    +transform(rotate(-15deg) translate(55%,0))
+    +transform(rotate(-15deg) translate(55%, 0) )
 
   #imageRight
     position: absolute
     bottom: 0
     left: 0
-    +transform(rotate(-15deg) translate(-50%,0))
+    +transform(rotate(-15deg) translate(-50%, 0))
 
-  #containerLowerLine
-    position: absolute
-    bottom: 0
-    right: 0
-    left: 0
-
-  #svg-line-lower
-    width: 1300px
-    float: right
-    path
-      fill: $col_accent_dark
-
-/*
- * Foreground (content) styles
- */
+/* Foreground (content) styles */
 .foreground
   position: absolute
   top: 0
@@ -82,9 +62,12 @@
 
   #titleBox
     border: 5px solid $col_font
-    +transition(all,300ms,ease-in-out)
+
+    +transition(all, 300ms, ease-in-out)
+
     &:hover
       background-color: $col_font
+
       #title, #subtitle
         color: $col_accent_light
         border-color: $col_accent_light
@@ -102,6 +85,10 @@
       font-weight: 300
 
 #contentContainer
+  position: absolute
+  top: 0
+  left: 0
+  margin: 0
   height: 100%
 
   #contentBox
@@ -109,49 +96,71 @@
     top: 50%
     left: 0
     padding: 50px
-    +transform(translate(0,-50%))
+    +transform(translate(0, -50%))
 
+
+
+/* Media queries */
++media-breakpoint-up(md)
+  #contentBox
     p
+      width: 80%
       color: $col_bg
       font-weight: 500
 
 
-
-/*
- * Media queries
- */
-@include media-breakpoint-up(xl)
-  +titleSize(440px)
-
-@include media-breakpoint-up(lg)
++media-breakpoint-up(lg)
   #lightBox
     left: -20px
 
-  #contentBox p
-    width: 80%
+
++media-breakpoint-up(xl)
+  +titleSize(350px, $desktop_biggest, $desktop_big)
 
 
-@include media-breakpoint-down(lg)
-  +titleSize(375px,$tablet_biggest,$tablet_big)
+@media screen and (min-width:1800px)
+  +titleSize(440px, $fourK_biggest, $fourK_big)
+  #lightBox
+    left: -50px
 
-@include media-breakpoint-down(sm)
-  +titleSize(250px,$mobile_biggest,$mobile_big)
+
++media-breakpoint-down(lg)
+  +titleSize(350px, $tablet_biggest, $tablet_big)
+
+
++media-breakpoint-down(sm)
+  +titleSize(250px, $mobile_biggest, $mobile_normal)
+
   body
     overflow-y: scroll
-
-  #darkBox
-    height: 130vh
+    background-color: $col_bg
 
   #titleContainer
     padding: 0
+    position: absolute
+    top: 25%
 
   #contentContainer
-    margin-top: 200px
     min-width: 360px
     padding: 0 10px
-    mix-blend-mode: difference
-    color: $col_font
+    #contentBox
+      top: 50%
 
     p
-      width: 100%
       color: $col_font
+      width: 100%
+      font-weight: 400
+
+  /* Customize the footer */
+  footer
+    background-color: $col_accent_dark
+
+  #langContainer .lang
+    font-weight: 500
+    background-color: transparent
+    border: 1px solid $col_bg
+
+  #logoContainer
+    .footer-text
+      color: $col_bg
+  /* Customize the footer, end */

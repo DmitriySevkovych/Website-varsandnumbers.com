@@ -9639,6 +9639,8 @@ h3 {
   src: local("Libre Franklin Bold"), local("LibreFranklin-Bold"), url(https://fonts.gstatic.com/s/librefranklin/v2/jizAREVItHgc8qDIbSTKq4XkRi2k_iI0q1s.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+/* * 4k font sizes for this project
+ * */
 /* * Desktop font sizes for this project
  * */
 /* * Tablet font sizes for this project
@@ -9701,7 +9703,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .huge, h1 {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1.05;
   letter-spacing: 1rem;
   font-weight: 700;
@@ -9713,7 +9715,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bigger, h3 {
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.38;
 }
 
@@ -9723,7 +9725,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .small, small {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
@@ -9748,6 +9750,9 @@ hr {
 }
 
 /* My reusable modules */
+header .navbar-toggler:focus, header .nav-item:focus {
+  outline: none;
+}
 header .navbar-nav {
   height: 75px;
 }
@@ -9949,7 +9954,7 @@ footer {
 .main-container .slick-current {
   text-align: justify;
   color: #FF851B;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -9966,6 +9971,12 @@ footer {
 
   .background-light {
     height: 75vh;
+  }
+
+  .services-icons-container {
+    -webkit-transform: translate(25%, 0);
+    -ms-transform: translate(25%, 0);
+    transform: translate(25%, 0);
   }
 
   .services-header {

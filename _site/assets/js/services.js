@@ -77,16 +77,17 @@ $(function() {
     }
 
     //Update the icon
-    $icon.fadeToggle(500, function() {
-      updateIcon($icon, $serviceIndex, delta > 0);
-    });
+    if ($serviceIndex >= 0 && $serviceIndex < 7) {
+      $icon.fadeToggle(500, function() {
+        updateIcon($icon, $serviceIndex, delta > 0);
+      });
+    }
   }
 
   function updateIcon(control, index, next) {
-    if (index >= 0 && index < 7) {
-      var newIndex = next ? index + 1 : index - 1;
-      control.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
-      control.fadeToggle(500);
-    }
+    var newIndex = next ? index + 1 : index - 1;
+    control.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
+    control.fadeToggle(500);
+
   }
 });

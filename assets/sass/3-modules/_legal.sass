@@ -13,12 +13,13 @@ body
  */
 @include media-breakpoint-up(lg)
   p
-    padding-right: 50px
+    padding-right: 20px
+  p, h3
+    padding-left: 10px
 
 @include media-breakpoint-down(md)
   .main
     padding-bottom: 50px
-
   h3
     margin-top: 30px
 
@@ -30,7 +31,7 @@ body
 
 @include media-breakpoint-down(xs)
   h1
-    font-size: 32px
+    font-size: $mobile_biggest
   h3
     font-size: $mobile_big
   p
