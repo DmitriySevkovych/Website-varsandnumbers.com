@@ -115,7 +115,6 @@
     width: 48%
     &:last-child
       float: right
-
   #mBig
     font-size: $desktop_big
 
@@ -124,20 +123,18 @@
   #mBig
     font-size: $desktop_biggest
 
+
 @include media-breakpoint-down(sm)
   #contactText
     p
       font-size: $mobile_big
-
   form
     label
       display: block
     input, textarea
       font-size: $mobile_big
-
   #customerContact label
     width: 100%
-
   #contactInfo
     #mBig
       font-size: $mobile_biggest
@@ -148,35 +145,28 @@
   #contactText
     p
       font-size: $mobile_normal
-
   form
     input, textarea
       font-size: $mobile_normal
-
   #contactInfo
     #mBig
-      font-size: $mobile_biggest
+      font-size: $mobile_big
 
 @media (max-height: 799px), (max-width: 575px)
   body
     overflow-y: scroll
-
   .contact-upper-container
     #contactText
       padding-top: 100px
       background-color: $col_bg
-
-
     #contactForm
       overflow-y: scroll
       height: 640px
       form
         padding-top: 225px
-
   #contactInfo
     height: 150px
     bottom: -75px
-
   footer
     position: absolute
     bottom: -65px

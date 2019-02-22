@@ -9942,14 +9942,14 @@ footer {
 }
 @media (max-width: 767.98px) {
   #contactText p {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   form label {
     display: block;
   }
   form input, form textarea {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   #customerContact label {
@@ -9957,17 +9957,17 @@ footer {
   }
 
   #contactInfo #mBig {
-    font-size: 22px;
+    font-size: 32px;
     top: 2rem;
   }
 }
 @media (max-width: 575.98px) {
   #contactText p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   form input, form textarea {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #contactInfo #mBig {

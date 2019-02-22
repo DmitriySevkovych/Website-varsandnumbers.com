@@ -9909,6 +9909,9 @@ footer {
 
 /* Media queries */
 @media (min-width: 768px) {
+  #contentBox #contentLead {
+    font-size: 36px;
+  }
   #contentBox p {
     width: 80%;
     color: #fff;
@@ -9969,7 +9972,7 @@ footer {
     font-size: 22px;
   }
   #titleBox #subtitle {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   body {
@@ -9985,15 +9988,21 @@ footer {
 
   #contentContainer {
     min-width: 360px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
-  #contentContainer #contentBox {
+
+  #contentBox {
     top: 50%;
   }
-  #contentContainer p {
+  #contentBox #contentLead {
+    font-size: 32px;
+    text-align: center;
+  }
+  #contentBox p {
+    font-size: 16px;
     color: #222;
     width: 100%;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   /* Customize the footer */

@@ -9980,12 +9980,12 @@ footer {
   }
 
   .services-header {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
 @media (max-width: 767.98px) {
   .services-header {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
 @media (min-width: 992px) {

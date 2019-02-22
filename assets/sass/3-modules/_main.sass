@@ -103,6 +103,8 @@
 /* Media queries */
 +media-breakpoint-up(md)
   #contentBox
+    #contentLead
+      font-size: $desktop_biggest
     p
       width: 80%
       color: $col_bg
@@ -129,7 +131,7 @@
 
 
 +media-breakpoint-down(sm)
-  +titleSize(250px, $mobile_biggest, $mobile_normal)
+  +titleSize(250px, $mobile_big, $mobile_normal)
 
   body
     overflow-y: scroll
@@ -142,14 +144,18 @@
 
   #contentContainer
     min-width: 360px
-    padding: 0 10px
-    #contentBox
-      top: 50%
+    padding: 0 5px
+  #contentBox
+    top: 50%
 
+    #contentLead
+      font-size: $mobile_biggest
+      text-align: center
     p
+      font-size: $mobile_normal
       color: $col_font
       width: 100%
-      font-weight: 400
+      font-weight: 500
 
   /* Customize the footer */
   footer
