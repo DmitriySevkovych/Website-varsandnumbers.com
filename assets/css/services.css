@@ -9750,6 +9750,14 @@ hr {
 }
 
 /* My reusable modules */
+header {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+header .navbar-toggler {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+}
 header .navbar-toggler:focus, header .nav-item:focus {
   outline: none;
 }

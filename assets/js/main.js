@@ -26,7 +26,7 @@ function initLogoClickHandler() {
 
   $logo.on('click', function() {
     $logo.fadeOut(300, function() {
-      $content.removeClass('d-none').fadeIn(300);
+      $content.fadeIn(500).removeClass('d-none');
     });
   });
 }

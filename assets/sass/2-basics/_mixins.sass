@@ -8,3 +8,12 @@
   -moz-transition: $property $duration $ease
   -o-transition: $property $duration $ease
   transition: $property $duration $ease
+
+=animation($name, $duration: 300ms, $delay: 1000ms, $ic:infinite, $dir:normal,$tf:ease,$fm:none)
+  animation-name: $name
+  animation-duration: $duration
+  animation-delay: $delay
+  animation-iteration-count: $ic
+  animation-direction: $dir
+  animation-timing-function: $timing
+  animation-fill-mode: $fm
