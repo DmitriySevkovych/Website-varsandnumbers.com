@@ -11,14 +11,17 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
+    "jquery-touchswipe": "^1.6.19",
     "popper.js": "^1.14.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.7.1",
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.1"
   }
 }
