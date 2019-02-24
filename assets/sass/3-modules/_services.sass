@@ -88,7 +88,7 @@
     top: 30%
     left: 20%
     right: 20%
-  .services-header
+  .services-header, .services-round-up
     font-size: $tablet_big
   .services-scrollable
     position: fixed
@@ -98,20 +98,31 @@
     div
       font-size: $tablet_normal
 
+
 @include media-breakpoint-down(sm)
   .services-header
+    position: fixed
+    top: 100px
+    left: 10%
+    right: 10%
     font-size: $mobile_normal
     text-align: justify
   .services-icons-container
     top: 20%
-    left: 15%
-    right: 15%
+    left: 20%
+    right: 20%
   .services-scrollable
     bottom: 20%
     left: 10%
     right: 10%
     div
       font-size: $mobile_normal
+  .services-round-up
+    p, ul li
+      font-size: $mobile_normal
+    p:first-child
+      padding-top: 75px
+
 
 @include media-breakpoint-up(lg)
   .background

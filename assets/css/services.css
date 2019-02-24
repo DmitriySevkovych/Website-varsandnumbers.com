@@ -9941,7 +9941,7 @@ footer {
   width: 100vw;
   height: 100vh;
   background-color: #222;
-  opacity: 0.7;
+  opacity: 0.85;
   z-index: 1000;
 }
 .main-container .services-icons-container {
@@ -10007,7 +10007,7 @@ footer {
     right: 20%;
   }
 
-  .services-header {
+  .services-header, .services-round-up {
     font-size: 22px;
   }
 
@@ -10023,14 +10023,18 @@ footer {
 }
 @media (max-width: 767.98px) {
   .services-header {
+    position: fixed;
+    top: 100px;
+    left: 10%;
+    right: 10%;
     font-size: 16px;
     text-align: justify;
   }
 
   .services-icons-container {
     top: 20%;
-    left: 15%;
-    right: 15%;
+    left: 20%;
+    right: 20%;
   }
 
   .services-scrollable {
@@ -10040,6 +10044,13 @@ footer {
   }
   .services-scrollable div {
     font-size: 16px;
+  }
+
+  .services-round-up p, .services-round-up ul li {
+    font-size: 16px;
+  }
+  .services-round-up p:first-child {
+    padding-top: 75px;
   }
 }
 @media (min-width: 992px) {

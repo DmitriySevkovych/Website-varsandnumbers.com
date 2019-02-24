@@ -27,9 +27,9 @@ $(function() {
   var $services = $(".services-scrollable");
 
   $services.on("init", function() {
-    mouseWheel($services);
+    initMouseWheelHandler($services);
     if (window.innerWidth < 992) {
-      swipeHandler();
+      initSwipeHandlers();
     }
 
   }).slick({
@@ -63,7 +63,7 @@ $(function() {
     ]
   });
 
-  function mouseWheel($services) {
+  function initMouseWheelHandler($services) {
     $(window).on("wheel", {
       $services: $services
     }, mouseWheelHandler);
@@ -90,23 +90,34 @@ $(function() {
     updateScreen($currentIndex, delta > 0);
   }
 
-  function swipeHandler() {
-    $(".services-scrollable").swipe({
-      //Single swipe handler for left swipes
+  function initSwipeHandlers() {
+
+    $('.services-scrollable').swipe({
       swipeLeft: function(event, direction, distance, duration, fingerCount) {
         $current = $('.slick-current');
         var $currentIndex = $current.data('slick-index');
-        updateScreen($currentIndex -1, true);
+        updateScreen($currentIndex - 1, true);
       },
-      //Single swipe handler for right swipes
       swipeRight: function(event, direction, distance, duration, fingerCount) {
         $current = $('.slick-current');
         var $currentIndex = $current.data('slick-index');
-        updateScreen($currentIndex+1, false);
+        updateScreen($currentIndex + 1, false);
       },
       //Set distance that triggers a swipe
       threshold: 25
     });
+
+    $('.services-round-up').swipe({
+      swipeLeft: function(event, direction, distance, duration, fingerCount) {
+        window.location.href = 'expertise.html';
+      },
+      swipeRight: function(event, direction, distance, duration, fingerCount) {
+        var $currentIndex = $('.slick-current').data('slick-index');
+        $('.services-scrollable').slick("slickPrev");
+        updateScreen($currentIndex, false);
+      }
+    });
+
   }
 
 
@@ -126,11 +137,12 @@ $(function() {
       });
       $servicesBlend.fadeOut(300);
       $servicesRoundUp.fadeOut(300);
-    } else if(newIndex === 8)
-    {
+    } else if (newIndex === 8) {
       $servicesBlend.fadeIn(300);
       $servicesRoundUp.fadeIn(300);
     }
   }
+
+
 
 });
