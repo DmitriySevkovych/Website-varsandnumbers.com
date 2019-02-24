@@ -23,8 +23,13 @@ $(function() {
  */
 $(function() {
   var $services = $(".services-scrollable");
+
   $services.on("init", function() {
     mouseWheel($services);
+    if (window.innerWidth < 992) {
+      swipeHandler(this);
+    }
+
   }).slick({
     dots: false,
     arrows: false,
@@ -40,7 +45,7 @@ $(function() {
     responsive: [{
         breakpoint: 992,
         settings: {
-          centerPadding: '40px',
+          centerPadding: '0px',
           slidesToShow: 1,
           vertical: false
         }
@@ -48,7 +53,7 @@ $(function() {
       {
         breakpoint: 576,
         settings: {
-          centerPadding: '40px',
+          centerPadding: '0px',
           slidesToShow: 1,
           vertical: false
         }
@@ -66,7 +71,6 @@ $(function() {
     event.preventDefault();
     var $services = event.data.$services;
     var $serviceIndex = $('.slick-current').data('slick-index');
-    var $icon = $('.services-icons');
 
     //Move to the next slick element
     var delta = event.originalEvent.deltaY;
@@ -77,17 +81,40 @@ $(function() {
     }
 
     //Update the icon
-    if ($serviceIndex >= 0 && $serviceIndex < 7) {
-      $icon.fadeToggle(500, function() {
-        updateIcon($icon, $serviceIndex, delta > 0);
-      });
-    }
+    updateIcon($serviceIndex, delta > 0);
+
   }
 
-  function updateIcon(control, index, next) {
+  function swipeHandler(services) {
+    $(".services-scrollable").swipe({
+      //Single swipe handler for left swipes
+      swipeLeft: function(event, direction, distance, duration, fingerCount) {
+        $current = $('.slick-current');
+        var $currentIndex = $current.data('slick-index');
+        updateIcon($currentIndex, true);
+      },
+      //Single swipe handler for right swipes
+      swipeRight: function(event, direction, distance, duration, fingerCount) {
+        $current = $('.slick-current');
+        var $currentIndex = $current.data('slick-index');
+        updateIcon($currentIndex, false);
+      },
+      //Default is 75px, set to 0 for demo so any distance triggers swipe
+      threshold: 25
+    });
+  }
+
+
+  function updateIcon(index, next) {
+    var $icon = $('.services-icons');
     var newIndex = next ? index + 1 : index - 1;
-    control.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
-    control.fadeToggle(500);
+
+    if (newIndex > 0 && newIndex < 8) {
+      $icon.fadeToggle(500, function() {
+        $icon.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
+        $icon.fadeToggle(500);
+      });
+    }
 
   }
 });

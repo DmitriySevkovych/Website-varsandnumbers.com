@@ -9936,12 +9936,6 @@ footer {
 }
 .main-container .services-icons-container {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  -webkit-transform: translate(-25%, -50%);
-  -ms-transform: translate(-25%, -50%);
-  transform: translate(-25%, -50%);
   height: 50vh;
   min-height: 200px;
   max-height: 400px;
@@ -9956,14 +9950,9 @@ footer {
   height: 100%;
   width: 100%;
 }
-.main-container .services-scrollable div {
-  margin: 10px;
-}
 .main-container .slick-current {
   text-align: justify;
-  color: #FF851B;
-  font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* * Media queries
@@ -9982,18 +9971,44 @@ footer {
   }
 
   .services-icons-container {
-    -webkit-transform: translate(25%, 0);
-    -ms-transform: translate(25%, 0);
-    transform: translate(25%, 0);
+    top: 30%;
+    left: 20%;
+    right: 20%;
   }
 
   .services-header {
-    font-size: 32px;
+    font-size: 22px;
+  }
+
+  .services-scrollable {
+    position: fixed;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+  }
+  .services-scrollable div {
+    font-size: 18px;
   }
 }
 @media (max-width: 767.98px) {
   .services-header {
-    font-size: 32px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .services-icons-container {
+    top: 20%;
+    left: 15%;
+    right: 15%;
+  }
+
+  .services-scrollable {
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+  }
+  .services-scrollable div {
+    font-size: 16px;
   }
 }
 @media (min-width: 992px) {
@@ -10005,10 +10020,27 @@ footer {
     height: 50vh;
   }
 
+  .services-icons-container {
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translate(-25%, -50%);
+    -ms-transform: translate(-25%, -50%);
+    transform: translate(-25%, -50%);
+  }
+
   .services-header {
     padding-left: 100px;
     color: #fff;
     font-weight: 700;
+  }
+
+  .services-scrollable div {
+    margin: 10px;
+  }
+
+  .slick-current {
+    color: #FF851B;
   }
 }
 

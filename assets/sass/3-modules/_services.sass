@@ -32,11 +32,6 @@
    */
   .services-icons-container
     position: absolute
-    top: 50%
-    left: 0
-    right: 0
-    +transform(translate(-25%,-50%))
-    // background-color: pink
     height: 50vh
     min-height: 200px
     max-height: 400px
@@ -48,18 +43,9 @@
       height: 100%
       width: 100%
 
-  .services-scrollable
-    div
-      margin: 10px
-    // background-color: pink
-
   .slick-current
-    // +transition()
     text-align: justify
-    color: $col_link
-    font-size: $desktop_big
-    // margin: 20px auto
-    font-weight: 600
+    font-weight: 500
 
 
 /*
@@ -70,28 +56,54 @@
     left: 50%
     +transform(translate(-50%,0))
     opacity: 0.5
-
   .background-light
     height: 75vh
-
   .services-icons-container
-    +transform(translate(25%,0))
-
+    top: 30%
+    left: 20%
+    right: 20%
   .services-header
-    font-size: $mobile-biggest
+    font-size: $tablet_big
+  .services-scrollable
+    position: fixed
+    bottom: 20%
+    left: 20%
+    right: 20%
+    div
+      font-size: $tablet_normal
 
 @include media-breakpoint-down(sm)
   .services-header
-    font-size: $mobile-biggest
+    font-size: $mobile_normal
+    text-align: justify
+  .services-icons-container
+    top: 20%
+    left: 15%
+    right: 15%
+  .services-scrollable
+    bottom: 20%
+    left: 10%
+    right: 10%
+    div
+      font-size: $mobile_normal
 
 @include media-breakpoint-up(lg)
   .background
     left: 100px
-
   .background-light
     height: 50vh
 
+  .services-icons-container
+    top: 50%
+    left: 0
+    right: 0
+    +transform(translate(-25%,-50%))
   .services-header
     padding-left: 100px
     color: $col_bg
     font-weight: 700
+  .services-scrollable
+    div
+      margin: 10px
+  .slick-current
+    color: $col_link
