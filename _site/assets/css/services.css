@@ -9934,6 +9934,16 @@ footer {
   background-color: #555;
   z-index: -1;
 }
+.main-container .services-blend {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  opacity: 0.7;
+  z-index: 1000;
+}
 .main-container .services-icons-container {
   position: absolute;
   height: 50vh;
@@ -9953,6 +9963,27 @@ footer {
 .main-container .slick-current {
   text-align: justify;
   font-weight: 500;
+}
+.main-container .services-round-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  border: 3px solid #ddd;
+  z-index: 1001;
+  padding: 30px;
+  opacity: 0.95;
+}
+.main-container .services-round-up p, .main-container .services-round-up ul li {
+  color: #ddd;
+  font-weight: 500;
+  text-align: justify;
+}
+.main-container .services-round-up ul {
+  list-style-type: none;
 }
 
 /* * Media queries
@@ -10031,12 +10062,20 @@ footer {
 
   .services-header {
     padding-left: 100px;
+    font-size: 22px;
     color: #fff;
     font-weight: 700;
   }
 
+  .services-scrollable {
+    top: 50%;
+    right: 50px;
+  }
   .services-scrollable div {
-    margin: 10px;
+    margin: 10px 50px;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
   }
 
   .slick-current {

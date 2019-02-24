@@ -5,6 +5,8 @@ var instructionSpan = document.getElementById('instruction');
 var instruction = window.innerWidth < 992 ? 'swipe left' : 'scroll down';
 instructionSpan.innerHTML = instruction;
 
+var lock = false;
+
 /*
  * Header stuff
  */
@@ -27,7 +29,7 @@ $(function() {
   $services.on("init", function() {
     mouseWheel($services);
     if (window.innerWidth < 992) {
-      swipeHandler(this);
+      swipeHandler();
     }
 
   }).slick({
@@ -36,7 +38,7 @@ $(function() {
     infinite: false,
     vertical: true,
     centerMode: true,
-    speed: 1000,
+    speed: 500,
     // fade: true,
     // cssEase: 'linear',
     centerPadding: '50px',
@@ -69,8 +71,13 @@ $(function() {
 
   function mouseWheelHandler(event) {
     event.preventDefault();
+
+    if (lock) {
+      return;
+    }
+
     var $services = event.data.$services;
-    var $serviceIndex = $('.slick-current').data('slick-index');
+    var $currentIndex = $('.slick-current').data('slick-index');
 
     //Move to the next slick element
     var delta = event.originalEvent.deltaY;
@@ -80,41 +87,50 @@ $(function() {
       $services.slick("slickNext");
     }
 
-    //Update the icon
-    updateIcon($serviceIndex, delta > 0);
-
+    updateScreen($currentIndex, delta > 0);
   }
 
-  function swipeHandler(services) {
+  function swipeHandler() {
     $(".services-scrollable").swipe({
       //Single swipe handler for left swipes
       swipeLeft: function(event, direction, distance, duration, fingerCount) {
         $current = $('.slick-current');
         var $currentIndex = $current.data('slick-index');
-        updateIcon($currentIndex, true);
+        updateScreen($currentIndex -1, true);
       },
       //Single swipe handler for right swipes
       swipeRight: function(event, direction, distance, duration, fingerCount) {
         $current = $('.slick-current');
         var $currentIndex = $current.data('slick-index');
-        updateIcon($currentIndex, false);
+        updateScreen($currentIndex+1, false);
       },
-      //Default is 75px, set to 0 for demo so any distance triggers swipe
+      //Set distance that triggers a swipe
       threshold: 25
     });
   }
 
 
-  function updateIcon(index, next) {
+  function updateScreen(index, next) {
     var $icon = $('.services-icons');
     var newIndex = next ? index + 1 : index - 1;
+    var $servicesBlend = $('.services-blend');
+    var $servicesRoundUp = $('.services-round-up');
 
-    if (newIndex > 0 && newIndex < 8) {
+    if (newIndex >= 0 && newIndex < 8) {
+      lock = true;
       $icon.fadeToggle(500, function() {
         $icon.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
-        $icon.fadeToggle(500);
+        $icon.fadeToggle(500, function() {
+          lock = false;
+        });
       });
+      $servicesBlend.fadeOut(300);
+      $servicesRoundUp.fadeOut(300);
+    } else if(newIndex === 8)
+    {
+      $servicesBlend.fadeIn(300);
+      $servicesRoundUp.fadeIn(300);
     }
-
   }
+
 });

@@ -27,6 +27,16 @@
     z-index: -1
     // +transform(rotate(10deg))
 
+  .services-blend
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: $col_font
+    opacity: 0.85
+    z-index: 1000
+
   /*
    * Foreground (content) styles
    */
@@ -47,6 +57,22 @@
     text-align: justify
     font-weight: 500
 
+  .services-round-up
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%,-50%))
+    background-color: $col_font
+    border: 3px solid $col_accent_light
+    z-index: 1001
+    padding: 30px
+    opacity: 0.95
+    p, ul li
+      color: $col_accent_light
+      font-weight: 500
+      text-align: justify
+    ul
+      list-style-type: none
 
 /*
  * Media queries
@@ -100,10 +126,18 @@
     +transform(translate(-25%,-50%))
   .services-header
     padding-left: 100px
+    font-size: $desktop_big
     color: $col_bg
     font-weight: 700
   .services-scrollable
+    top: 50%
+    right: 50px
+    // left: 50px
     div
-      margin: 10px
+      margin: 10px 50px
+      text-align: justify
+      font-size: $desktop_big
+      font-weight: 500
   .slick-current
     color: $col_link
+    // font-size: $desktop_biggest
