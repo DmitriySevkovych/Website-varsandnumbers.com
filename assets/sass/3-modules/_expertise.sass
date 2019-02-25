@@ -6,6 +6,50 @@
 /* Background styles */
 .background-light
   background-color: $col_accent_light
+  min-height: 100vh
+  z-index: -2
 
 .background-dark
   background-color: $col_accent_dark
+  height: 100vh
+  z-index: -2
+
+.triangle
+  width: 0
+  height: 0
+  border-left: 60vw solid transparent
+  border-right: 60vw solid transparent
+  border-bottom: 400px solid $col_bg
+  z-index: -1
+
+.triangle-right
+  position: absolute
+  bottom: 0
+  right: -65vw
+.triangle-left
+  position: absolute
+  bottom: 0
+  left: -65vw
+
+.expertise-content
+  position: absolute
+  // top: 45%
+  left: 50%
+  +transform(translate(-50%,-50%))
+  z-index: 1000
+
+#expertiseAll
+  top: 45%
+
+/*
+ * Media queries
+ */
+ @include media-breakpoint-down(sm)
+   body
+     overflow-y: scroll
+   #expertiseMaths
+     top: 0
+   #expertiseSoft
+     top: 80%
+   #expertiseBoth
+     top: 120%

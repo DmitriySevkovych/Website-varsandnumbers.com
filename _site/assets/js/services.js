@@ -12,7 +12,6 @@ var lock = false;
  */
 $(function() {
   var $logo = $('.navbar-toggler');
-  var $navList = $('#navbarResponsive ul');
   var $navBlend = $('.nav-blend');
 
   $logo.on('click', function() {
