@@ -9986,6 +9986,16 @@ footer {
   list-style-type: none;
 }
 
+#servicesPlain {
+  margin: 30px 0;
+  max-height: 400px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
 /* * Media queries
  * */
 @media (max-width: 991.98px) {
