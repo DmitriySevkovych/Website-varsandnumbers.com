@@ -1,0 +1,4 @@
+AuthName "The website VarsAndNumbers is temporarily password protected"
+AuthUserFile /html/.htpasswd
+AuthType Basic
+require valid-user

@@ -9847,8 +9847,21 @@ footer {
   left: -65vw;
 }
 
-.expertise-content {
+#expertiseIntro {
   position: absolute;
+  top: 150px;
+  left: 30px;
+  z-index: 1010;
+}
+#expertiseIntro p {
+  text-align: justify;
+  color: #fff;
+  font-weight: 500;
+}
+
+#expertiseAll {
+  position: absolute;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -9856,20 +9869,10 @@ footer {
   z-index: 1000;
 }
 
-#expertiseAll {
-  top: 45%;
-}
-
 /* * Media queries
  * */
  * @include media-breakpoint-down(sm)
- * body
- *   overflow-y: scroll
- * #expertiseMaths
- *   top: 0
- * #expertiseSoft
- *   top: 80%
- * #expertiseBoth
- *   top: 120% */
+ * .content-container
+ *   overflow-y: scroll */
 
 /*# sourceMappingURL=expertise.css.map */

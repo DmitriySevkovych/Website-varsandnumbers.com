@@ -35,28 +35,30 @@ $(function() {
     dots: false,
     arrows: false,
     infinite: false,
-    vertical: true,
+    // vertical: true,
     centerMode: true,
-    speed: 500,
-    // fade: true,
+    speed: 1000,
+    fade: true,
     // cssEase: 'linear',
-    centerPadding: '50px',
-    slidesToShow: 3,
+    centerPadding: '0px',
+    slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [{
         breakpoint: 992,
         settings: {
-          centerPadding: '0px',
-          slidesToShow: 1,
-          vertical: false
+          // centerPadding: '0px',
+          // slidesToShow: 1,
+          // vertical: false,
+          fade: false
         }
       },
       {
         breakpoint: 576,
         settings: {
-          centerPadding: '0px',
-          slidesToShow: 1,
-          vertical: false
+          // centerPadding: '0px',
+          // slidesToShow: 1,
+          // vertical: false,
+          fade: false
         }
       }
     ]
