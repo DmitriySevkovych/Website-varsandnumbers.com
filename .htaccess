@@ -1,4 +1,4 @@
 AuthName "The website VarsAndNumbers is temporarily password protected"
-AuthUserFile /html/.htpasswd
+AuthUserFile /var/www/web26627933/html/.htpasswd
 AuthType Basic
 require valid-user

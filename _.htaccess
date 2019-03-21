@@ -1,0 +1,4 @@
+AuthName "VarsAndNumbers"
+AuthType Basic
+AuthUserFile /var/www/web26627933/html/.htpasswd
+require valid-user

@@ -7,13 +7,11 @@ var rename = require('gulp-rename');
 var shell = require('gulp-shell');
 
 /* External libraries to be bundled */
-var bootstrapMinJs = './node_modules/bootstrap/dist/js/bootstrap.min.js';
+var bootstrapMinJs = './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 var jqueryMinJs = './node_modules/jquery/dist/jquery.min.js';
 var jqueryUiMinJs = './assets/js/jquery-ui.min.js';
 var touchswipeMinJs = './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js';
 var slickMinJs = './node_modules/slick-carousel/slick/slick.min.js';
-var popperMinJs = './node_modules/popper.js/dist/popper.min.js';
-var tooltipMinJs = './node_modules/tooltip.js/dist/tooltip.min.js';
 
 var extLibs = [jqueryMinJs, bootstrapMinJs, touchswipeMinJs, slickMinJs];
 
@@ -27,10 +25,8 @@ gulp.task('start', gulp.parallel('sass', 'jekyll', 'atom'));
 
 gulp.task('get-ext-js', function() {
   return gulp.src(extLibs)
-    // .pipe(sourcemaps.init())
     .pipe(concat('ext.js'))
     .pipe(uglify())
-    // .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
     }))

@@ -8,4 +8,6 @@ $(function() {
   $navLogo.on('click', function() {
       $navBlend.fadeToggle(300);
   });
+
+  $('[data-toggle="popover"]').popover();
 });
