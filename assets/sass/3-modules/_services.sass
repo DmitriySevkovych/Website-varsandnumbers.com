@@ -55,7 +55,6 @@
 
   .slick-current
     text-align: justify
-    font-weight: 500
 
   .services-round-up
     position: absolute
@@ -75,13 +74,6 @@
       margin: 20px 0 30px 0
       min-width: 300px
 
-// #servicesPlain
-  // max-height: 300px
-//   position: relative
-//   left: 50%
-//   +transform(translate(-50%,0))
-
-
 /*
  * Media queries
  */
@@ -97,6 +89,8 @@
     left: 20%
     right: 20%
   .services-header
+    position: relative
+    top: 30px
     font-size: $tablet_big
     // font-weight: 500
     .services-attention
@@ -104,11 +98,11 @@
       letter-spacing: 3px
   .services-scrollable
     position: fixed
-    bottom: 20%
+    bottom: 14%
     left: 20%
     right: 20%
     div
-      font-size: $tablet_normal
+      font-size: $tablet_big
   .services-round-up p
     font-size: $tablet_normal
 
@@ -138,8 +132,6 @@
       font-size: $mobile_normal
   .services-round-up p
     font-size: $mobile_small
-    // p:first-child
-    //   padding-top: 75px
 
 
 @include media-breakpoint-up(lg)
@@ -147,7 +139,6 @@
     left: 100px
   .background-light
     height: 50vh
-
   .services-icons-container
     top: 50%
     left: 0
@@ -161,15 +152,11 @@
   .services-attention
     font-size: $desktop_biggest
     letter-spacing: 5px
-  .services-scrollable
-    // top: 100%
-    // right: 50px
-    // left: 50px
-    div
+  .services-scrollable div
       margin: 10px 50px
       text-align: justify
       font-size: $desktop_big
       font-weight: 500
   .slick-current
     color: $col_link
-    // font-size: $desktop_biggest
+    +transition(color)

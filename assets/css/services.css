@@ -9962,7 +9962,6 @@ footer {
 }
 .main-container .slick-current {
   text-align: justify;
-  font-weight: 500;
 }
 .main-container .services-round-up {
   position: absolute;
@@ -10009,6 +10008,8 @@ footer {
   }
 
   .services-header {
+    position: relative;
+    top: 30px;
     font-size: 22px;
   }
   .services-header .services-attention {
@@ -10018,12 +10019,12 @@ footer {
 
   .services-scrollable {
     position: fixed;
-    bottom: 20%;
+    bottom: 14%;
     left: 20%;
     right: 20%;
   }
   .services-scrollable div {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .services-round-up p {
@@ -10103,6 +10104,10 @@ footer {
 
   .slick-current {
     color: #FF851B;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
   }
 }
 

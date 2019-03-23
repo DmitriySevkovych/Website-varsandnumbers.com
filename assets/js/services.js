@@ -25,6 +25,9 @@ $(function() {
 $(function() {
   var $services = $(".services-scrollable");
 
+
+
+  // Initialize the scroll event handler and the slick carousel
   $services.on("init", function() {
     initMouseWheelHandler($services);
     if (window.innerWidth < 992) {
@@ -56,8 +59,9 @@ $(function() {
     ]
   });
 
-  if ($(window).width() > 992) {
-    $(".services-scrollable").position({
+  // Position the scrollable elements
+  if ($(window).width() >= 992) {
+    $services.position({
       my: "right center",
       at: "right center",
       of: "body"
