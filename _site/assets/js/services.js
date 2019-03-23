@@ -30,12 +30,10 @@ $(function() {
     if (window.innerWidth < 992) {
       initSwipeHandlers();
     }
-
   }).slick({
     dots: false,
     arrows: false,
     infinite: false,
-    // vertical: true,
     centerMode: true,
     speed: 1000,
     fade: true,
@@ -46,23 +44,25 @@ $(function() {
     responsive: [{
         breakpoint: 992,
         settings: {
-          // centerPadding: '0px',
-          // slidesToShow: 1,
-          // vertical: false,
           fade: false
         }
       },
       {
         breakpoint: 576,
         settings: {
-          // centerPadding: '0px',
-          // slidesToShow: 1,
-          // vertical: false,
           fade: false
         }
       }
     ]
   });
+
+  if ($(window).width() > 992) {
+    $(".services-scrollable").position({
+      my: "right center",
+      at: "right center",
+      of: "body"
+    });
+  }
 
   function initMouseWheelHandler($services) {
     $(window).on("wheel", {
