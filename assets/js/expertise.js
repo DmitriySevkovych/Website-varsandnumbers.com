@@ -9,5 +9,15 @@ $(function() {
       $navBlend.fadeToggle(300);
   });
 
-  $('[data-toggle="popover"]').popover();
+
+  $.get('./assets/popovers/popover_expSimulation.html', function(markup){
+    $('[data-toggle="popover"]').popover({
+      html : true,
+      content : markup
+    });
+  });
+
+
+
+  // $('[data-toggle="popover"]').popover();
 });
