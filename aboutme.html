@@ -1,6 +1,7 @@
 ---
 lang: en
-ref: services
+ref: about me
+description: Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, artificial intelligence and numerical simulation. And I like digital design.
 ---
 
 <!DOCTYPE html>
@@ -14,21 +15,20 @@ ref: services
   <meta name="author" content="{{site.data.vars.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="/assets/css/services.css">
+  <link rel="stylesheet" href="/assets/css/aboutme.css">
 </head>
 
 <body>
   {% include eng/header.html %}
 
   <div class="main-container">
-    {% include eng/services_background.html %}
-    {% include eng/services_content.html %}
+    {% include eng/aboutme_background.html %}
+    {% include eng/aboutme_content.html %}
     {% include eng/footer.html %}
   </div>
 
-  <script type="text/javascript" src="/assets/js/ext.min.js"></script>
-  <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/assets/js/services.js"> </script>
+  <script type="text/javascript" src="/assets/js/ext.min.js"> </script>
+  <script type="text/javascript" src="/assets/js/aboutme.js"> </script>
 </body>
 
 </html>

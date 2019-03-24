@@ -21,11 +21,9 @@
   .background
     position: absolute
     top: 0
-    // left: 100px
     height: 100vh
     background-color: $col_accent_dark
     z-index: -1
-    // +transform(rotate(10deg))
 
   .services-blend
     position: fixed
@@ -33,8 +31,8 @@
     left: 0
     width: 100vw
     height: 100vh
-    background-color: $col_font
-    opacity: 0.85
+    background-color: $col_accent_dark
+    opacity: 0.9
     z-index: 1000
 
   /*
@@ -59,20 +57,19 @@
   .services-round-up
     position: absolute
     top: 50%
-    left: 50%
-    +transform(translate(-50%,-50%))
-    background-color: $col_font
-    border: 3px solid $col_accent_light
-    z-index: 1001
+    left: 0
+    right: 0
+    +transform(translate(0,-50%))
+    background-color: darken($col_accent_dark,10%)
+    // background-color: $col_accent_dark
+    z-index: 1010
     padding: 30px
     opacity: 0.95
     p
-      color: $col_accent_light
+      color: $col_bg
       font-weight: 500
       text-align: justify
-    #servicesPlain
-      margin: 20px 0 30px 0
-      min-width: 300px
+
 
 /*
  * Media queries
@@ -105,7 +102,9 @@
       font-size: $tablet_big
   .services-round-up p
     font-size: $tablet_normal
-
+  #servicesPlain
+    margin: 30px 0
+    // max-width: 400px
 
 
 @include media-breakpoint-down(sm)
@@ -132,6 +131,9 @@
       font-size: $mobile_normal
   .services-round-up p
     font-size: $mobile_small
+  #servicesPlain
+    margin: 10px 0 20px 0
+    max-width: 200px
 
 
 @include media-breakpoint-up(lg)
@@ -160,3 +162,8 @@
   .slick-current
     color: $col_link
     +transition(color)
+  .services-round-up p
+    font-size: $desktop_big
+  #servicesPlain
+    margin: 30px 0
+    max-width: 400px
