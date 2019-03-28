@@ -9950,16 +9950,6 @@ footer {
   min-height: 200px;
   max-height: 400px;
 }
-.main-container .services-icons-container .services-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-}
 .main-container .slick-current {
   text-align: justify;
 }
@@ -10087,9 +10077,11 @@ footer {
     -ms-transform: translate(-25%, -50%);
     transform: translate(-25%, -50%);
   }
+  .services-icons-container .services-icons {
+    max-height: 40vh;
+  }
 
   .services-header {
-    padding-left: 50px;
     font-size: 22px;
     color: #fff;
     font-weight: 500;

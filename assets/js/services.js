@@ -24,8 +24,8 @@ $(function() {
  */
 $(function() {
   var $services = $(".services-scrollable");
-
-
+  var $servicesHeader = $(".services-header");
+  var $servicesIcons = $(".services-icons");
 
   // Initialize the scroll event handler and the slick carousel
   $services.on("init", function() {
@@ -59,15 +59,28 @@ $(function() {
     ]
   });
 
-  // Position the scrollable elements
-  if ($(window).width() >= 992) {
+  // Position some special elements
+  $servicesIcons.position({
+    my: "center",
+    at: "center",
+    of: ".background"
+  });
+
+  if (window.innerWidth >= 992) {
     $services.position({
       my: "right center",
       at: "right center",
       of: "body"
     });
+
+    $servicesHeader.position({
+      my: "center center",
+      at: "center center-" + window.innerHeight / 3,
+      of: ".services-icons"
+    });
   }
 
+  // Event handlers
   function initMouseWheelHandler($services) {
     $(window).on("wheel", {
       $services: $services

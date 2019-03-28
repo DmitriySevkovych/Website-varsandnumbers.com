@@ -43,13 +43,13 @@
     height: 50vh
     min-height: 200px
     max-height: 400px
-    .services-icons
-      position: absolute
-      top: 50%
-      left: 50%
-      +transform(translate(-50%,-50%))
-      height: 100%
-      width: 100%
+    // .services-icons
+    //   position: absolute
+    //   top: 50%
+    //   left: 50%
+    //   +transform(translate(-50%,-50%))
+    //   height: 100%
+    //   width: 100%
 
   .slick-current
     text-align: justify
@@ -146,8 +146,9 @@
     left: 0
     right: 0
     +transform(translate(-25%,-50%))
+    .services-icons
+      max-height: 40vh
   .services-header
-    padding-left: 50px
     font-size: $desktop_big
     color: $col_bg
     font-weight: 500

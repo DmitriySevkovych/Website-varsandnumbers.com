@@ -50,20 +50,45 @@
 
 .expertise-keyword
   outline: none
-.test-class
-  list-style-type: none
-  background-color: pink
-.expertise-popover-img-container
+.popover
+  background-color: lighten($col_accent_light,10%)
+  border: solid 4px $col_font
+  max-width: 500px
+  opacity: 0.95
+.media-header
+  text-transform: uppercase
+  color: $col_link
+  font-weight: 500
+  letter-spacing: 3px
+.expertise-pop-text-container
+  // color: $col_bg
+  font-size: $desktop_normal
+  text-align: justify
+  ul
+    list-style-type: none
+.expertise-pop-img-container
   display: block
-.expertise-popover-img
-  display: inline-block
+.expertise-pop-img
+  display: inline
+  width: 40px
+  height: 40px
+  margin: auto 5px
+.expertise-pop-logo
   width: 64px
   height: 64px
-  margin: 10px
-
 /*
  * Media queries
  */
  @include media-breakpoint-down(sm)
    .content-container
      overflow-y: scroll
+   .popover
+     max-width: 276px !important
+
+ @include media-breakpoint-up(md)
+   .popover
+     max-width: 350px !important
+
+ @include media-breakpoint-up(lg)
+   .popover
+     max-width: 500px !important
