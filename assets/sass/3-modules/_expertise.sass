@@ -33,62 +33,59 @@
 
 #expertiseIntro
   position: absolute
-  top: 150px
-  left: 30px
+  top: 125px
+  left: 0
+  right: 0
+  padding: 0
   z-index: 1010
   p
     text-align: justify
     color: $col_bg
     font-weight: 500
 
-#expertiseAll
+#expertiseAll, .expertise-popup
   position: absolute
   top: 50%
   left: 50%
   +transform(translate(-50%,-50%))
+#expertiseAll
   z-index: 1000
+.expertise-popup
+  z-index: 1010
 
 .expertise-keyword
   outline: none
-.popover
-  background-color: lighten($col_accent_light,10%)
-  border: solid 4px $col_font
-  max-width: 500px
-  opacity: 0.95
-.media-header
-  text-transform: uppercase
-  color: $col_link
-  font-weight: 500
-  letter-spacing: 3px
-.expertise-pop-text-container
-  // color: $col_bg
-  font-size: $desktop_normal
-  text-align: justify
-  ul
-    list-style-type: none
-.expertise-pop-img-container
-  display: block
-.expertise-pop-img
-  display: inline
-  width: 40px
-  height: 40px
-  margin: auto 5px
-.expertise-pop-logo
-  width: 64px
-  height: 64px
+
+// .popover
+//   background-color: lighten($col_accent_light,10%)
+//   border: solid 4px $col_font
+//   max-width: 500px
+//   opacity: 0.95
+// .media-header
+//   text-transform: uppercase
+//   color: $col_link
+//   font-weight: 500
+//   letter-spacing: 3px
+// .expertise-pop-text-container
+//   // color: $col_bg
+//   font-size: $desktop_normal
+//   text-align: justify
+//   ul
+//     list-style-type: none
+// .expertise-pop-img-container
+//   display: block
+// .expertise-pop-img
+//   display: inline
+//   width: 40px
+//   height: 40px
+//   margin: auto 5px
+// .expertise-pop-logo
+//   width: 64px
+//   height: 64px
+
 /*
  * Media queries
  */
  @include media-breakpoint-down(sm)
    .content-container
      overflow-y: scroll
-   .popover
-     max-width: 276px !important
-
- @include media-breakpoint-up(md)
-   .popover
-     max-width: 350px !important
-
- @include media-breakpoint-up(lg)
-   .popover
-     max-width: 500px !important

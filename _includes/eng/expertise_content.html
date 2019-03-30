@@ -1,26 +1,30 @@
 <div class="container-fluid" id="expertiseIntro">
   <div class="row">
-    <div class="col-10 col-lg-5">
+    <div class="col-1"></div>
+    <div class="col-10 col-md-4 ">
       <p class="lead">In this infographic you can click on the keywords to discover
         some of the domains in which I have been able to put my expertise to use.</p>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-11 col-lg-8 d-none d-md-block expertise-content" id="expertiseAll">
+<div class="row d-none d-md-block">
+  <div class="col-11 col-lg-8 expertise-content" id="expertiseAll">
     {% include eng/expertise_all.html %}
   </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse">
+    {% include eng/expertise_popup_test.html %}
+  </div>
+</div>
 
-  <div class="content-container">
-    <div class="col-12 px-5 d-md-none expertise-content" id="expertiseMaths">
+<div class="row d-block d-md-none exp-mobile-content-container">
+    <div class="col-12 px-5 expertise-content" id="expertiseMaths">
       {% include eng/expertise_mathematics.html %}
     </div>
-    <div class="col-12 px-5  d-md-none expertise-content" id="expertiseSoft">
+    <div class="col-12 px-5 expertise-content" id="expertiseSoft">
       {% include eng/expertise_software.html %}
     </div>
-    <div class="col-12 px-5 d-md-none expertise-content" id="expertiseBoth">
+    <div class="col-12 px-5 expertise-content" id="expertiseBoth">
       {% include eng/expertise_both.html %}
     </div>
-  </div>
 </div>
