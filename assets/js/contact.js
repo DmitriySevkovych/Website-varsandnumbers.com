@@ -8,14 +8,64 @@ contactform.setAttribute('action', '//formspree.io/' + 'd.sevkovych' + '@' + 'va
 /*
 Document ready function
 */
-$( function() {
-  $md = $(window).width() < 992;
+$(function() {
+  $sm = $(window).width() < 576;
 
-  $logo = $('.navbar-toggler');
-  $navList = $('#navbarResponsive ul');
+  $navLogo = $('.navbar-toggler');
+  // $navList = $('#navbarResponsive ul');
   $navBlend = $('.nav-blend');
 
-  $logo.on('click', function(){
+  $navLogo.on('click', function() {
     $navBlend.fadeToggle(300);
   });
+
+  // Positioning
+  $contactForm = $('#contactForm');
+  $contactText = $('#contactText');
+  $contactInfo = $('#contactInfo');
+  $footer = $('footer');
+  if ($sm) {
+    $contactText.position({
+      my: 'center top',
+      at: 'center top+' + $("body").height() * 2  / 12,
+      of: 'body'
+    });
+    $contactForm.position({
+      my: 'center top',
+      at: 'center bottom+' + $("body").height() * 1  / 12,
+      of: '#contactText'
+    });
+    $contactInfo.position({
+      my: 'center bottom',
+      at: 'center bottom+' + $("body").height() * 1  / 12,
+      of: 'body'
+    });
+    $footer.position({
+      my: 'center bottom',
+      at: 'center bottom',
+      of: '#contactInfo'
+    });
+  } else {
+    $contactForm.position({
+      my: 'center',
+      at: 'center',
+      of: 'body'
+    });
+    $contactText.position({
+      my: 'center top',
+      at: 'center center-' + $("body").height() / 3,
+      of: '#contactForm'
+    });
+    $contactInfo.position({
+      my: 'center bottom',
+      at: 'center bottom',
+      of: 'body'
+    });
+    $footer.position({
+      my: 'center bottom',
+      at: 'center bottom',
+      of: 'body'
+    });
+  }
+
 });

@@ -9555,11 +9555,11 @@ h3 {
 /* * Mobile font sizes for this project
  * */
 ::selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 ::-moz-selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 img::selection {
@@ -9768,7 +9768,7 @@ footer {
   transform: translate(0, -50%);
   width: 50px;
   height: 50px;
-  background-color: #ddd;
+  background-color: #cccccc;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -9818,6 +9818,10 @@ footer {
 }
 
 /* Customize the footer */
+footer {
+  position: static;
+}
+
 #langContainer .lang {
   background-color: transparent;
   border: 1px solid #fff;
@@ -9827,39 +9831,26 @@ footer {
   color: #fff;
 }
 #logoContainer #logoFooter path {
-  fill: #ddd;
+  fill: #cccccc;
 }
 
 /* * General page style
  * */
+body {
+  min-height: 100vh;
+  width: 100vw;
+}
+
 #contactText {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 150px;
   z-index: 1010;
   text-align: justify;
 }
 #contactText a {
   display: inline;
 }
-#contactText a #twitterLogo path {
-  fill: #7FDBFF;
-}
-#contactText a #githubLogo path {
-  fill: black;
-}
 
-#contactForm {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-}
 #contactForm form {
-  padding-top: 275px;
+  height: 100%;
 }
 #contactForm form label {
   width: 100%;
@@ -9868,7 +9859,7 @@ footer {
   height: 10em;
 }
 #contactForm form input, #contactForm form textarea {
-  border: 3px solid #555;
+  border: 3px solid #4d4d4d;
   border-radius: 0;
   width: 100%;
   padding: 10px;
@@ -9876,7 +9867,7 @@ footer {
 }
 #contactForm form input:focus, #contactForm form textarea:focus {
   outline: none;
-  background-color: #ddd;
+  background-color: #cccccc;
 }
 #contactForm form [type=submit] {
   width: 30%;
@@ -9884,7 +9875,7 @@ footer {
   float: right;
   text-transform: uppercase;
   font-weight: 500;
-  background-color: #ddd;
+  background-color: #cccccc;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -9896,12 +9887,9 @@ footer {
 }
 
 #contactInfo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 20%;
-  background-color: #555;
+  width: 100vw;
+  min-height: 20vh;
+  background-color: #4d4d4d;
 }
 #contactInfo #mBig {
   position: absolute;
@@ -9912,21 +9900,10 @@ footer {
   color: #fff;
   font-weight: 300;
   text-align: center;
-  color: #aaaaaa;
+  color: #999999;
 }
 #contactInfo #mBig span {
   color: #fff;
-}
-#contactInfo #socialMediaLinks a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-}
-#contactInfo #socialMediaLinks #twitterLogo path {
-  fill: #7FDBFF;
-}
-#contactInfo #socialMediaLinks #githubLogo path {
-  fill: black;
 }
 
 /* * Media queries
@@ -9948,65 +9925,36 @@ footer {
     font-size: 36px;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   #contactText p {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  form label, form textarea {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  body {
+    overflow: scroll;
+  }
+
+  #contactText p {
+    font-size: 16px;
   }
 
   form label {
     display: block;
   }
   form input, form textarea {
-    font-size: 22px;
-  }
-
-  #customerContact label {
-    width: 100%;
-  }
-
-  #contactInfo #mBig {
-    font-size: 32px;
-    top: 2rem;
-  }
-}
-@media (max-width: 575.98px) {
-  #contactText p {
     font-size: 16px;
-  }
-
-  form input, form textarea {
-    font-size: 16px;
-  }
-
-  #contactInfo #mBig {
-    font-size: 22px;
-  }
-}
-@media (max-height: 799px), (max-width: 575px) {
-  body {
-    overflow-y: scroll;
-  }
-
-  .contact-upper-container #contactText {
-    padding-top: 100px;
-    background-color: #fff;
-  }
-  .contact-upper-container #contactForm {
-    overflow-y: scroll;
-    height: 640px;
-  }
-  .contact-upper-container #contactForm form {
-    padding-top: 225px;
   }
 
   #contactInfo {
-    height: 150px;
-    bottom: -75px;
+    height: 35vh;
   }
-
-  footer {
-    position: absolute;
-    bottom: -65px;
+  #contactInfo #mBig {
+    font-size: 22px;
   }
 }
 

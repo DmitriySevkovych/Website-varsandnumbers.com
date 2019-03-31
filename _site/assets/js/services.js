@@ -60,25 +60,36 @@ $(function() {
   });
 
   // Position some special elements
-  $servicesIcons.position({
-    my: "center",
-    at: "center",
-    of: ".background"
-  });
-
   if (window.innerWidth >= 992) {
+    $servicesIcons.position({
+      my: "center center",
+      at: "center center",
+      of: ".background"
+    });
     $services.position({
       my: "right center",
       at: "right center",
       of: "body"
     });
-
     $servicesHeader.position({
       my: "center center",
       at: "center center-" + window.innerHeight / 3,
       of: ".services-icons"
     });
+  } else {
+    $servicesIcons.position({
+      my: "center center",
+      at: "center center",
+      of: "body"
+    });
+    $servicesHeader.position({
+      my: "center bottom",
+      at: "center center-" + window.innerHeight / 4,
+      of: ".services-icons"
+    });
   }
+
+
 
   // Event handlers
   function initMouseWheelHandler($services) {

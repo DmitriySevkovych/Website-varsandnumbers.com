@@ -1,8 +1,8 @@
 <div class="container-fluid" id="expertiseIntro">
   <div class="row">
     <div class="col-1"></div>
-    <div class="col-10 col-md-4 ">
-      <p class="lead">In this infographic you can click on the keywords to discover
+    <div class="col-10 col-md-4">
+      <p class="">In this infographic you can click on the keywords to discover
         some of the domains in which I have been able to put my expertise to use.</p>
     </div>
   </div>
@@ -10,10 +10,37 @@
 
 <div class="row d-none d-md-block">
   <div class="col-11 col-lg-8 expertise-content" id="expertiseAll">
-    {% include eng/expertise_all.html %}
+    {% include eng/expertise_graphic_all.html %}
   </div>
-  <div class="col-11 col-lg-8 expertise-popup collapse">
-    {% include eng/expertise_popup_test.html %}
+
+  <!-- Popups for "Mathematics" -->
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expSimulation">
+    {% include popups/eng/exp_popup_numericalSimulation.html %}
+  </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expStatistics">
+    {% include popups/eng/exp_popup_statistics.html %}
+  </div>
+
+  <!-- Popups for "Software" -->
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expFullStack">
+    {% include popups/eng/exp_popup_fullStack.html %}
+  </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expWebDevelopment">
+    {% include popups/eng/exp_popup_webDevelopment.html %}
+  </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expDigitalDesign">
+    {% include popups/eng/exp_popup_digitalDesign.html %}
+  </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expDevops">
+    {% include popups/eng/exp_popup_devops.html %}
+  </div>
+
+  <!-- Popups for "Both" -->
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expMachineLearning">
+    {% include popups/eng/exp_popup_machineLearning.html %}
+  </div>
+  <div class="col-11 col-lg-8 expertise-popup collapse" data-popup="expDataScience">
+    {% include popups/eng/exp_popup_dataScience.html %}
   </div>
 </div>
 

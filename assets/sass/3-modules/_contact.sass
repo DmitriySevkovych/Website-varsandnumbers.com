@@ -3,6 +3,10 @@
   display: none
 
 /* Customize the footer */
+footer
+  position: static
+  // height: 20%
+
 #langContainer .lang
   background-color: transparent
   border: 1px solid $col_bg
@@ -13,38 +17,25 @@
 
   #logoFooter
     path
-      fill: $col_accent_light
+      fill: $col_main_light
 
 /*
  * General page style
  */
+body
+  min-height: 100vh
+  width: 100vw
+
 #contactText
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  padding-top: 150px
   z-index: 1010
   text-align: justify
 
   a
     display: inline
 
-    #twitterLogo path
-      fill: $aqua
-
-    #githubLogo path
-      fill: black
-
 #contactForm
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  height: 60%
-
   form
-    padding-top: 275px
+    height: 100%
     label
       width: 100%
 
@@ -52,14 +43,14 @@
       height: 10em
 
     input, textarea
-      border: 3px solid $col_accent_dark
+      border: 3px solid $col_main_dark
       border-radius: 0
       width: 100%
       padding: 10px
       margin-bottom: 1em
       &:focus
         outline: none
-        background-color: $col_accent_light
+        background-color: $col_main_light
 
     [type="submit"]
       width: 30%
@@ -67,19 +58,20 @@
       float: right
       text-transform: uppercase
       font-weight: 500
-      background-color: $col_accent_light
+      background-color: $col_main_light
       +transition()
       &:hover
-        background-color: $col_link
+        background-color: $col_accent
         color: $col_bg
 
 #contactInfo
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  height: 20%
-  background-color: $col_accent_dark
+  // position: absolute
+  // bottom: 0
+  // left: 0
+  // right: 0
+  width: 100vw
+  min-height: 20vh
+  background-color: $col_main_dark
 
   #mBig
     position: absolute
@@ -88,23 +80,10 @@
     color: $col_bg
     font-weight: 300
     text-align: center
-    color: darken($col_accent_light,20%)
+    color: darken($col_main_light,20%)
 
     span
       color: $col_bg
-
-  #socialMediaLinks
-    a
-      display: inline-block
-      width: 50px
-      height: 50px
-
-    #twitterLogo path
-      fill: $aqua
-
-    #githubLogo path
-      fill: black
-
 
 
 /*
@@ -123,50 +102,27 @@
   #mBig
     font-size: $desktop_biggest
 
-
-@include media-breakpoint-down(sm)
+@include media-breakpoint-down(md)
   #contactText
     p
-      font-size: $mobile_big
+      font-size: $tablet_normal
+  form
+    label, textarea
+      font-size: $tablet_normal
+
+
+@include media-breakpoint-down(sm)
+  body
+    overflow: scroll
+  #contactText
+    p
+      font-size: $mobile_normal
   form
     label
       display: block
     input, textarea
-      font-size: $mobile_big
-  #customerContact label
-    width: 100%
-  #contactInfo
-    #mBig
-      font-size: $mobile_biggest
-      top: 2rem
-
-
-@include media-breakpoint-down(xs)
-  #contactText
-    p
-      font-size: $mobile_normal
-  form
-    input, textarea
       font-size: $mobile_normal
   #contactInfo
+    height: 35vh
     #mBig
       font-size: $mobile_big
-
-@media (max-height: 799px), (max-width: 575px)
-  body
-    overflow-y: scroll
-  .contact-upper-container
-    #contactText
-      padding-top: 100px
-      background-color: $col_bg
-    #contactForm
-      overflow-y: scroll
-      height: 640px
-      form
-        padding-top: 225px
-  #contactInfo
-    height: 150px
-    bottom: -75px
-  footer
-    position: absolute
-    bottom: -65px

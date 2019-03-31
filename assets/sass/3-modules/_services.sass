@@ -15,14 +15,14 @@
     top: 50vh
     left: 0
     +transform(translate(0,-50%))
-    background-color: $col_accent_light
+    background-color: $col_main_light
     z-index: -1
 
   .background
     position: absolute
     top: 0
     height: 100vh
-    background-color: $col_accent_dark
+    background-color: $col_main_dark
     z-index: -1
 
   .services-blend
@@ -31,7 +31,7 @@
     left: 0
     width: 100vw
     height: 100vh
-    background-color: $col_accent_dark
+    background-color: $col_main_dark
     opacity: 0.9
     z-index: 1000
 
@@ -41,15 +41,11 @@
   .services-icons-container
     position: absolute
     height: 50vh
+    width: 60vw
     min-height: 200px
     max-height: 400px
-    // .services-icons
-    //   position: absolute
-    //   top: 50%
-    //   left: 50%
-    //   +transform(translate(-50%,-50%))
-    //   height: 100%
-    //   width: 100%
+    max-width: 400px
+    min-width: 200px
 
   .slick-current
     text-align: justify
@@ -60,8 +56,8 @@
     left: 0
     right: 0
     +transform(translate(0,-50%))
-    background-color: darken($col_accent_dark,10%)
-    // background-color: $col_accent_dark
+    background-color: darken($col_main_dark,10%)
+    // background-color: $col_main_dark
     z-index: 1010
     padding: 30px
     opacity: 0.95
@@ -81,18 +77,10 @@
     opacity: 0.5
   .background-light
     height: 75vh
-  .services-icons-container
-    top: 30%
-    left: 20%
-    right: 20%
   .services-header
-    position: relative
-    top: 30px
     font-size: $tablet_big
-    // font-weight: 500
     .services-attention
-      font-size: 28px
-      letter-spacing: 3px
+      font-weight: 500
   .services-scrollable
     position: fixed
     bottom: 14%
@@ -104,25 +92,17 @@
     font-size: $tablet_normal
   #servicesPlain
     margin: 30px 0
-    // max-width: 400px
 
 
 @include media-breakpoint-down(sm)
   .services-header
     position: fixed
-    top: 100px
     left: 10%
     right: 10%
     font-size: $mobile_normal
     text-align: justify
     .services-attention
-      font-size: $mobile_normal
       font-weight: 500
-      letter-spacing: 0px
-  .services-icons-container
-    top: 20%
-    left: 20%
-    right: 20%
   .services-scrollable
     bottom: 15%
     left: 10%
@@ -141,27 +121,21 @@
     left: 100px
   .background-light
     height: 50vh
-  .services-icons-container
-    top: 50%
-    left: 0
-    right: 0
-    +transform(translate(-25%,-50%))
-    .services-icons
-      max-height: 40vh
+  .services-icons
+    max-height: 40vh
   .services-header
     font-size: $desktop_big
     color: $col_bg
     font-weight: 500
-  .services-attention
-    font-size: $desktop_biggest
-    letter-spacing: 5px
+    .services-attention
+      font-weight: 600
   .services-scrollable div
       margin: 10px 50px
       text-align: justify
       font-size: $desktop_big
       font-weight: 500
   .slick-current
-    color: $col_link
+    color: $col_accent
     +transition(color)
   .services-round-up p
     font-size: $desktop_big

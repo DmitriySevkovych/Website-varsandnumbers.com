@@ -9,9 +9,9 @@ var shell = require('gulp-shell');
 /* External libraries to be bundled */
 var bootstrapMinJs = './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 var jqueryMinJs = './node_modules/jquery/dist/jquery.min.js';
-var jqueryUiMinJs = './assets/js/jquery-ui.min.js';
 var touchswipeMinJs = './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js';
 var slickMinJs = './node_modules/slick-carousel/slick/slick.min.js';
+var jqueryUiMinJs = './assets/js/jquery-ui.min.js';
 
 var extLibs = [jqueryMinJs, bootstrapMinJs, touchswipeMinJs, slickMinJs];
 

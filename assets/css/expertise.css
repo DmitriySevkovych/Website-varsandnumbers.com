@@ -9555,11 +9555,11 @@ h3 {
 /* * Mobile font sizes for this project
  * */
 ::selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 ::-moz-selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 img::selection {
@@ -9768,7 +9768,7 @@ footer {
   transform: translate(0, -50%);
   width: 50px;
   height: 50px;
-  background-color: #ddd;
+  background-color: #cccccc;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -9815,13 +9815,13 @@ footer {
 /* General page style */
 /* Background styles */
 .background-light {
-  background-color: #ddd;
+  background-color: #cccccc;
   min-height: 100vh;
   z-index: -2;
 }
 
 .background-dark {
-  background-color: #555;
+  background-color: #4d4d4d;
   height: 100vh;
   z-index: -2;
 }

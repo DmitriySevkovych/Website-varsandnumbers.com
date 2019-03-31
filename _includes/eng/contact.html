@@ -1,54 +1,39 @@
 <div class="container-fluid">
 
-  <!-- the upper part of the page, containing the form for submitting the user data -->
-  <div class="contact-upper-container">
-    <div class="row" id="contactText">
-      <div class="col-2"></div>
-
-      <div class="col-8">
-        <p>Awesome! Just one more step.</p>
-
-        <p>You can either fill out this form to contact me, or, if you prefer,
-          write me a mail or get in touch via
-          <a href="https://twitter.com/VarsAndNumbers">Twitter</a>
-          or <a href="https://github.com/DmitriySevkovych">GitHub</a>.</p>
-      </div>
-
-      <div class="col-2"></div>
-    </div>
-
-    <div class="row" id="contactForm">
-      <div class="col-2"></div>
-
-      <div class="col-8">
-        <form id="formaction" method="post">
-          <input type="text" name="_gotcha" style="display:none" />
-          <input type="hidden" name="_next" value="thanks.html" />
-
-          <div id="customerContact">
-            <!-- <label><span>Your name</span> -->
-            <label><input type="text" name="name" placeholder="Please enter your name here ... "></label>
-
-            <!-- <label><span>How to contact you</span> -->
-            <label><input type="text" name="email" placeholder="... and your e-mail here"></label>
-
-          </div>
-
-          <!-- <label><span>What do you want to talk about</span> -->
-          <label><textarea name="message" cols="1" placeholder="So tell me... what do you want to talk about?"></textarea></label>
-
-          <input type="submit" value="Let's go!">
-        </form>
-      </div>
-
-      <div class="col-2"></div>
+  <div class="row" id="contactText">
+    <div class="col-1 col-lg-2"></div>
+    <div class="col-10 col-lg-8">
+      <p>Awesome! Just one more step.<br d-none d-md-block>You can either fill out this form to contact me, or, if you prefer,
+        write me a mail or get in touch via
+        <a href="https://twitter.com/VarsAndNumbers">Twitter</a>
+        or <a href="https://github.com/DmitriySevkovych">GitHub</a>.</p>
     </div>
   </div>
 
-  <!-- the lower part of the page, containing some links -->
+  <div class="row" id="contactForm">
+    <div class="col-1 col-lg-2"></div>
+    <div class="col-10 col-lg-8">
+      <form id="formaction" method="post">
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_next" value="thanks.html" />
+
+        <div id="customerContact">
+          <label><input type="text" name="name" placeholder="Please enter your name here ... "></label>
+
+          <label><input type="text" name="email" placeholder="... and your e-mail here"></label>
+
+        </div>
+
+        <label><textarea name="message" cols="1" placeholder="What do you want to talk about?"></textarea></label>
+
+        <input type="submit" value="Let's go!">
+      </form>
+    </div>
+  </div>
+
   <div class="row" id="contactInfo">
     <div class="col-12" id="mBig"></div>
-<!-- 
+    <!--
     <div class="col-4"></div>
     <div class="col-4" id="socialMediaLinks">
     </div>

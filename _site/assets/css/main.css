@@ -9555,11 +9555,11 @@ h3 {
 /* * Mobile font sizes for this project
  * */
 ::selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 ::-moz-selection {
-  background: #ddd;
+  background: #cccccc;
 }
 
 img::selection {
@@ -9768,7 +9768,7 @@ footer {
   transform: translate(0, -50%);
   width: 50px;
   height: 50px;
-  background-color: #ddd;
+  background-color: #cccccc;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -9834,12 +9834,12 @@ footer {
 .background #darkBox {
   top: -15vmax;
   height: 100vh;
-  background-color: #555;
+  background-color: #4d4d4d;
 }
 .background #lightBox {
   top: 50px;
   height: 80vh;
-  background-color: #ddd;
+  background-color: #cccccc;
 }
 .background #imageLeft {
   position: absolute;
@@ -9882,8 +9882,8 @@ footer {
   background-color: #222;
 }
 #titleContainer #titleBox:hover #title, #titleContainer #titleBox:hover #subtitle {
-  color: #ddd;
-  border-color: #ddd;
+  color: #cccccc;
+  border-color: #cccccc;
   width: 100%;
 }
 #titleContainer #titleBox #title {
@@ -10017,7 +10017,7 @@ footer {
 
   /* Customize the footer */
   footer {
-    background-color: #555;
+    background-color: #4d4d4d;
   }
 
   #langContainer .lang {
