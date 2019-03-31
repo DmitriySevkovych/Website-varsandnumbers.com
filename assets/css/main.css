@@ -9857,6 +9857,9 @@ footer {
   -ms-transform: rotate(-15deg) translate(-50%, 0);
   transform: rotate(-15deg) translate(-50%, 0);
 }
+.background #imageLeft, .background #imageRight {
+  max-height: 60vh;
+}
 
 /* Foreground (content) styles */
 .foreground {
