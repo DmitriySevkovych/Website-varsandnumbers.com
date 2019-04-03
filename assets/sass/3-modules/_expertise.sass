@@ -1,9 +1,9 @@
-/* General page style */
+/* General page style
 // .main-container
 //   // padding-top: 110px
 //   height: 100vh
 
-/* Background styles */
+/* Background styles
 .background-light
   background-color: $col_main_light
   min-height: 100vh
@@ -14,18 +14,31 @@
   height: 100vh
   z-index: -2
 
+.mobile-background-dark
+  background-color: $col_main_dark
+  height: 33%
+  width: 100vw
+  z-index: -1
+
+.mobile-background-light
+  background-color: $col_main_light
+  width: 100vw
+  height: 33%
+  z-index: -1
+
 .triangle
   width: 0
   height: 0
   border-left: 60vw solid transparent
   border-right: 60vw solid transparent
-  border-bottom: 400px solid $col_bg
+  border-bottom: 250px solid $col_bg
   z-index: -1
 
 .triangle-right
   position: absolute
   bottom: 0
   right: -65vw
+
 .triangle-left
   position: absolute
   bottom: 0
@@ -38,54 +51,53 @@
   right: 0
   padding: 0
   z-index: 1010
-  p
-    text-align: justify
+
+  .expertise-header
     color: $col_bg
+    font-weight: 500
+
+  .alt-expertise-header
+    color: $col_font
     font-weight: 500
 
 #expertiseAll, .expertise-popup
   position: absolute
-  top: 50%
+  top: 55%
   left: 50%
-  +transform(translate(-50%,-50%))
+  +transform(translate(-50%, -50%))
+
 #expertiseAll
   z-index: 1000
+
 .expertise-popup
   z-index: 1010
+//   +transition(all, 500ms, ease-in-out)
+//   +transform(translateY(-90px))
+// .popup-open
+//   +transform(translateY(0px))
 
 .expertise-keyword
   outline: none
 
-// .popover
-//   background-color: lighten($col_main_light,10%)
-//   border: solid 4px $col_font
-//   max-width: 500px
-//   opacity: 0.95
-// .media-header
-//   text-transform: uppercase
-//   color: $col_accent
-//   font-weight: 500
-//   letter-spacing: 3px
-// .expertise-pop-text-container
-//   // color: $col_bg
-//   font-size: $desktop_normal
-//   text-align: justify
-//   ul
-//     list-style-type: none
-// .expertise-pop-img-container
-//   display: block
-// .expertise-pop-img
-//   display: inline
-//   width: 40px
-//   height: 40px
-//   margin: auto 5px
-// .expertise-pop-logo
-//   width: 64px
-//   height: 64px
+/* Media queries
++media-breakpoint-down(md)
+  .expertise-header, .alt-expertise-header
+    font-size: $tablet_normal
 
-/*
- * Media queries
- */
- @include media-breakpoint-down(sm)
-   .content-container
-     overflow-y: scroll
+
++media-breakpoint-down(sm)
+  .content-container
+    overflow-y: scroll
+
+  .expertise-header
+    font-size: $mobile_normal
+
+
++media-breakpoint-up(lg)
+  .expertise-container svg
+    display: block
+    margin: auto
+    max-height: 50vh
+
+  .expertise-header
+    font-size: $desktop_normal
