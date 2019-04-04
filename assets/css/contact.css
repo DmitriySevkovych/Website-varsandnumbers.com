@@ -9834,8 +9834,7 @@ footer {
   fill: #cccccc;
 }
 
-/* * General page style
- * */
+/* General page style */
 body {
   min-height: 100vh;
   width: 100vw;
@@ -9906,8 +9905,7 @@ body {
   color: #fff;
 }
 
-/* * Media queries
- * */
+/* Media queries */
 @media (min-width: 768px) {
   form #customerContact label {
     width: 48%;

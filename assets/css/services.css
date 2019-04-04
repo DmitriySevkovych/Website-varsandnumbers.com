@@ -10056,7 +10056,7 @@ footer {
   }
 
   .services-header {
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     font-weight: 500;
   }
@@ -10081,12 +10081,12 @@ footer {
   }
 
   .services-round-up p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   #servicesPlain {
     margin: 30px 0;
-    max-width: 400px;
+    max-height: 30vh;
   }
 }
 

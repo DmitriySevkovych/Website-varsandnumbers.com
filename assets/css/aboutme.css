@@ -9812,5 +9812,58 @@ footer {
   }
 }
 /* The page-specific sass module */
+/* General page style */
+/* Background */
+.background-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: -2;
+}
+
+.background-dark {
+  position: absolute;
+  top: 20%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background-color: #4d4d4d;
+  z-index: -1;
+}
+
+/* Foreground */
+.content-container {
+  position: absolute;
+  top: 20%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+}
+
+.content-container .row {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.content-container .row .video-container video {
+  width: 50vw;
+  height: calc(50vw * 9 / 16);
+  display: block;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #fff;
+}
+.content-container .row .video-container::before {
+  height: 480px;
+}
+
+/* Media queries */
 
 /*# sourceMappingURL=aboutme.css.map */
