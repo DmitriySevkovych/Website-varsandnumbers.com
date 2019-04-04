@@ -1,0 +1,55 @@
+<div class="container-fluid" id="skillsIntro">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 col-md-4">
+      <p class="skills-header text-justify">When dealing with variables and
+        numbers, chances are that some skills in maths or software are required,
+        or even in both!
+        <br class="d-md-none">
+        <span class="d-md-none d-lg-inline">Click on the keywords and explore a
+          few examples of what Vars&Numbers can offer.</span>
+      </p>
+    </div>
+    <div class="col-md-2 d-none d-md-block d-lg-none"></div>
+    <div class="col-md-4 d-none d-md-block d-lg-none">
+      <p class="alt-skills-header text-justify">Click on the keywords and
+        explore a few examples of what Vars&Numbers can offer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row d-none d-md-block skills-container">
+  <div class="col-11 col-lg-8 skills-content" id="skillsAll">
+    {% include eng/skills_graphic_all.html %}
+  </div>
+
+  <!-- Popups for "Mathematics" -->
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillSimulation">
+    {% include popups/eng/skill_popup_numericalSimulation.html %}
+  </div>
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillStatistics">
+    {% include popups/eng/skill_popup_statistics.html %}
+  </div>
+
+  <!-- Popups for "Software" -->
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillFullStack">
+    {% include popups/eng/skill_popup_fullStack.html %}
+  </div>
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillWebDevelopment">
+    {% include popups/eng/skill_popup_webDevelopment.html %}
+  </div>
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillDigitalDesign">
+    {% include popups/eng/skill_popup_digitalDesign.html %}
+  </div>
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillDevops">
+    {% include popups/eng/skill_popup_devops.html %}
+  </div>
+
+  <!-- Popups for "Both" -->
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillMachineLearning">
+    {% include popups/eng/skill_popup_machineLearning.html %}
+  </div>
+  <div class="col-11 col-lg-8 skills-popup collapse" data-popup="skillDataScience">
+    {% include popups/eng/skill_popup_dataScience.html %}
+  </div>
+</div>

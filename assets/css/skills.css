@@ -9861,7 +9861,7 @@ footer {
   left: -65vw;
 }
 
-#expertiseIntro {
+#skillsIntro {
   position: absolute;
   top: 125px;
   left: 0;
@@ -9869,16 +9869,16 @@ footer {
   padding: 0;
   z-index: 1010;
 }
-#expertiseIntro .expertise-header {
+#skillsIntro .skills-header {
   color: #fff;
   font-weight: 500;
 }
-#expertiseIntro .alt-expertise-header {
+#skillsIntro .alt-skills-header {
   color: #222;
   font-weight: 500;
 }
 
-#expertiseAll, .expertise-popup {
+#skillsAll, .skills-popup {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -9887,21 +9887,21 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-#expertiseAll {
+#skillsAll {
   z-index: 1010;
 }
 
-.expertise-popup {
+.skills-popup {
   z-index: 1020;
 }
 
-.expertise-keyword {
+.skills-keyword {
   outline: none;
 }
 
 /* Media queries */
 @media (max-width: 991.98px) {
-  .expertise-header, .alt-expertise-header {
+  .skills-header, .alt-skills-header {
     font-size: 18px;
   }
 }
@@ -9910,20 +9910,20 @@ footer {
     overflow-y: scroll;
   }
 
-  .expertise-header {
+  .skills-header {
     font-size: 16px;
   }
 }
 @media (min-width: 992px) {
-  .expertise-container svg {
+  .skills-container svg {
     display: block;
     margin: auto;
     max-height: 55vh;
   }
 
-  .expertise-header {
+  .skills-header {
     font-size: 16px;
   }
 }
 
-/*# sourceMappingURL=expertise.css.map */
+/*# sourceMappingURL=skills.css.map */

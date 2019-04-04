@@ -44,7 +44,7 @@
   bottom: 0
   left: -65vw
 
-#expertiseIntro
+#skillsIntro
   position: absolute
   top: 125px
   left: 0
@@ -52,36 +52,36 @@
   padding: 0
   z-index: 1010
 
-  .expertise-header
+  .skills-header
     color: $col_bg
     font-weight: 500
 
-  .alt-expertise-header
+  .alt-skills-header
     color: $col_font
     font-weight: 500
 
-#expertiseAll, .expertise-popup
+#skillsAll, .skills-popup
   position: absolute
   top: 55%
   left: 50%
   +transform(translate(-50%, -50%))
 
-#expertiseAll
+#skillsAll
   z-index: 1010
 
-.expertise-popup
+.skills-popup
   z-index: 1020
 //   +transition(all, 500ms, ease-in-out)
 //   +transform(translateY(-90px))
 // .popup-open
 //   +transform(translateY(0px))
 
-.expertise-keyword
+.skills-keyword
   outline: none
 
 /* Media queries
 +media-breakpoint-down(md)
-  .expertise-header, .alt-expertise-header
+  .skills-header, .alt-skills-header
     font-size: $tablet_normal
 
 
@@ -89,15 +89,15 @@
   .content-container
     overflow-y: scroll
 
-  .expertise-header
+  .skills-header
     font-size: $mobile_normal
 
 
 +media-breakpoint-up(lg)
-  .expertise-container svg
+  .skills-container svg
     display: block
     margin: auto
     max-height: 55vh
 
-  .expertise-header
+  .skills-header
     font-size: $desktop_normal
