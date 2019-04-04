@@ -9622,7 +9622,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bigger, h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.38;
 }
 
@@ -9888,11 +9888,11 @@ footer {
 }
 
 #expertiseAll {
-  z-index: 1000;
+  z-index: 1010;
 }
 
 .expertise-popup {
-  z-index: 1010;
+  z-index: 1020;
 }
 
 .expertise-keyword {
@@ -9918,11 +9918,11 @@ footer {
   .expertise-container svg {
     display: block;
     margin: auto;
-    max-height: 50vh;
+    max-height: 55vh;
   }
 
   .expertise-header {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 

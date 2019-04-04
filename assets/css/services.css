@@ -9715,7 +9715,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bigger, h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.38;
 }
 
@@ -9991,7 +9991,7 @@ footer {
   }
 
   .services-header {
-    font-size: 22px;
+    font-size: 18px;
   }
   .services-header .services-attention {
     font-weight: 500;
@@ -10004,7 +10004,7 @@ footer {
     right: 20%;
   }
   .services-scrollable div {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .services-round-up p {
@@ -10017,9 +10017,6 @@ footer {
 }
 @media (max-width: 767.98px) {
   .services-header {
-    position: fixed;
-    left: 10%;
-    right: 10%;
     font-size: 16px;
     text-align: justify;
   }
@@ -10028,7 +10025,7 @@ footer {
   }
 
   .services-scrollable {
-    bottom: 15%;
+    bottom: 13%;
     left: 10%;
     right: 10%;
   }
@@ -10059,7 +10056,7 @@ footer {
   }
 
   .services-header {
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
     font-weight: 500;
   }
@@ -10068,9 +10065,10 @@ footer {
   }
 
   .services-scrollable div {
-    margin: 10px 50px;
+    margin: 10px 60px;
+    padding-right: 20px;
     text-align: justify;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
   }
 
@@ -10083,7 +10081,7 @@ footer {
   }
 
   .services-round-up p {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   #servicesPlain {

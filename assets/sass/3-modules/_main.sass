@@ -107,6 +107,7 @@
 
 /* Media queries */
 +media-breakpoint-up(md)
+  +titleSize(350px, $desktop_biggest, $desktop_big)
   #contentBox
     #contentLead
       font-size: $desktop_biggest
@@ -114,29 +115,16 @@
       width: 80%
       color: $col_bg
       font-weight: 500
+      font-size: $tablet_normal
 
 
 +media-breakpoint-up(lg)
-  #lightBox
-    left: -20px
-
-
-+media-breakpoint-up(xl)
-  +titleSize(350px, $desktop_biggest, $desktop_big)
-
-
-@media screen and (min-width:1800px)
-  +titleSize(440px, $fourK_biggest, $fourK_big)
-  #lightBox
-    left: -50px
-
-
-+media-breakpoint-down(lg)
-  +titleSize(350px, $tablet_biggest, $tablet_big)
+  #contentBox
+    font-size: $desktop_normal
 
 
 +media-breakpoint-down(sm)
-  +titleSize(250px, $mobile_big, $mobile_normal)
+  +titleSize(255px, $mobile_big, $mobile_normal)
 
   body
     overflow-y: scroll

@@ -1,2 +1,9 @@
 gems:
   - jekyll-babel
+
+exclude:
+  - .gitignore
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
