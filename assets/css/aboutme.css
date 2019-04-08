@@ -9852,6 +9852,26 @@ footer {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.content-container .row #intro {
+  color: #fff;
+  font-weight: 500;
+}
+.content-container .row #intro #title {
+  font-size: 36px;
+  text-transform: capitalize;
+  color: #fff;
+}
+.content-container .row #downloadResources {
+  margin: 20px 0;
+}
+.content-container .row #downloadResources div {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 10px;
+}
 .content-container .row .video-container video {
   width: 50vw;
   height: calc(50vw * 9 / 16);
@@ -9859,9 +9879,6 @@ footer {
   margin: auto;
   padding: 20px;
   border: 3px solid #fff;
-}
-.content-container .row .video-container::before {
-  height: 480px;
 }
 
 /* Media queries */
