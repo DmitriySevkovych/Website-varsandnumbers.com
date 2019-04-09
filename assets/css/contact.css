@@ -9843,6 +9843,7 @@ body {
 #contactText {
   z-index: 1010;
   text-align: justify;
+  font-weight: 500;
 }
 #contactText a {
   display: inline;
@@ -9914,18 +9915,21 @@ body {
     float: right;
   }
 
-  #mBig {
-    font-size: 20px;
+  .contact-header, #mBig {
+    font-size: 36px;
   }
 }
 @media (min-width: 992px) {
-  #mBig {
+  .contact-header, #mBig {
     font-size: 36px;
   }
 }
 @media (max-width: 991.98px) {
   #contactText p {
     font-size: 18px;
+  }
+  #contactText .contact-header {
+    font-size: 36px;
   }
 
   form label, form textarea {
@@ -9939,6 +9943,9 @@ body {
 
   #contactText p {
     font-size: 16px;
+  }
+  #contactText .contact-header {
+    font-size: 22px;
   }
 
   form label {

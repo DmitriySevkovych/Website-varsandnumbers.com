@@ -79,7 +79,7 @@ $(function() {
   } else {
     $servicesIcons.position({
       my: "center center",
-      at: "center center",
+      at: "center center-10",
       of: "body"
     });
     $servicesHeader.position({

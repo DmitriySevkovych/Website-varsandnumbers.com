@@ -26,7 +26,7 @@ body
 #contactText
   z-index: 1010
   text-align: justify
-
+  font-weight: 500
   a
     display: inline
 
@@ -92,23 +92,23 @@ body
 +media-breakpoint-up(md)
   form #customerContact label
     width: 48%
-
     &:last-child
       float: right
 
-  #mBig
-    font-size: $desktop_big
+  .contact-header, #mBig
+    font-size: $desktop_biggest
 
 
 +media-breakpoint-up(lg)
-  #mBig
+  .contact-header, #mBig
     font-size: $desktop_biggest
-
 
 +media-breakpoint-down(md)
   #contactText
     p
       font-size: $tablet_normal
+    .contact-header
+      font-size: $tablet_biggest
 
   form
     label, textarea
@@ -122,6 +122,8 @@ body
   #contactText
     p
       font-size: $mobile_normal
+    .contact-header
+      font-size: $mobile_big
 
   form
     label
@@ -132,6 +134,5 @@ body
 
   #contactInfo
     height: 35vh
-
     #mBig
       font-size: $mobile_big

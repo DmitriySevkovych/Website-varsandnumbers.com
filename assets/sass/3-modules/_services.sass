@@ -5,6 +5,8 @@
   position: relative
   min-height: 100vh
   padding-top: 100px
+  p, .services-scrollable div
+    font-weight: 500
 
   /*
    * Background styles
@@ -78,9 +80,7 @@
   .background-light
     height: 75vh
   .services-header
-    font-size: $tablet_normal
-    .services-attention
-      font-weight: 500
+    font-size: $tablet_biggest
   .services-scrollable
     position: fixed
     bottom: 14%
@@ -96,10 +96,7 @@
 
 @include media-breakpoint-down(sm)
   .services-header
-    font-size: $mobile_normal
-    text-align: justify
-    .services-attention
-      font-weight: 500
+    font-size: $mobile_biggest
   .services-scrollable
     bottom: 13%
     left: 10%
@@ -121,17 +118,13 @@
   .services-icons
     max-height: 40vh
   .services-header
-    font-size: $desktop_normal
+    font-size: $desktop_biggest
     color: $col_bg
-    font-weight: 500
-    .services-attention
-      font-weight: 600
   .services-scrollable div
       margin: 10px 60px
       padding-right: 20px
       text-align: justify
       font-size: $desktop_big
-      // font-size: $desktop_normal
       font-weight: 500
   .slick-current
     color: $col_accent

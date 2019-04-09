@@ -9855,10 +9855,10 @@ footer {
 .content-container .row #intro {
   color: #fff;
   font-weight: 500;
+  font-size: 16px;
 }
 .content-container .row #intro #title {
   font-size: 36px;
-  text-transform: capitalize;
   color: #fff;
 }
 .content-container .row #downloadResources {

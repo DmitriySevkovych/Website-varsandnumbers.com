@@ -47,14 +47,14 @@ $(function() {
     });
   } else {
     $contactForm.position({
-      my: 'center',
-      at: 'center',
+      my: 'center center',
+      at: 'center center+50',
       of: 'body'
     });
     $contactText.position({
-      my: 'center top',
-      at: 'center center-' + $("body").height() / 3,
-      of: '#contactForm'
+      my: 'center center',
+      at: 'center top+' + $("body").height() / 4,
+      of: 'body'
     });
     $contactInfo.position({
       my: 'center bottom',

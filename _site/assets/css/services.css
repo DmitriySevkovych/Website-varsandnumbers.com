@@ -9916,6 +9916,9 @@ footer {
   /* * Foreground (content) styles
   * */
 }
+.main-container p, .main-container .services-scrollable div {
+  font-weight: 500;
+}
 .main-container .background-light {
   position: absolute;
   width: 100%;
@@ -9991,10 +9994,7 @@ footer {
   }
 
   .services-header {
-    font-size: 18px;
-  }
-  .services-header .services-attention {
-    font-weight: 500;
+    font-size: 36px;
   }
 
   .services-scrollable {
@@ -10017,11 +10017,7 @@ footer {
 }
 @media (max-width: 767.98px) {
   .services-header {
-    font-size: 16px;
-    text-align: justify;
-  }
-  .services-header .services-attention {
-    font-weight: 500;
+    font-size: 32px;
   }
 
   .services-scrollable {
@@ -10056,12 +10052,8 @@ footer {
   }
 
   .services-header {
-    font-size: 16px;
+    font-size: 36px;
     color: #fff;
-    font-weight: 500;
-  }
-  .services-header .services-attention {
-    font-weight: 600;
   }
 
   .services-scrollable div {
