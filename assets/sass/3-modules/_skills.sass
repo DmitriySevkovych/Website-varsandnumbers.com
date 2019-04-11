@@ -1,7 +1,4 @@
 /* General page style
-// .main-container
-//   // padding-top: 110px
-//   height: 100vh
 
 /* Background styles
 .background-light
@@ -16,14 +13,10 @@
 
 .mobile-background-dark
   background-color: $col_main_dark
-  height: 33%
-  width: 100vw
   z-index: -1
 
 .mobile-background-light
   background-color: $col_main_light
-  width: 100vw
-  height: 33%
   z-index: -1
 
 .triangle
@@ -64,6 +57,7 @@
   position: absolute
   top: 55%
   left: 50%
+
   +transform(translate(-50%, -50%))
 
 #skillsAll
@@ -78,6 +72,7 @@
 
 .skills-keyword
   outline: none
+  -webkit-tap-highlight-color: transparent
 
 /* Media queries
 +media-breakpoint-down(md)
@@ -86,11 +81,34 @@
 
 
 +media-breakpoint-down(sm)
-  .content-container
+  body
     overflow-y: scroll
 
-  .skills-header
-    font-size: $mobile_normal
+  .main-container
+    min-height: 100vh
+
+    footer
+      position: relative
+      background-color: $col_main_dark
+
+      .footer-text
+        color: $col_main_light
+
+  #skillsIntro
+    top: 100px
+
+    .skills-header
+      font-size: $mobile_small
+
+  #mobileContainer
+    padding: 0
+
+    .mobile-background-dark, .mobile-background-light
+      min-height: 20vh
+      border-bottom: 15px solid $col_bg
+
+      &:first-child
+        height: 250px
 
 
 +media-breakpoint-up(lg)

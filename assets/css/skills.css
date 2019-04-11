@@ -9829,15 +9829,11 @@ footer {
 
 .mobile-background-dark {
   background-color: #4d4d4d;
-  height: 33%;
-  width: 100vw;
   z-index: -1;
 }
 
 .mobile-background-light {
   background-color: #cccccc;
-  width: 100vw;
-  height: 33%;
   z-index: -1;
 }
 
@@ -9898,6 +9894,7 @@ footer {
 
 .skills-keyword {
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Media queries */
@@ -9907,12 +9904,37 @@ footer {
   }
 }
 @media (max-width: 767.98px) {
-  .content-container {
+  body {
     overflow-y: scroll;
   }
 
-  .skills-header {
-    font-size: 16px;
+  .main-container {
+    min-height: 100vh;
+  }
+  .main-container footer {
+    position: relative;
+    background-color: #4d4d4d;
+  }
+  .main-container footer .footer-text {
+    color: #cccccc;
+  }
+
+  #skillsIntro {
+    top: 100px;
+  }
+  #skillsIntro .skills-header {
+    font-size: 12px;
+  }
+
+  #mobileContainer {
+    padding: 0;
+  }
+  #mobileContainer .mobile-background-dark, #mobileContainer .mobile-background-light {
+    min-height: 20vh;
+    border-bottom: 15px solid #fff;
+  }
+  #mobileContainer .mobile-background-dark:first-child, #mobileContainer .mobile-background-light:first-child {
+    height: 250px;
   }
 }
 @media (min-width: 992px) {
