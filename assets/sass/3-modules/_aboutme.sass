@@ -1,5 +1,11 @@
 /* General page style
+.main-container
+  min-height: 100vh
+
 /* Background
+.background-container
+  height: 100%
+
 .background-dark
   position: absolute
   top: 20%
@@ -8,6 +14,25 @@
   right: 0
   background-color: $col_main_dark
   z-index: -1
+
+.background-alt
+  width: 0
+  height: 0
+  border-left: 50vw solid transparent
+  border-right: 50vw solid transparent
+  border-bottom: 25vh solid $col_main_dark
+  position: absolute
+  top: 0
+  left: 0
+  &:after
+    content: ''
+    position: absolute
+    top: 25vh
+    left: -50vw
+    width: 0
+    height: 0
+    border: 50vw solid transparent
+    border-top: 75vh solid $col_main_dark
 
 /* Foreground
 .content-container

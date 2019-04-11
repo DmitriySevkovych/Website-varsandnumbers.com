@@ -9814,7 +9814,15 @@ footer {
 }
 /* The page-specific sass module */
 /* General page style */
+.main-container {
+  min-height: 100vh;
+}
+
 /* Background */
+.background-container {
+  height: 100%;
+}
+
 .background-dark {
   position: absolute;
   top: 20%;
@@ -9823,6 +9831,27 @@ footer {
   right: 0;
   background-color: #4d4d4d;
   z-index: -1;
+}
+
+.background-alt {
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-bottom: 25vh solid #4d4d4d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.background-alt:after {
+  content: "";
+  position: absolute;
+  top: 25vh;
+  left: -50vw;
+  width: 0;
+  height: 0;
+  border: 50vw solid transparent;
+  border-top: 75vh solid #4d4d4d;
 }
 
 /* Foreground */
