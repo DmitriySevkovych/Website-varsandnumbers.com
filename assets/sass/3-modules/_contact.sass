@@ -73,12 +73,12 @@ body
   width: 100vw
   min-height: 20vh
   background-color: $col_main_dark
+  align-items: center
 
   #mBig
-    position: absolute
-    top: 50%
-
-    +transform(translate(0, -50%))
+    // position: absolute
+    // top: 50%
+    // +transform(translate(0, -50%))
 
     color: $col_bg
     font-weight: 300
@@ -119,26 +119,33 @@ body
 
 +media-breakpoint-down(sm)
   body
-    overflow: scroll
+    overflow-y: scroll
   .main-container
     min-height: 100vh
-
   #contactText
+    min-height: 50vh
+    padding-top: 15vh
     p
       font-size: $mobile_normal
     .contact-header
       font-size: $mobile_big
+  #contactForm
+    min-height: 50vh
+    form
+      label
+        display: block
 
-  form
-    label
-      display: block
-
-    input, textarea
-      font-size: $mobile_normal
+      input, textarea
+        font-size: $mobile_normal
 
   #contactInfo
-    position: absolute
-    bottom: 0
-    height: 20vh
+    position: relative
+    top: 75px
+    height: 25vh
+    align-items: flex-start
     #mBig
+      padding-top: 30px
       font-size: $mobile_big
+
+  footer
+    position: static

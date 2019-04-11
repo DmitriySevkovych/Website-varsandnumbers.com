@@ -9887,13 +9887,9 @@ body {
   width: 100vw;
   min-height: 20vh;
   background-color: #4d4d4d;
+  align-items: center;
 }
 #contactInfo #mBig {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
   color: #fff;
   font-weight: 300;
   text-align: center;
@@ -9935,13 +9931,17 @@ body {
 }
 @media (max-width: 767.98px) {
   body {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .main-container {
     min-height: 100vh;
   }
 
+  #contactText {
+    min-height: 50vh;
+    padding-top: 15vh;
+  }
   #contactText p {
     font-size: 16px;
   }
@@ -9949,20 +9949,29 @@ body {
     font-size: 22px;
   }
 
-  form label {
+  #contactForm {
+    min-height: 50vh;
+  }
+  #contactForm form label {
     display: block;
   }
-  form input, form textarea {
+  #contactForm form input, #contactForm form textarea {
     font-size: 16px;
   }
 
   #contactInfo {
-    position: absolute;
-    bottom: 0;
-    height: 20vh;
+    position: relative;
+    top: 75px;
+    height: 25vh;
+    align-items: flex-start;
   }
   #contactInfo #mBig {
+    padding-top: 30px;
     font-size: 22px;
+  }
+
+  footer {
+    position: static;
   }
 }
 
