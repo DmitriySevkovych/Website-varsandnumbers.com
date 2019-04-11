@@ -9859,8 +9859,8 @@ footer {
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #cccccc;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
@@ -9883,12 +9883,13 @@ footer {
 }
 
 #logoContainer {
-  width: 75px;
+  width: 55px;
   float: right !important;
 }
 #logoContainer .footer-text {
-  font-size: 12px;
+  font-size: 8px;
   opacity: 0.7;
+  margin-bottom: 2px;
 }
 
 /* * Media queries
@@ -9995,6 +9996,7 @@ footer {
 
   .services-header {
     font-size: 36px;
+    color: #fff;
   }
 
   .services-scrollable {
@@ -10005,6 +10007,7 @@ footer {
   }
   .services-scrollable div {
     font-size: 18px;
+    color: #fff;
   }
 
   .services-round-up p {
@@ -10017,7 +10020,7 @@ footer {
 }
 @media (max-width: 767.98px) {
   .services-header {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .services-scrollable {

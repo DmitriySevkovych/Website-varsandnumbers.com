@@ -3,8 +3,8 @@
   display: none
 
 /* Customize the footer
-footer
-  position: static
+// footer
+//   position: static
 
 #langContainer .lang
   background-color: transparent
@@ -90,6 +90,8 @@ body
 
 /* Media queries
 +media-breakpoint-up(md)
+  // footer
+  //   position: static
   form #customerContact label
     width: 48%
     &:last-child
@@ -118,6 +120,8 @@ body
 +media-breakpoint-down(sm)
   body
     overflow: scroll
+  .main-container
+    min-height: 100vh
 
   #contactText
     p
@@ -133,6 +137,8 @@ body
       font-size: $mobile_normal
 
   #contactInfo
-    height: 35vh
+    position: absolute
+    bottom: 0
+    height: 20vh
     #mBig
       font-size: $mobile_big

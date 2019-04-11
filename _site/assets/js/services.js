@@ -138,7 +138,7 @@ $(function() {
 
     $('.services-round-up').swipe({
       swipeLeft: function(event, direction, distance, duration, fingerCount) {
-        window.location.href = 'expertise.html';
+        window.location.href = 'skills.html';
       },
       swipeRight: function(event, direction, distance, duration, fingerCount) {
         var $currentIndex = $('.slick-current').data('slick-index');
