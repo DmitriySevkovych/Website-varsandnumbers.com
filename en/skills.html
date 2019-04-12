@@ -1,6 +1,6 @@
 ---
 lang: en
-ref: services
+ref: skills
 ---
 
 <!DOCTYPE html>
@@ -14,21 +14,25 @@ ref: services
   <meta name="author" content="{{site.data.vars.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="/assets/css/services.css">
+  <link rel="stylesheet" href="../assets/css/skills.css">
 </head>
 
 <body>
   {% include eng/header.html %}
 
   <div class="main-container">
-    {% include univ/services_background.html %}
-    {% include eng/services_content.html %}
+    {% include univ/skills_background.html %}
+
+    {% include eng/skills_content.html %}
+
+    {% include eng/skills_mobile.html %}
+
     {% include univ/footer.html %}
   </div>
 
-  <script type="text/javascript" src="/assets/js/ext.min.js"></script>
-  <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/assets/js/services.js"> </script>
+  <script type="text/javascript" src="../assets/js/ext.min.js"></script>
+  <script type="text/javascript" src="../assets/js/skills.js"></script>
+  <script type="text/javascript" src="../assets/js/footer.js"></script>
 </body>
 
 </html>

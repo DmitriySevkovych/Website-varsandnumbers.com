@@ -1,10 +1,35 @@
+---
+lang: de
+ref: main
+description: Ich bin ein freiberuflicher Softwareentwickler mit einem M.Sc.-Abschluss in Mathematik. Ich beschäftige mich im Wesentlichen mit Allem was mit Variablen und Zahlen zu tun hat, zum Beispiel Full-Stack Web Development, maschinelles Lernen und numerische Simulation. Und ich mag Digital Design.
+---
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    test de
-  </body>
+<html lang="de" dir="ltr">
+
+<head>
+  <title>{{site.data.vars.title_tab}}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{site.data.vars.description}}">
+  <meta name="keywords" content="{{site.data.vars.keywords}}">
+  <meta name="author" content="{{site.data.vars.author}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+  {% include ger/header.html %}
+
+  <div class="main-container">
+    {% include univ/main_background.html %}
+    {% include ger/main.html %}
+    {% include univ/footer.html %}
+  </div>
+
+  <script type="text/javascript" src="../assets/js/ext.min.js"> </script>
+  <script type="text/javascript" src="../assets/js/main.js"> </script>
+  <script type="text/javascript" src="../assets/js/footer.js"> </script>
+</body>
+
 </html>

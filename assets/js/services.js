@@ -133,7 +133,7 @@ $(function() {
         updateScreen($currentIndex + 1, false);
       },
       //Set distance that triggers a swipe
-      threshold: 25
+      threshold: 10
     });
 
     $('.services-round-up').swipe({
