@@ -159,7 +159,20 @@ $(function() {
     if (newIndex >= 0 && newIndex < 8) {
       lock = true;
       $icon.fadeToggle(500, function() {
-        $icon.attr('src', 'assets/img/service-icons/service_' + newIndex + '.svg');
+
+        // var urlParts = window.location.href.split('/');
+        // var resourceHelper = '';
+        // ['en', 'de', 'ru'].forEach(function(lang) {
+        //   if (urlParts.includes(lang)) {
+        //     resourceHelper = '../';
+        //   }
+        // });
+        //
+        // var resource = resourceHelper + 'assets/img/service-icons/service_' + newIndex + '.svg';
+        var resource = 'assets/img/service-icons/service_' + newIndex + '.svg';
+
+        $icon.attr('src', resource);
+
         $icon.fadeToggle(500, function() {
           lock = false;
         });

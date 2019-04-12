@@ -1,10 +1,10 @@
 ---
-lang: en
-ref: contact
+lang: de
+ref: services
 ---
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="de" dir="ltr">
 
 <head>
   <title>{{site.data.vars.title_tab}}</title>
@@ -14,21 +14,21 @@ ref: contact
   <meta name="author" content="{{site.data.vars.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="../assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/services.css">
 </head>
 
 <body>
-  {% include eng/header.html %}
+  {% include ger/header.html %}
 
   <div class="main-container">
-    {% include eng/contact.html %}
+    {% include univ/services_background.html %}
+    {% include ger/services.html %}
     {% include univ/footer.html %}
   </div>
 
-  <script type="text/javascript" src="../assets/js/ext.min.js"></script>
-  <script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="../assets/js/contact.js"></script>
-  <script type="text/javascript" src="../assets/js/footer.js"></script>
+  <script type="text/javascript" src="assets/js/ext.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="assets/js/services.js"> </script>
 </body>
 
 </html>

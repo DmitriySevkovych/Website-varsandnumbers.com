@@ -3,12 +3,15 @@ Document ready function
 */
 $(function() {
   $('.lang').on('click', function() {
-    var lang = document.documentElement.lang;
-    var url = window.location.href;
-    var page = url.split('/')[url.split('/').length - 1];
+    var gotoLang = this.dataset.lang;
+    var docLang = document.documentElement.lang;
 
-    if (this.dataset.lang != lang) {
-      var newUrl = '../' + this.dataset.lang + '/' + page;
+
+    if (gotoLang != docLang) {
+      var url = window.location.href;
+      var page = url.split('/')[url.split('/').length - 1];
+      var folder = (gotoLang == 'en') ? '' : gotoLang + '/';
+      var newUrl = '../' + folder + page;
       window.location.href = newUrl;
     }
   });
