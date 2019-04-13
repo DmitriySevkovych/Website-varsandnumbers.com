@@ -10043,12 +10043,15 @@ footer {
   font-weight: 500;
   text-align: justify;
 }
+.main-container .services-header {
+  font-weight: 400;
+}
 .main-container .services-header #typewriter {
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 5px;
 }
 .main-container .services-header #caret {
-  font-weight: 700;
+  font-weight: 500;
   -webkit-transition: opacity 300ms ease-in-out;
   -moz-transition: opacity 300ms ease-in-out;
   -o-transition: opacity 300ms ease-in-out;

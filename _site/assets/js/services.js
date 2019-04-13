@@ -23,10 +23,8 @@ $(function() {
   var $servicesHeader = $(".services-header");
   var $servicesIcons = $(".services-icons");
 
-
   //Typewriter effect
   var $caret = $('#caret');
-
   function blink() {
     if (!lock) {
       $caret.toggleClass('blink');
