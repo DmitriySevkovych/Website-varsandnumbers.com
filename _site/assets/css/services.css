@@ -10043,15 +10043,19 @@ footer {
   font-weight: 500;
   text-align: justify;
 }
-.main-container .services-header i {
-  position: absolute;
-  left: 50%;
-  border: solid #fff;
-  border-width: 0 5px 5px 0;
-  display: inline-block;
-  -webkit-transform: rotate(45deg) translate(-50%, 0);
-  -ms-transform: rotate(45deg) translate(-50%, 0);
-  transform: rotate(45deg) translate(-50%, 0);
+.main-container .services-header #typewriter {
+  font-weight: 700;
+  padding-left: 5px;
+}
+.main-container .services-header #caret {
+  font-weight: 700;
+  -webkit-transition: opacity 300ms ease-in-out;
+  -moz-transition: opacity 300ms ease-in-out;
+  -o-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+.main-container .services-header .blink {
+  opacity: 0;
 }
 
 /* * Media queries
@@ -10072,10 +10076,6 @@ footer {
   .services-header {
     font-size: 36px;
     color: #fff;
-  }
-  .services-header i {
-    top: 150%;
-    padding: 10px;
   }
 
   .services-scrollable {
@@ -10100,9 +10100,6 @@ footer {
 @media (max-width: 767.98px) {
   .services-header {
     font-size: 22px;
-  }
-  .services-header i {
-    padding: 5px;
   }
 
   .services-scrollable {
@@ -10139,10 +10136,6 @@ footer {
   .services-header {
     font-size: 32px;
     color: #fff;
-  }
-  .services-header i {
-    padding: 10px;
-    top: 75px;
   }
 
   .services-scrollable div {

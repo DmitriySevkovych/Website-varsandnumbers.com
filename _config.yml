@@ -11,4 +11,3 @@ exclude:
   - gulpfile.js
   - assets/img_raw
   - assets/sass
-  - assets/css/*.css.map

@@ -11,6 +11,8 @@ instructionSpan.innerHTML = instruction;
 
 var lock = false;
 
+
+
 /*
  * Document ready function
  */
@@ -18,6 +20,21 @@ $(function() {
   var $services = $(".services-scrollable");
   var $servicesHeader = $(".services-header");
   var $servicesIcons = $(".services-icons");
+
+
+  //Typewriter effect
+  var $caret = $('#caret');
+  var $typewriter = $('#typewriter');
+
+  function blink() {
+    if (!lock) {
+      $caret.toggleClass('blink');
+    } else {
+      $caret.addClass('blink');
+    }
+  }
+  window.setInterval(blink, 600);
+  //Typewriter effect, end
 
   // Initialize the scroll event handler and the slick carousel
   $services.on("init", function() {
@@ -64,7 +81,7 @@ $(function() {
       of: "body"
     });
     $servicesHeader.position({
-      my: "center bottom",
+      my: "center top",
       at: "center center-" + window.innerHeight / 3,
       of: ".services-icons"
     });
@@ -80,8 +97,6 @@ $(function() {
       of: ".services-icons"
     });
   }
-
-
 
   // Event handlers
   function initMouseWheelHandler($services) {
@@ -148,9 +163,22 @@ $(function() {
     var $servicesBlend = $('.services-blend');
     var $servicesRoundUp = $('.services-round-up');
 
+    var $typewriter = $('#typewriter');
+    var test = ['', 'WHAT', 'HOW', 'WHO', 'ALL', 'TRICKY', 'PRETTY', 'ME'];
+    $typewriter.t(test[newIndex], {
+      // speed:100,
+      caret:false,
+      blink_perm:false
+    });
+
     if (newIndex >= 0 && newIndex < 8) {
       lock = true;
+
       $icon.fadeToggle(500, function() {
+
+
+
+        // typewriter(test[newIndex]);
 
         var docLang = document.documentElement.lang;
         var resourceHelper = (['de', 'ru'].includes(docLang)) ? '../' : '';
