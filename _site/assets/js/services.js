@@ -4,8 +4,10 @@
 var instructionSpan = document.getElementById('instruction');
 if (document.documentElement.lang == 'en') {
   var instruction = window.innerWidth < 992 ? 'swipe left' : 'scroll down';
+  var typeCommands = ['', 'WHAT', 'HOW', 'WHO', 'ALL', 'TRICKY', 'PRETTY', 'ME'];
 } else if (document.documentElement.lang == 'de') {
   var instruction = window.innerWidth < 992 ? 'nach links wischen' : 'nach unten scrollen';
+  var typeCommands = ['', 'WAS', 'WIE', 'WER', 'ALLEM', 'KOMPLEX', 'HÜBSCH', 'MIR'];
 }
 instructionSpan.innerHTML = instruction;
 
@@ -24,7 +26,6 @@ $(function() {
 
   //Typewriter effect
   var $caret = $('#caret');
-  var $typewriter = $('#typewriter');
 
   function blink() {
     if (!lock) {
@@ -164,8 +165,7 @@ $(function() {
     var $servicesRoundUp = $('.services-round-up');
 
     var $typewriter = $('#typewriter');
-    var test = ['', 'WHAT', 'HOW', 'WHO', 'ALL', 'TRICKY', 'PRETTY', 'ME'];
-    $typewriter.t(test[newIndex], {
+    $typewriter.t(typeCommands[newIndex], {
       // speed:100,
       caret:false,
       blink_perm:false
