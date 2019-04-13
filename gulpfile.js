@@ -1,10 +1,12 @@
 /* Gulp and plugins */
 var gulp = require('gulp');
-// var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+var minify = require('gulp-minify');
+var imagemin = require('gulp-imagemin');
 var shell = require('gulp-shell');
+//var sourcemaps = require('gulp-sourcemaps');
+// var uglify = require('gulp-uglify');
+// var rename = require('gulp-rename');
 
 /* External libraries to be bundled */
 var bootstrapMinJs = './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -17,18 +19,40 @@ var extLibs = [jqueryMinJs, bootstrapMinJs, touchswipeMinJs, slickMinJs];
 
 
 /* Gulp tasks */
+// Startup task
 gulp.task('sass', shell.task('sass --watch assets/sass:assets/css'));
 gulp.task('jekyll', shell.task('jekyll serve --watch'));
 gulp.task('atom', shell.task('atom .'));
-
 gulp.task('start', gulp.parallel('sass', 'jekyll', 'atom'));
 
+// Concatenate and minify external js
 gulp.task('get-ext-js', function() {
   return gulp.src(extLibs)
     .pipe(concat('ext.js'))
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      }
     }))
     .pipe(gulp.dest('./assets/js'));
+});
+
+// Minify my own files and images
+gulp.task('minify-js', function() {
+  return gulp.src('assets/js/*.js')
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+      ignoreFiles: ['*.min.js']
+    }))
+    .pipe(gulp.dest('assets/js/min'));
+});
+
+gulp.task('minify-images', function() {
+  return gulp.src('assets/img_raw/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img'));
 });

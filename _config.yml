@@ -7,3 +7,4 @@ exclude:
   - package.json
   - package-lock.json
   - gulpfile.js
+  - assets/img_raw

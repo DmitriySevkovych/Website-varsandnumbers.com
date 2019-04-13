@@ -2,12 +2,7 @@
  * Plain JS to execute on page load
  */
 var instructionSpan = document.getElementById('instruction');
-if (document.documentElement.lang == 'en') {
-  var instruction = window.innerWidth < 992 ? 'swipe left' : 'scroll down';
-} else if (document.documentElement.lang == 'de') {
-  var instruction = window.innerWidth < 992 ? 'nach links wischen' : 'nach unten scrollen';
-}
-
+var instruction = window.innerWidth < 992 ? 'swipe left' : 'scroll down';
 instructionSpan.innerHTML = instruction;
 
 var lock = false;
