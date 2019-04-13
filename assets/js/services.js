@@ -7,22 +7,9 @@ if (document.documentElement.lang == 'en') {
 } else if (document.documentElement.lang == 'de') {
   var instruction = window.innerWidth < 992 ? 'nach links wischen' : 'nach unten scrollen';
 }
-
 instructionSpan.innerHTML = instruction;
 
 var lock = false;
-
-/*
- * Header stuff
- */
-$(function() {
-  var $logo = $('.navbar-toggler');
-  var $navBlend = $('.nav-blend');
-
-  $logo.on('click', function() {
-    $navBlend.fadeToggle(300);
-  });
-});
 
 /*
  * Document ready function
@@ -77,7 +64,7 @@ $(function() {
       of: "body"
     });
     $servicesHeader.position({
-      my: "center center",
+      my: "center bottom",
       at: "center center-" + window.innerHeight / 3,
       of: ".services-icons"
     });
@@ -88,8 +75,8 @@ $(function() {
       of: "body"
     });
     $servicesHeader.position({
-      my: "center bottom",
-      at: "center center-" + window.innerHeight / 4,
+      my: "center top",
+      at: "center center-" + window.innerHeight / 3,
       of: ".services-icons"
     });
   }

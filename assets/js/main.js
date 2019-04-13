@@ -1,20 +1,12 @@
-// if (document.documentElement.lang == 'ru') {
-//   document.body.style.fontFamily = 'Roboto Slab';
-// }
+if (document.documentElement.lang == 'ru') {
+  document.body.style.fontFamily = 'Roboto Slab';
+}
 
 /*
 Document ready function
 */
 $(function() {
   $sm = $(window).width() < 768;
-
-  $navLogo = $('.navbar-toggler');
-  $navBlend = $('.nav-blend');
-
-  $navLogo.on('click', function() {
-    $navBlend.fadeToggle(300);
-  });
-
   if ($sm) {
     initLogoClickHandler();
   }
