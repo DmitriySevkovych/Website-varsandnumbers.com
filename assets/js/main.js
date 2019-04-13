@@ -1,3 +1,7 @@
+// if (document.documentElement.lang == 'ru') {
+//   document.body.style.fontFamily = 'Roboto Slab';
+// }
+
 /*
 Document ready function
 */

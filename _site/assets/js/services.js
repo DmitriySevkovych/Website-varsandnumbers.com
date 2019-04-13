@@ -165,17 +165,9 @@ $(function() {
       lock = true;
       $icon.fadeToggle(500, function() {
 
-        // var urlParts = window.location.href.split('/');
-        // var resourceHelper = '';
-        // ['en', 'de', 'ru'].forEach(function(lang) {
-        //   if (urlParts.includes(lang)) {
-        //     resourceHelper = '../';
-        //   }
-        // });
-        //
-        // var resource = resourceHelper + 'assets/img/service-icons/service_' + newIndex + '.svg';
-        var resource = 'assets/img/service-icons/service_' + newIndex + '.svg';
-
+        var docLang = document.documentElement.lang;
+        var resourceHelper = (['de', 'ru'].includes(docLang)) ? '../' : '';
+        var resource = resourceHelper + 'assets/img/service-icons/service_' + newIndex + '.svg';
         $icon.attr('src', resource);
 
         $icon.fadeToggle(500, function() {
