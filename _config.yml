@@ -3,8 +3,12 @@ gems:
 
 exclude:
   - .gitignore
+  - .htpasswd
+  - .htaccess
   - node_modules
   - package.json
   - package-lock.json
   - gulpfile.js
   - assets/img_raw
+  - assets/sass
+  - assets/css/*.css.map

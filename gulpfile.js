@@ -48,7 +48,7 @@ gulp.task('minify-js', function() {
       },
       ignoreFiles: ['*.min.js']
     }))
-    .pipe(gulp.dest('assets/js/min'));
+    .pipe(gulp.dest('assets/js'));
 });
 
 gulp.task('minify-images', function() {
