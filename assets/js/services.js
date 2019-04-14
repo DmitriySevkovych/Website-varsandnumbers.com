@@ -4,10 +4,10 @@
 var instructionSpan = document.getElementById('instruction');
 if (document.documentElement.lang == 'en') {
   var instruction = window.innerWidth < 992 ? 'swipe left' : 'scroll down';
-  var typeCommands = ['', 'WHAT', 'HOW', 'WHO', 'ALL', 'TRICKY', 'PRETTY', 'ME'];
+  var typeCommands = ['', 'WHAT', 'HOW', 'WHO', 'ALL', 'TRICKY', 'PRETTY', 'ME', ''];
 } else if (document.documentElement.lang == 'de') {
   var instruction = window.innerWidth < 992 ? 'nach links wischen' : 'nach unten scrollen';
-  var typeCommands = ['', 'WAS', 'WIE', 'WER', 'ALLEM', 'KOMPLEX', 'HÜBSCH', 'MIR'];
+  var typeCommands = ['', 'WAS', 'WIE', 'WER', 'ALLEM', 'KOMPLEX', 'HÜBSCH', 'MIR', ''];
 }
 instructionSpan.innerHTML = instruction;
 

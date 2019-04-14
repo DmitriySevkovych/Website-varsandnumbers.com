@@ -9913,6 +9913,7 @@ body {
 
 #contactForm form {
   height: 100%;
+  margin-top: 20px;
 }
 #contactForm form label {
   width: 100%;
