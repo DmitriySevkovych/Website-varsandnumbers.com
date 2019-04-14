@@ -13,4 +13,10 @@ $(function() {
     $popup.fadeOut(400);
     $popup.removeClass('popup-open');
   });
+
+  $('.mobile-skills-popup').on('click', function() {
+    $popup = $('.popup-open');
+    $popup.fadeOut(400);
+    $popup.removeClass('popup-open');
+  });
 });

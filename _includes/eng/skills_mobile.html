@@ -2,26 +2,58 @@
 
   <div class="mobile-background-dark"></div>
 
+  <!-- "Software" -->
   <div class="mobile-background-light">
-    <div class="p-4 mobile-skills-content" id="skillsMaths">
-      {% include eng/skills_graphic_mathematics.html %}
+    <div class="mobile-popup-container">
+      <div class="p-4 mobile-skills-content" id="skillsSoft">
+        {% include eng/skills_graphic_software.html %}
+      </div>
+      <!-- Popups for "Software" -->
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillFullStack">
+        {% include popups/eng/fullStack_mob.html %}
+      </div>
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillWebDevelopment">
+        {% include popups/eng/webDevelopment_mob.html %}
+      </div>
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillDigitalDesign">
+        {% include popups/eng/digitalDesign_mob.html %}
+      </div>
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillDevops">
+        {% include popups/eng/devops_mob.html %}
+      </div>
     </div>
   </div>
+
+  <!-- "Mathematics" -->
   <div class="mobile-background-dark">
-    <div class="p-4 mobile-skills-content" id="skillsSoft">
-      {% include eng/skills_graphic_software.html %}
+    <div class="mobile-popup-container">
+      <div class="p-4 mobile-skills-content" id="skillsMaths">
+        {% include eng/skills_graphic_mathematics.html %}
+      </div>
+      <!-- Popups for "Mathematics" -->
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillSimulation">
+        {% include popups/eng/numericalSimulation_mob.html %}
+      </div>
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillStatistics">
+        {% include popups/eng/statistics_mob.html %}
+      </div>
     </div>
   </div>
+
+  <!-- "Both" -->
   <div class="mobile-background-light">
-    <div class="p-4 mobile-skills-content" id="skillsBoth">
-      {% include eng/skills_graphic_both.html %}
-    </div>
-    <!-- Popups for "Both" -->
-    <div class="p-4 skills-popup collapse" data-popup="skillDataScience">
-      {% include popups/eng/dataScience_mob.html %}
-    </div>
-    <div class="p-4 skills-popup collapse" data-popup="skillMachineLearning">
-      {% include popups/eng/machineLearning_mob.html %}
+    <div class="mobile-popup-container">
+      <div class="p-4 mobile-skills-content" id="skillsBoth">
+        {% include eng/skills_graphic_both.html %}
+      </div>
+      <!-- Popups for "Both" -->
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillDataScience">
+        {% include popups/eng/dataScience_mob.html %}
+      </div>
+      <div class="p-4 mobile-skills-popup collapse" data-popup="skillMachineLearning">
+        {% include popups/eng/machineLearning_mob.html %}
+      </div>
     </div>
   </div>
+
 </div>

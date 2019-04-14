@@ -9953,8 +9953,19 @@ footer {
   z-index: 1010;
 }
 
-.skills-popup {
+.skills-popup, .mobile-skills-popup {
   z-index: 1020;
+}
+
+.mobile-popup-container {
+  position: relative;
+  z-index: 1010;
+}
+
+.mobile-skills-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .skills-keyword {
