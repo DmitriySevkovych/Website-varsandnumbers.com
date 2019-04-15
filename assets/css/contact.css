@@ -9901,6 +9901,26 @@ body {
   min-height: 100vh;
   width: 100vw;
 }
+body .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+body .main-container .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 2;
+}
+body .main-container .form-container {
+  flex-grow: 1;
+}
+body .main-container .info-container {
+  flex-grow: 1;
+  height: 25vh;
+  max-height: 175px;
+}
 
 #contactText {
   z-index: 1010;
@@ -9913,7 +9933,7 @@ body {
 
 #contactForm form {
   height: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #contactForm form label {
   width: 100%;
@@ -9951,7 +9971,7 @@ body {
 
 #contactInfo {
   width: 100vw;
-  min-height: 20vh;
+  height: 100%;
   background-color: #4d4d4d;
   align-items: center;
 }
@@ -9967,6 +9987,14 @@ body {
 
 /* Media queries */
 @media (min-width: 768px) {
+  .text-container {
+    padding-top: 100px;
+  }
+
+  form textarea {
+    max-height: 15vh;
+  }
+
   form #customerContact label {
     width: 48%;
   }
@@ -9999,9 +10027,12 @@ body {
   body {
     overflow-y: scroll;
   }
-
-  .main-container {
-    min-height: 100vh;
+  body footer {
+    position: relative;
+  }
+  body .main-container .info-container {
+    position: relative;
+    top: 80px;
   }
 
   #contactText {
@@ -10021,23 +10052,19 @@ body {
   #contactForm form label {
     display: block;
   }
+  #contactForm form textarea {
+    height: 15em;
+  }
   #contactForm form input, #contactForm form textarea {
     font-size: 16px;
   }
 
   #contactInfo {
-    position: relative;
-    top: 75px;
-    height: 25vh;
     align-items: flex-start;
   }
   #contactInfo #mBig {
     padding-top: 30px;
     font-size: 22px;
-  }
-
-  footer {
-    position: static;
   }
 }
 

@@ -8,36 +8,4 @@ contactform.setAttribute('action', '//formspree.io/' + 'd.sevkovych' + '@' + 'va
 /*
 Document ready function
 */
-$(function() {
-  $sm = $(window).width() < 576;
-
-  // Positioning
-  $contactForm = $('#contactForm');
-  $contactText = $('#contactText');
-  $contactInfo = $('#contactInfo');
-  $footer = $('footer');
-  
-  if (!$sm) {
-    $contactForm.position({
-      my: 'center center',
-      at: 'center center+50',
-      of: 'body'
-    });
-    $contactText.position({
-      my: 'center center',
-      at: 'center top+' + $("body").height() / 4,
-      of: 'body'
-    });
-    $contactInfo.position({
-      my: 'center bottom',
-      at: 'center bottom',
-      of: 'body'
-    });
-    $footer.position({
-      my: 'center bottom',
-      at: 'center bottom',
-      of: 'body'
-    });
-  }
-
-});
+$(function() {});

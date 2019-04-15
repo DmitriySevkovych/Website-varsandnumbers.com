@@ -3,6 +3,7 @@
   display: none
 
 /* Customize the footer
+
 #langContainer .lang
   background-color: transparent
   border: 1px solid $col_bg
@@ -20,6 +21,26 @@ body
   min-height: 100vh
   width: 100vw
 
+  .main-container
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+
+    .text-container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      flex-grow: 2
+
+    .form-container
+      flex-grow: 1
+
+    .info-container
+      flex-grow: 1
+      height: 25vh
+      max-height: 175px
+
 #contactText
   z-index: 1010
   text-align: justify
@@ -31,7 +52,8 @@ body
 #contactForm
   form
     height: 100%
-    margin-top: 20px
+    margin-top: 10px
+
     label
       width: 100%
 
@@ -65,7 +87,7 @@ body
 
 #contactInfo
   width: 100vw
-  min-height: 20vh
+  height: 100%
   background-color: $col_main_dark
   align-items: center
 
@@ -80,6 +102,12 @@ body
 
 /* Media queries
 +media-breakpoint-up(md)
+  .text-container
+    padding-top: 100px
+
+  form textarea
+      max-height: 15vh
+
   form #customerContact label
     width: 48%
 
@@ -112,8 +140,12 @@ body
   body
     overflow-y: scroll
 
-  .main-container
-    min-height: 100vh
+    footer
+      position: relative
+
+    .main-container .info-container
+      position: relative
+      top: 80px
 
   #contactText
     min-height: 50vh
@@ -131,19 +163,15 @@ body
     form
       label
         display: block
+      textarea
+        height: 15em
 
       input, textarea
         font-size: $mobile_normal
 
   #contactInfo
-    position: relative
-    top: 75px
-    height: 25vh
     align-items: flex-start
 
     #mBig
       padding-top: 30px
       font-size: $mobile_big
-
-  footer
-    position: static
