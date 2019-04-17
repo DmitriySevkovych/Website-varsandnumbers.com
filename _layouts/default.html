@@ -2,13 +2,29 @@
 <html lang="{{ page.lang }}" dir="ltr">
 
 <head>
-  <title>{{site.data.vars.title_tab}}</title>
+  <title>{{site.title_tab}}</title>
   <meta charset="utf-8">
-  <meta name="description" content="Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, data science and numerical simulation. And I like digital design.">
-  <meta name="keywords" content="Mathematics,IT,Software,Development,Web,Learning,Data,Simulation,Digital,Design">
-  <meta name="author" content="Dmitriy Sevkovych">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/ico" href="{{ page.assets }}/img/favicons/favicon.ico">
+  <meta name="author" content="{{site.author}}">
+  <meta name="description" content="{{page.description}}">
+  <meta name="keywords" content="{{site.keywords}}">
+  <meta property="og:locale" content="{{site.locale}}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "person",
+      "name": "{{ site.title }}",
+      "url": "{{site.url}}",
+      "sameAs": null
+    }
+  </script>
+  <link rel="canonical" href="{{ site.url }}">
+  <link rel="icon" type="image/ico" href="{{ page.assets }}/img/favicons/favicon.ico">
   <link rel="stylesheet" href="{{ page.assets }}/css/{{ page.ref }}.css">
 </head>
 
@@ -19,10 +35,10 @@
 
 <script type="text/javascript" src="{{ page.assets }}/js/ext.min.js"> </script>
 {% if page.jQueryUi %}
-  <script type="text/javascript" src="{{ page.assets }}/js/jquery-ui.min.js"> </script>
+<script type="text/javascript" src="{{ page.assets }}/js/jquery-ui.min.js"> </script>
 {% endif %}
 {% if page.t %}
-  <script type="text/javascript" src="{{ page.assets }}/js/t.min.js"> </script>
+<script type="text/javascript" src="{{ page.assets }}/js/t.min.js"> </script>
 {% endif %}
 <script type="text/javascript" src="{{ page.assets }}/js/headerfooter.js"> </script>
 <script type="text/javascript" src="{{ page.assets }}/js/{{ page.ref }}.js"> </script>
