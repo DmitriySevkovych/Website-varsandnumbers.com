@@ -1,6 +1,7 @@
 ---
 lang: de
-ref: services
+ref: main
+description: Ich bin ein freiberuflicher Softwareentwickler mit einem M.Sc.-Abschluss in Mathematik. Ich beschäftige mich im Wesentlichen mit Allem was mit Variablen und Zahlen zu tun hat, zum Beispiel Full-Stack Web Development, maschinelles Lernen und numerische Simulation. Und ich mag Digital Design.
 ---
 
 <!DOCTYPE html>
@@ -14,23 +15,21 @@ ref: services
   <meta name="author" content="{{site.data.vars.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="../assets/css/services.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
   {% include de/header.html %}
 
   <div class="main-container">
-    {% include de/services_background.html %}
-    {% include de/services.html %}
+    {% include univ/main_background.html %}
+    {% include de/main.html %}
     {% include univ/footer.html %}
   </div>
 
-  <script type="text/javascript" src="../assets/js/ext.min.js"></script>
-  <script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="../assets/js/t.min.js"></script>
+  <script type="text/javascript" src="../assets/js/ext.min.js"> </script>
   <script type="text/javascript" src="../assets/js/headerfooter.js"> </script>
-  <script type="text/javascript" src="../assets/js/services.js"> </script>
+  <script type="text/javascript" src="../assets/js/main.js"> </script>
 </body>
 
 </html>

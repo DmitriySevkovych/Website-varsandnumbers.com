@@ -1,7 +1,7 @@
 ---
-lang: en
-ref: aboutme
-description: Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, artificial intelligence and numerical simulation. And I like digital design.
+lang: eng
+ref: main
+description: Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, data science and numerical simulation. And I like digital design.
 ---
 
 <!DOCTYPE html>
@@ -14,22 +14,22 @@ description: Hi, I am a freelance software developer with a M.Sc. degree in math
   <meta name="keywords" content="{{site.data.vars.keywords}}">
   <meta name="author" content="{{site.data.vars.author}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="/assets/css/aboutme.css">
+  <link rel="shortcut icon" type={{site.data.vars.favicon_type}} href={{site.data.vars.favicon}}>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
   {% include en/header.html %}
 
   <div class="main-container">
-    {% include univ/aboutme_background.html %}
-    {% include en/aboutme.html %}
+    {% include univ/main_background.html %}
+    {% include en/main.html %}
     {% include univ/footer.html %}
   </div>
 
   <script type="text/javascript" src="/assets/js/ext.min.js"> </script>
   <script type="text/javascript" src="/assets/js/headerfooter.js"> </script>
-  <script type="text/javascript" src="/assets/js/aboutme.js"> </script>
+  <script type="text/javascript" src="/assets/js/main.js"> </script>
 </body>
 
 </html>

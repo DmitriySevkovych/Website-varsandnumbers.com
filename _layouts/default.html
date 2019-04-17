@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ page.lang }}" dir="ltr">
+
+<head>
+  <title>{{site.data.vars.title_tab}}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, data science and numerical simulation. And I like digital design.">
+  <meta name="keywords" content="Mathematics,IT,Software,Development,Web,Learning,Data,Simulation,Digital,Design">
+  <meta name="author" content="Dmitriy Sevkovych">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/ico" href="{{ page.assets }}/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="{{ page.assets }}/css/{{ page.ref }}.css">
+</head>
+
+<body>
+  {% include {{ page.lang }}/header.html %}
+  {{ content }}
+</body>
+
+<script type="text/javascript" src="{{ page.assets }}/js/ext.min.js"> </script>
+<script type="text/javascript" src="{{ page.assets }}/js/headerfooter.js"> </script>
+<script type="text/javascript" src="{{ page.assets }}/js/{{ page.ref }}.js"> </script>
+
+</html>
