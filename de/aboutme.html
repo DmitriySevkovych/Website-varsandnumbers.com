@@ -1,35 +1,12 @@
 ---
+layout: default
+assets: ../assets
 lang: de
-ref: about me
-description: Hi, I am a freelance software developer with a M.Sc. degree in mathematics. My focus lies basically on everything that deals with variables and numbers, namely full-stack web development, artificial intelligence and numerical simulation. And I like digital design.
+ref: aboutme
 ---
 
-<!DOCTYPE html>
-<html lang="de" dir="ltr">
-
-<head>
-  <title>{{site.data.vars.title_tab}}</title>
-  <meta charset="utf-8">
-  <meta name="description" content="{{site.data.vars.description}}">
-  <meta name="keywords" content="{{site.data.vars.keywords}}">
-  <meta name="author" content="{{site.data.vars.author}}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="../assets/css/aboutme.css">
-</head>
-
-<body>
-  {% include de/header.html %}
-
-  <div class="main-container">
-    {% include univ/aboutme_background.html %}
-    {% include de/aboutme.html %}
-    {% include univ/footer.html %}
-  </div>
-
-  <script type="text/javascript" src="../assets/js/ext.min.js"> </script>
-  <script type="text/javascript" src="../assets/js/headerfooter.js"> </script>
-  <script type="text/javascript" src="../assets/js/aboutme.js"> </script>
-</body>
-
-</html>
+<div class="main-container">
+  {% include univ/aboutme_background.html %}
+  {% include {{page.lang}}/aboutme.html %}
+  {% include univ/footer.html %}
+</div>

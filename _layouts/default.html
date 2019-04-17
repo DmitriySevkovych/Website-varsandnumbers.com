@@ -18,6 +18,12 @@
 </body>
 
 <script type="text/javascript" src="{{ page.assets }}/js/ext.min.js"> </script>
+{% if page.jQueryUi %}
+  <script type="text/javascript" src="{{ page.assets }}/js/jquery-ui.min.js"> </script>
+{% endif %}
+{% if page.t %}
+  <script type="text/javascript" src="{{ page.assets }}/js/t.min.js"> </script>
+{% endif %}
 <script type="text/javascript" src="{{ page.assets }}/js/headerfooter.js"> </script>
 <script type="text/javascript" src="{{ page.assets }}/js/{{ page.ref }}.js"> </script>
 

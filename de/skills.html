@@ -1,38 +1,16 @@
 ---
+layout: default
+assets: ../assets
 lang: de
 ref: skills
 ---
 
-<!DOCTYPE html>
-<html lang="de" dir="ltr">
+<div class="main-container">
+  {% include univ/skills_background.html %}
 
-<head>
-  <title>{{site.data.vars.title_tab}}</title>
-  <meta charset="utf-8">
-  <meta name="description" content="{{site.data.vars.description}}">
-  <meta name="keywords" content="{{site.data.vars.keywords}}">
-  <meta name="author" content="{{site.data.vars.author}}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="{{site.data.vars.favicon_type}}" href="{{site.data.vars.favicon}}">
-  <link rel="stylesheet" href="../assets/css/skills.css">
-</head>
+  {% include {{page.lang}}/skills_content.html %}
 
-<body>
-  {% include de/header.html %}
+  {% include {{page.lang}}/skills_mobile.html %}
 
-  <div class="main-container">
-    {% include univ/skills_background.html %}
-
-    {% include de/skills_content.html %}
-
-    {% include de/skills_mobile.html %}
-
-    {% include univ/footer.html %}
-  </div>
-
-  <script type="text/javascript" src="../assets/js/ext.min.js"></script>
-  <script type="text/javascript" src="../assets/js/headerfooter.js"> </script>
-  <script type="text/javascript" src="../assets/js/skills.js"> </script>
-</body>
-
-</html>
+  {% include univ/footer.html %}
+</div>
