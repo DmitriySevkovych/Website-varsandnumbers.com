@@ -9893,5 +9893,8 @@ body .main-container {
 body .main-container h1 {
   text-align: center;
 }
+body .main-container #postsList {
+  list-style: none;
+}
 
 /*# sourceMappingURL=blog.css.map */
