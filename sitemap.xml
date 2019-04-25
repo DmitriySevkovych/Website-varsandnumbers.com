@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English -->
+  <url>
+    <loc>https://varsandnumbers.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/"/>
+    <lastmod>2019-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/services.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/skills.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/skills.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/skills.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/skills.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/aboutme.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/aboutme.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/aboutme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/aboutme.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/references.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/references.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/references.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/references.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/legal.html"/>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/contact.html"/>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://varsandnumbers.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/"/>
+    <lastmod>2019-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/services.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/skills.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/skills.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/skills.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/skills.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/aboutme.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/aboutme.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/aboutme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/aboutme.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/references.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/references.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/references.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/references.html"/>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/blog.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/legal.html"/>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://varsandnumbers.com/de/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/contact.html"/>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- For future use -->
+
+</urlset>
