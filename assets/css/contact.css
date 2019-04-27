@@ -9721,7 +9721,9 @@ hr {
   height: 0;
 }
 
-/* My reusable modules */
+header {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 header .navbar-toggler {
   padding: 0;
   width: 60px;
@@ -9875,7 +9877,6 @@ footer {
     float: left;
   }
 }
-/* The page-specific sass module */
 /* First, hide the "Let's Talk"-button */
 #talk {
   display: none;
