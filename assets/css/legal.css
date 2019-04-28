@@ -9682,8 +9682,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .large, h2 {
-  font-size: 42px;
-  line-height: 1.14;
+  font-size: 20px;
+  line-height: 1.38;
 }
 
 .bigger, h3 {
@@ -9895,7 +9895,7 @@ body {
     padding-right: 20px;
   }
 
-  p, h3 {
+  p, h2 {
     padding-left: 10px;
   }
 }
@@ -9904,12 +9904,12 @@ body {
     padding-bottom: 50px;
   }
 
-  h3 {
+  h2 {
     margin-top: 30px;
   }
 }
 @media (max-width: 767.98px) {
-  h3 {
+  h2 {
     font-size: 32px;
   }
 
@@ -9922,7 +9922,7 @@ body {
     font-size: 32px;
   }
 
-  h3 {
+  h2 {
     font-size: 22px;
   }
 

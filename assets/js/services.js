@@ -42,6 +42,7 @@ $(function() {
       initSwipeHandlers();
     }
   }).slick({
+    lazyLoad: 'ondemand',
     dots: false,
     arrows: false,
     infinite: false,

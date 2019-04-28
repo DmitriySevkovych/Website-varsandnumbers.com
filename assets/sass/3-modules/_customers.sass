@@ -4,7 +4,98 @@ body
   width: 100vw
 
   .main-container
-    padding-top: 150px
     min-height: 100vh
+
+    #vision
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: justify
+
+      .lead
+        font-weight: 500
+
+    #customers
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      min-height: 100vh
+      background-color: $col_main_light
+
+      .customers-focus
+        display: flex
+        height: 60%
+        width: 80%
+        opacity: 0.7
+        margin-top: 75px
+        padding: 30px auto
+
+        h1, h2
+          text-align: center
+          margin-bottom: 15px
+
+        .focus-image
+          margin: 50px auto
+          img
+            margin: auto
+
+        p
+          text-align: justify
+
+      .customers-slider
+        width: 80%
+
+        .slick-slide
+          position: relative
+          margin: 0 10px
+          padding: 15px auto
+          height: 120px
+          outline: none
+          opacity: 0.3
+
+          +transition(opacity)
+
+          svg, img
+            max-height: 90px
+            max-width: 90px
+            position: absolute
+            left: 50%
+            top: 50%
+
+            +transform(translate(-50%, -50%))
+
+        .slick-current
+          opacity: 1
+
+/* Media queries
++media-breakpoint-up(lg)
+  #vision
+    min-height: 50vh
+    font-size: $desktop_normal
+
+    .lead
+      font-size: $desktop_big
+
+
++media-breakpoint-down(md)
+  body
+    overflow-y: scroll
+
+  #vision
+    min-height: 50vh
+    font-size: $mobile_normal
+
+    .lead
+      font-size: $mobile_big
+
+
++media-breakpoint-down(sm)
+  .main-container #vision
+    padding-top: 100px
+
     p
-      text-align: center
+      font-size: $mobile_normal !important
+
+    .lead
+      font-size: $mobile_big !important
