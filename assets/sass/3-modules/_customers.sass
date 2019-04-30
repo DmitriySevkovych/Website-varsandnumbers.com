@@ -21,30 +21,41 @@ body
       justify-content: center
       align-items: center
       min-height: 100vh
-      background-color: $col_main_light
 
       .customers-focus
         display: flex
         height: 60%
-        width: 80%
+        width: 90%
         opacity: 0.7
-        margin-top: 75px
-        padding: 30px auto
+        margin-bottom: 25px
+        background-color: $col_main_light
+        .slick-list
+          padding: 50px
+          overflow-y: scroll
 
-        h1, h2
+        h1
           text-align: center
-          margin-bottom: 15px
+          letter-spacing: normal
+          font-weight: 500
+        h2
+          text-align: center
 
         .focus-image
           margin: 50px auto
           img
             margin: auto
 
-        p
-          text-align: justify
+        .customer-data
+          margin-top: 30px
+          .keyword
+            text-transform: uppercase
+            font-weight: 500
+        // p
+        //   text-align: justify
 
       .customers-slider
         width: 80%
+        z-index: 1030
 
         .slick-slide
           position: relative
@@ -52,6 +63,7 @@ body
           padding: 15px auto
           height: 120px
           outline: none
+          cursor: pointer
           opacity: 0.3
 
           +transition(opacity)
@@ -77,6 +89,13 @@ body
     .lead
       font-size: $desktop_big
 
+@media only screen and (max-height: 1025px)
+    #customers
+      .customers-slider.slick-slide
+        svg,img
+          max-height: 50px
+          max-width: 50px
+
 
 +media-breakpoint-down(md)
   body
@@ -93,9 +112,7 @@ body
 +media-breakpoint-down(sm)
   .main-container #vision
     padding-top: 100px
-
     p
       font-size: $mobile_normal !important
-
     .lead
       font-size: $mobile_big !important

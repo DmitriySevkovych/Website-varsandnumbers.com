@@ -10145,19 +10145,26 @@ body .main-container #customers {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #cccccc;
 }
 body .main-container #customers .customers-focus {
   display: flex;
   height: 60%;
-  width: 80%;
+  width: 90%;
   opacity: 0.7;
-  margin-top: 75px;
-  padding: 30px auto;
+  margin-bottom: 25px;
+  background-color: #cccccc;
 }
-body .main-container #customers .customers-focus h1, body .main-container #customers .customers-focus h2 {
+body .main-container #customers .customers-focus .slick-list {
+  padding: 50px;
+  overflow-y: scroll;
+}
+body .main-container #customers .customers-focus h1 {
   text-align: center;
-  margin-bottom: 15px;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+body .main-container #customers .customers-focus h2 {
+  text-align: center;
 }
 body .main-container #customers .customers-focus .focus-image {
   margin: 50px auto;
@@ -10165,11 +10172,16 @@ body .main-container #customers .customers-focus .focus-image {
 body .main-container #customers .customers-focus .focus-image img {
   margin: auto;
 }
-body .main-container #customers .customers-focus p {
-  text-align: justify;
+body .main-container #customers .customers-focus .customer-data {
+  margin-top: 30px;
+}
+body .main-container #customers .customers-focus .customer-data .keyword {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 body .main-container #customers .customers-slider {
   width: 80%;
+  z-index: 1030;
 }
 body .main-container #customers .customers-slider .slick-slide {
   position: relative;
@@ -10177,6 +10189,7 @@ body .main-container #customers .customers-slider .slick-slide {
   padding: 15px auto;
   height: 120px;
   outline: none;
+  cursor: pointer;
   opacity: 0.3;
   -webkit-transition: opacity 300ms ease-in-out;
   -moz-transition: opacity 300ms ease-in-out;
@@ -10205,6 +10218,12 @@ body .main-container #customers .customers-slider .slick-current {
   }
   #vision .lead {
     font-size: 20px;
+  }
+}
+@media only screen and (max-height: 1025px) {
+  #customers .customers-slider.slick-slide svg, #customers .customers-slider.slick-slide img {
+    max-height: 50px;
+    max-width: 50px;
   }
 }
 @media (max-width: 991.98px) {
