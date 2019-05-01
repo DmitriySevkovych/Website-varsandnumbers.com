@@ -9734,6 +9734,8 @@ header .navbar-toggler:focus, header .nav-item:focus {
 }
 header .navbar-nav {
   height: 75px;
+  width: 100vw;
+  max-width: 100%;
 }
 header .navbar-nav a {
   position: relative;
@@ -9810,6 +9812,17 @@ header a:hover {
     background-color: #fff;
     opacity: 0.9;
     z-index: 1029;
+  }
+
+  #talk {
+    right: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  #talk {
+    padding: 5px 10px;
+    top: 20px;
+    font-size: 18px;
   }
 }
 footer {
@@ -10020,10 +10033,11 @@ footer {
     font-size: 22px;
   }
   #titleBox #subtitle {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   body {
+    max-width: 100%;
     overflow-y: scroll;
     background-color: #fff;
   }
@@ -10045,11 +10059,11 @@ footer {
     top: 50%;
   }
   #contentBox #contentLead {
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
   }
   #contentBox p {
-    font-size: 16px;
+    font-size: 14px;
     color: #222;
     width: 100%;
     font-weight: 500;

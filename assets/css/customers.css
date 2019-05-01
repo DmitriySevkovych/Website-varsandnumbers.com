@@ -9979,6 +9979,8 @@ header .navbar-toggler:focus, header .nav-item:focus {
 }
 header .navbar-nav {
   height: 75px;
+  width: 100vw;
+  max-width: 100%;
 }
 header .navbar-nav a {
   position: relative;
@@ -10055,6 +10057,17 @@ header a:hover {
     background-color: #fff;
     opacity: 0.9;
     z-index: 1029;
+  }
+
+  #talk {
+    right: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  #talk {
+    padding: 5px 10px;
+    top: 20px;
+    font-size: 18px;
   }
 }
 footer {
@@ -10155,7 +10168,7 @@ body .main-container #customers .customers-focus {
   background-color: #cccccc;
 }
 body .main-container #customers .customers-focus .slick-list {
-  padding: 50px;
+  padding: 50px 30px;
   overflow-y: scroll;
 }
 body .main-container #customers .customers-focus h1 {
@@ -10178,6 +10191,9 @@ body .main-container #customers .customers-focus .customer-data {
 body .main-container #customers .customers-focus .customer-data .keyword {
   text-transform: uppercase;
   font-weight: 500;
+}
+body .main-container #customers .customers-focus p {
+  text-align: justify;
 }
 body .main-container #customers .customers-slider {
   width: 80%;
@@ -10233,21 +10249,21 @@ body .main-container #customers .customers-slider .slick-current {
 
   #vision {
     min-height: 50vh;
-    font-size: 16px;
+    font-size: 18px;
   }
-  #vision .lead {
+  #vision:first-child {
     font-size: 22px;
   }
 }
 @media (max-width: 767.98px) {
-  .main-container #vision {
+  #vision {
     padding-top: 100px;
   }
-  .main-container #vision p {
-    font-size: 16px !important;
+  #vision p {
+    font-size: 14px;
   }
-  .main-container #vision .lead {
-    font-size: 22px !important;
+  #vision:first-child {
+    font-size: 18px;
   }
 }
 

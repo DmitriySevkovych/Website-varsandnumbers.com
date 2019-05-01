@@ -11,6 +11,8 @@ header
 
   .navbar-nav
     height: 75px
+    width: 100vw
+    max-width: 100%
     a
       position: relative
       top: 5px
@@ -75,6 +77,11 @@ header
     opacity: 0.9
     z-index: 1029
 
-// @include media-breakpoint-down(sm)
-//   #talk
-//     font-size: $mobile-big
+  #talk
+    right: 0px
+
+@include media-breakpoint-down(sm)
+  #talk
+    padding: 5px 10px
+    top: 20px
+    font-size: $mobile_big
