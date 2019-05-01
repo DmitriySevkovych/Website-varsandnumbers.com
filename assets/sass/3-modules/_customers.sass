@@ -6,12 +6,8 @@ body
   .main-container
     display: flex
     flex-direction: column
-    align-items: flex-end
+    justify-content: space-around
     min-height: 100vh
-
-    footer
-      position: relative
-      // align-self: flex-end
 
     #vision
       display: flex
@@ -27,7 +23,6 @@ body
       flex-direction: column
       justify-content: center
       align-items: center
-      min-height: 100vh
 
       .customers-focus
         display: flex
@@ -56,28 +51,28 @@ body
           margin-top: 30px
           .keyword
             text-transform: uppercase
-            font-weight: 500
+            font-weight: 700
         p
           text-align: justify
 
       .customers-slider
-        width: 80%
+        width: 90%
         z-index: 1030
 
         .slick-slide
           position: relative
           margin: 0 10px
           padding: 15px auto
-          height: 120px
+          height: 100px
           outline: none
           cursor: pointer
           opacity: 0.3
 
           +transition(opacity)
 
-          svg, img
-            max-height: 90px
-            max-width: 90px
+          svg
+            // max-height: 90px
+            // max-width: 90px
             position: absolute
             left: 50%
             top: 50%
@@ -87,6 +82,14 @@ body
         .slick-current
           opacity: 1
 
+  .customer-feedback-container
+    margin-top: 30px
+
+    .customer-face
+      svg
+        margin: auto
+        display: block
+        max-height: 100px
 /* Media queries
 +media-breakpoint-up(lg)
   #vision
@@ -96,24 +99,29 @@ body
     .lead
       font-size: $desktop_big
 
-@media only screen and (max-height: 1025px)
-    #customers
-      .customers-slider.slick-slide
-        svg,img
-          max-height: 50px
-          max-width: 50px
+  #customers
+    min-height: 100vh
 
 
 +media-breakpoint-down(md)
   body
     overflow-y: scroll
 
+  footer
+    position: relative
+    align-self: baseline
+
   #vision
+    padding-top: 50px
     min-height: 50vh
     font-size: $tablet_normal
     .lead
       font-size: $tablet_big
 
+  #customers
+    .customers-focus
+      height: auto !important
+      +transition(height)
 
 +media-breakpoint-down(sm)
   #vision
@@ -121,7 +129,7 @@ body
     p
       font-size: $mobile_normal
     .lead
-      font-size: $mobile_big
+      font-size: $mobile_normal
 
   #customers .customers-focus
     h1
@@ -130,3 +138,7 @@ body
       font-size: $mobile_big
     p
       font-size: $mobile_normal
+    strong,em
+      font-size: $mobile_small
+    .slick-list
+      padding: 15px 20px !important

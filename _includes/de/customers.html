@@ -1,36 +1,38 @@
-<div class="row">
-  <div class="col-lg-6" id="vision">
-    <div class="row">
-      <p class=" lead col-10 mx-auto">The main idea behind Vars&Numbers is to combine different domains
-        and streamline technologies in order help my customers exploit their full potential.
-      </p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6" id="vision">
+      <div class="row">
+        <p class=" lead col-10 mx-auto">The main idea behind Vars&Numbers is to combine different domains
+          and streamline technologies in order help my customers exploit their full potential.
+        </p>
+      </div>
+
+      <div class="row">
+        <p class="col-10 mx-auto">The mere attempt to bridle the complexity and the immense pace at which the
+          digital world evolves requires constant learning, great effort and curiosity.
+          This is not an easy task to accomplish, but I am up to the challenge and I feel
+          that this is where I really excel.
+        </p>
+      </div>
+
+      <div class="row">
+        <p class="col-10 mx-auto">Speaking of customers. You might want to see a few examples of happy
+          clients that are already benefiting from their commitment to Vars&Numbers.
+        </p>
+      </div>
     </div>
 
-    <div class="row">
-      <p class="col-10 mx-auto">The mere attempt to bridle the complexity and the immense pace at which the
-        digital world evolves requires constant learning, great effort and curiosity.
-        This is not an easy task to accomplish, but I am up to the challenge and I feel
-        that this is where I really excel.
-      </p>
-    </div>
+    <div class="col-lg-6 pr-lg-5" id="customers">
+      <div class="customers-focus">
+        <div>{% include {{page.lang}}/customers_you.html %}</div>
+        <div>{% include {{page.lang}}/customers_twt.html %}</div>
+      </div>
 
-    <div class="row">
-      <p class="col-10 mx-auto">Speaking of customers. You might want to see a few examples of happy
-        clients that are already benefiting from their commitment to Vars&Numbers.
-      </p>
-    </div>
-  </div>
+      <div class="customers-slider">
+        <div>{% include icons/LogoScaled.html %}</div>
+        <div>{% include icons/TWT.html %}</div>
+      </div>
 
-  <div class="col-lg-6 pr-lg-5" id="customers">
-    <div class="customers-focus">
-      <div>{% include {{page.lang}}/customers_you.html %}</div>
-      <div>{% include {{page.lang}}/customers_twt.html %}</div>
     </div>
-
-    <div class="customers-slider">
-      <div><img src="{{page.assets}}/img/favicons/favicon.ico" alt="It could be you"> </div>
-      <div>{% include icons/TWT.html %}</div>
-    </div>
-
   </div>
 </div>

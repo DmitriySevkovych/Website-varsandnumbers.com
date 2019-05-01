@@ -9969,6 +9969,10 @@ hr {
 header {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+header nav {
+  width: 100vw;
+  max-width: 100%;
+}
 header .navbar-toggler {
   padding: 0;
   width: 60px;
@@ -10141,6 +10145,9 @@ body {
   width: 100vw;
 }
 body .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   min-height: 100vh;
 }
 body .main-container #vision {
@@ -10157,7 +10164,6 @@ body .main-container #customers {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 body .main-container #customers .customers-focus {
   display: flex;
@@ -10190,20 +10196,20 @@ body .main-container #customers .customers-focus .customer-data {
 }
 body .main-container #customers .customers-focus .customer-data .keyword {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
 }
 body .main-container #customers .customers-focus p {
   text-align: justify;
 }
 body .main-container #customers .customers-slider {
-  width: 80%;
+  width: 90%;
   z-index: 1030;
 }
 body .main-container #customers .customers-slider .slick-slide {
   position: relative;
   margin: 0 10px;
   padding: 15px auto;
-  height: 120px;
+  height: 100px;
   outline: none;
   cursor: pointer;
   opacity: 0.3;
@@ -10212,9 +10218,7 @@ body .main-container #customers .customers-slider .slick-slide {
   -o-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
-body .main-container #customers .customers-slider .slick-slide svg, body .main-container #customers .customers-slider .slick-slide img {
-  max-height: 90px;
-  max-width: 90px;
+body .main-container #customers .customers-slider .slick-slide svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -10224,6 +10228,14 @@ body .main-container #customers .customers-slider .slick-slide svg, body .main-c
 }
 body .main-container #customers .customers-slider .slick-current {
   opacity: 1;
+}
+body .customer-feedback-container {
+  margin-top: 30px;
+}
+body .customer-feedback-container .customer-face svg {
+  margin: auto;
+  display: block;
+  max-height: 100px;
 }
 
 /* Media queries */
@@ -10235,11 +10247,9 @@ body .main-container #customers .customers-slider .slick-current {
   #vision .lead {
     font-size: 20px;
   }
-}
-@media only screen and (max-height: 1025px) {
-  #customers .customers-slider.slick-slide svg, #customers .customers-slider.slick-slide img {
-    max-height: 50px;
-    max-width: 50px;
+
+  #customers {
+    min-height: 100vh;
   }
 }
 @media (max-width: 991.98px) {
@@ -10247,12 +10257,26 @@ body .main-container #customers .customers-slider .slick-current {
     overflow-y: scroll;
   }
 
+  footer {
+    position: relative;
+    align-self: baseline;
+  }
+
   #vision {
+    padding-top: 50px;
     min-height: 50vh;
     font-size: 18px;
   }
-  #vision:first-child {
+  #vision .lead {
     font-size: 22px;
+  }
+
+  #customers .customers-focus {
+    height: auto !important;
+    -webkit-transition: height 300ms ease-in-out;
+    -moz-transition: height 300ms ease-in-out;
+    -o-transition: height 300ms ease-in-out;
+    transition: height 300ms ease-in-out;
   }
 }
 @media (max-width: 767.98px) {
@@ -10262,8 +10286,24 @@ body .main-container #customers .customers-slider .slick-current {
   #vision p {
     font-size: 14px;
   }
-  #vision:first-child {
+  #vision .lead {
+    font-size: 14px;
+  }
+
+  #customers .customers-focus h1 {
+    font-size: 22px;
+  }
+  #customers .customers-focus h2 {
     font-size: 18px;
+  }
+  #customers .customers-focus p {
+    font-size: 14px;
+  }
+  #customers .customers-focus strong, #customers .customers-focus em {
+    font-size: 12px;
+  }
+  #customers .customers-focus .slick-list {
+    padding: 15px 20px !important;
   }
 }
 

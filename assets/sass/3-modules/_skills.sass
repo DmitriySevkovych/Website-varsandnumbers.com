@@ -64,7 +64,7 @@
 
 .skills-popup
   z-index: 1020
-  
+
 .mobile-skills-popup
   z-index: 1020
   position: absolute
@@ -103,12 +103,22 @@
   .main-container
     min-height: 100vh
 
+    /* Customize the footer
     footer
       position: relative
       background-color: $col_main_dark
 
-      .footer-text
-        color: $col_main_light
+      #langContainer .lang
+        background-color: transparent
+        border: 1px solid $col_bg
+
+      #logoContainer
+        .footer-text
+          color: $col_bg
+
+        #logoFooter
+          path
+            fill: $col_main_light
 
   #skillsIntro
     top: 100px

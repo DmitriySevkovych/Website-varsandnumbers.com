@@ -9724,6 +9724,10 @@ hr {
 header {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+header nav {
+  width: 100vw;
+  max-width: 100%;
+}
 header .navbar-toggler {
   padding: 0;
   width: 60px;
