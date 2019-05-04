@@ -100,28 +100,6 @@ body
       color: $col_bg
 
 /* Media queries
-+media-breakpoint-up(md)
-  .text-container
-    padding-top: 100px
-
-  form textarea
-      max-height: 15vh
-
-  form #customerContact label
-    width: 48%
-
-    &:last-child
-      float: right
-
-  .contact-header, #mBig
-    font-size: $desktop_biggest
-
-
-+media-breakpoint-up(lg)
-  .contact-header, #mBig
-    font-size: $desktop_biggest
-
-
 +media-breakpoint-down(md)
   #contactText
     p
@@ -174,3 +152,36 @@ body
     #mBig
       padding-top: 30px
       font-size: $mobile_big
+
++media-breakpoint-up(md)
+  .text-container
+    padding-top: 100px
+
+  form textarea
+      max-height: 15vh
+
+  form #customerContact label
+    width: 48%
+
+    &:last-child
+      float: right
+
+  .contact-header, #mBig
+    font-size: $desktop_biggest
+
+
++media-breakpoint-up(lg)
+  .contact-header, #mBig
+    font-size: $desktop_biggest
+
+@media screen and (min-width: $retina )
+  .text-container
+    flex-grow: 1 !important
+  #contactText
+    p
+      font-size: $fourK_big
+    .contact-header
+      font-size: $fourK_biggest
+  #contactForm
+    input
+      font-size: $fourK_normal

@@ -30,7 +30,7 @@
 
   #darkBox
     top: -15vmax
-    height: 100vh
+    min-height: 100vh
     background-color: $col_main_dark
 
   #lightBox
@@ -120,6 +120,13 @@
   #contentBox
     font-size: $desktop_normal
 
+@media screen and (min-width: $retina)
+  +titleSize(450px, $fourK_biggest, $fourK_normal)
+  #contentBox
+      #contentLead
+        font-size: $fourK_biggest
+      p
+        font-size: $fourK_normal
 
 +media-breakpoint-down(sm)
   +titleSize(255px, $mobile_biggest, $mobile_normal)

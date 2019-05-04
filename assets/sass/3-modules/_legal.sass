@@ -11,12 +11,6 @@ body
 /*
  * Media queries
  */
-@include media-breakpoint-up(lg)
-  p
-    padding-right: 20px
-  p, h2
-    padding-left: 10px
-
 @include media-breakpoint-down(md)
   .main
     padding-bottom: 50px
@@ -36,3 +30,17 @@ body
     font-size: $mobile_big
   p
     font-size: $mobile_normal
+
+@include media-breakpoint-up(lg)
+  p
+    padding-right: 20px
+  p, h2
+    padding-left: 10px
+
+@media screen and (min-width: $retina)
+  h1
+    font-size: $fourK_biggest
+  h2
+    font-size: $fourK_big
+  p
+    font-size: $fourK_normal

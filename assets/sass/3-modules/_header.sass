@@ -89,3 +89,7 @@ header
     padding: 5px 10px
     top: 20px
     font-size: $mobile_big
+
+@media screen and (min-width:$retina)
+  #svg-line-upper
+    +transform(translateX(1/2) scaleX(1.5))

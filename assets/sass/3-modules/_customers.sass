@@ -45,6 +45,7 @@ body
         .focus-image
           margin: 50px auto
           img
+            display: block
             margin: auto
 
         .customer-data
@@ -71,8 +72,8 @@ body
           +transition(opacity)
 
           svg
-            // max-height: 90px
-            // max-width: 90px
+            max-height: 90px
+            max-width: 90px
             position: absolute
             left: 50%
             top: 50%
@@ -90,19 +91,9 @@ body
         margin: auto
         display: block
         max-height: 100px
+
+
 /* Media queries
-+media-breakpoint-up(lg)
-  #vision
-    min-height: 50vh
-    font-size: $desktop_normal
-
-    .lead
-      font-size: $desktop_big
-
-  #customers
-    min-height: 100vh
-
-
 +media-breakpoint-down(md)
   body
     overflow-y: scroll
@@ -142,3 +133,30 @@ body
       font-size: $mobile_small
     .slick-list
       padding: 15px 20px !important
+
++media-breakpoint-up(lg)
+  #vision
+    min-height: 50vh
+    font-size: $desktop_normal
+
+    .lead
+      font-size: $desktop_big
+
+  #customers
+    min-height: 100vh
+
+@media screen and (min-width: $retina)
+    #vision
+      font-size: $fourK_normal
+      .lead
+        font-size: $fourK_big
+
+    #customers .customers-focus
+      h1
+        font-size: $fourK_biggest
+      h2
+        font-size: $fourK_big
+      p
+        font-size: $fourK_normal
+      strong,em
+        font-size: $fourK_small

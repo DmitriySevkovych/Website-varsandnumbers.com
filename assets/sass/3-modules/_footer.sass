@@ -43,9 +43,16 @@ footer
 /*
  * Media queries
  */
-@media (max-width: 992px)
++media-breakpoint-down(md)
    #langContainer, #logoContainer
      +transform(scale(0.8))
+
+   #langContainer
+     float: left
+
+@media screen and (min-width: $retina)
+   #langContainer, #logoContainer
+     +transform(scale(1.2))
 
    #langContainer
      float: left

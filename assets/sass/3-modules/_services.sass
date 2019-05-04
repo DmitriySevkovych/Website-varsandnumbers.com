@@ -41,14 +41,14 @@
    * Foreground (content) styles
    */
   .services-icons-container
-    position: absolute
+    position: relative
     height: 50vh
     width: 60vw
     min-height: 200px
     max-height: 400px
     max-width: 400px
     min-width: 200px
-    
+
   .slick-current
     text-align: justify
 
@@ -145,3 +145,12 @@
   #servicesPlain
     margin: 30px 0
     max-height: 30vh
+
+@media screen and (min-width: $retina)
+  .services-icons-container
+    max-height: 500px !important
+    max-width: 500px !important
+  .services-header
+    font-size: $fourK_big !important
+  .services-scrollable div
+    font-size: $fourK_big
