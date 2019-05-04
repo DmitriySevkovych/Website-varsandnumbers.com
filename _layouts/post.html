@@ -18,11 +18,22 @@
   <link rel="stylesheet" href="/assets/css/post.css">
 </head>
 
-<p class="text-right">{{ page.date | date_to_long_string }} - {{ page.author }}</p>
-<h1 class="text-center">{{ page.title }}</h1>
+<body>
 
-{{ content }}
+  <p class="text-right">{{ page.date | date_to_long_string }} - {{ page.author }}</p>
+  <h1 class="text-center">{{ page.title }}</h1>
+
+  {{ content }}
+
+  <div class="post-anchors text-right">
+    {% if page.discussable %}
+    <a href="/contact.html">DISCUSS</a>
+    {% endif %}
+    <a href="/blog.html">GO BACK</a>
+  </div>
+</body>
 
 <script type="text/javascript" src="/assets/js/ext.min.js"> </script>
 <script type="text/javascript" src="/assets/js/headerfooter.js"> </script>
+
 </html>

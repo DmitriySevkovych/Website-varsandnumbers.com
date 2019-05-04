@@ -9914,6 +9914,7 @@ footer {
 }
 /* General page style */
 body {
+  padding: 0 !important;
   min-height: 100vh;
   width: 100vw;
   overflow-y: scroll !important;
@@ -9927,12 +9928,6 @@ body .main-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-body .main-container > h1 {
-  letter-spacing: normal;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 75px;
 }
 body .main-container ul {
   list-style: none;
@@ -9968,7 +9963,8 @@ body .main-container .post-container h1 {
   letter-spacing: normal;
   font-weight: 500;
   color: #FF851B;
-  margin-bottom: 25px;
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
 }
 
 /* Media queries */
