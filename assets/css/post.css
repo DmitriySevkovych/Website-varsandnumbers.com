@@ -9919,9 +9919,6 @@ body {
   padding: 50px;
   overflow-y: scroll !important;
 }
-body footer {
-  position: relative;
-}
 body h1 {
   letter-spacing: normal;
   text-transform: uppercase;
@@ -9950,13 +9947,15 @@ body .post-anchors a:hover {
 
 /* Media queries */
 @media screen and (min-width: 1921px) {
-  .main-container h1 {
+  h1 {
     font-size: 48px;
   }
-  .main-container h2 {
+
+  h2 {
     font-size: 32px;
   }
-  .main-container p {
+
+  a, p {
     font-size: 24px;
   }
 }
@@ -9969,7 +9968,7 @@ body .post-anchors a:hover {
     font-size: 18px;
   }
 
-  p {
+  a, p {
     font-size: 14px;
   }
 }

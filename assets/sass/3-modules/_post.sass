@@ -4,8 +4,6 @@ body
   width: 100vw
   padding: 50px
   overflow-y: scroll !important
-  footer
-    position: relative
 
   h1
     letter-spacing: normal
@@ -29,22 +27,17 @@ body
 
 /* Media queries */
 @media screen and (min-width: $retina)
-  .main-container
     h1
       font-size: $fourK_biggest
     h2
       font-size: $fourK_big
-    p
+    a, p
       font-size: $fourK_normal
-
-// +media-breakpoint-down(md)
-//   .main-container
-//     padding: 50px 0 0 0 !important
 
 +media-breakpoint-down(sm)
   h1
     font-size: $mobile_biggest
   h2
     font-size: $mobile_big
-  p
+  a,p
     font-size: $mobile_normal
