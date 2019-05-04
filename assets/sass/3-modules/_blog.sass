@@ -2,15 +2,45 @@
 body
   min-height: 100vh
   width: 100vw
+  overflow-y: scroll !important
+  footer
+    position: relative
 
   .main-container
     padding-top: 120px
     min-height: 100vh
     display: flex
     flex-direction: column
-    justify-content: flex-start
-    h1
-      text-align: center
-
-    #postsList
+    justify-content: space-between
+    > h1
+      letter-spacing: normal
+      text-transform: uppercase
+      font-weight: 500
+      margin-top: 75px
+    ul
       list-style: none
+
+    .archive-container, .post-container
+      min-height: 40vh
+      margin-bottom: 50px
+      .container-header
+        letter-spacing: normal
+        text-transform: uppercase
+        font-weight: 500
+        margin-top: 75px
+      p
+        text-align: justify
+      a
+        font-weight: 500
+        +transition()
+        &:hover
+          color: $col_font
+
+    .post-container
+      display: flex
+      flex-direction: column
+      h1
+        letter-spacing: normal
+        font-weight: 500
+        color: $col_accent
+        margin-bottom: 25px

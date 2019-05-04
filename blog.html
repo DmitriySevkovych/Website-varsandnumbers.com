@@ -1,21 +1,44 @@
 ---
 layout: default
-assets: assets
 lang: en
 ref: blog
 title: Blog
 ---
 
-<div class="main-container">
-  <h1>Latest Posts</h1>
+<div class="container-fluid main-container">
 
-  <ul id="postsList">
-    {% for post in site.posts %}
-      <li>
-        <p class="lead"><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></p>
-        <p>{{ post.excerpt }}</p>
-      </li>
+  <div class="post-container col-11 col-lg-8 mx-auto">
+    <h2 class="container-header">Latest Post</h2>
+    {% for post in site.posts limit:1 %}
+    {% assign latestPost = post %}
     {% endfor %}
-  </ul>
+    {{ latestPost | truncatewords: 350 }}
+    <div class="align-self-bottom text-right">
+      <a href="{{latestPost.url}}">READ MORE</a>
+    </div>
+
+  </div>
+
+  <div class="archive-container col-11 col-lg-8 mx-auto">
+    <h2 class="container-header">Archive</h2>
+    <section>
+
+      {% for post in site.posts %}
+      {% assign currentDate = post.date | date: "%Y" %}
+      {% if currentDate != myDate %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h2 class="text-center">{{ currentDate }}</h2>
+      <ul>
+        {% assign myDate = currentDate %}
+        {% endif %}
+        <li>
+          <p class="lead"><a href="{{ post.url }}">{{ post.date | date_to_long_string }} - {{ post.title }}</a></p>
+          <p>{{ post.excerpt | truncatewords: 50 }}</p>
+        </li>
+        {% if forloop.last %}</ul>{% endif %}
+      {% endfor %}
+    </section>
+  </div>
+
   {% include univ/footer.html %}
 </div>
