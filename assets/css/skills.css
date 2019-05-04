@@ -10049,7 +10049,7 @@ footer {
     top: 100px;
   }
   #skillsIntro .skills-header {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #mobileContainer {
@@ -10060,7 +10060,15 @@ footer {
     border-bottom: 15px solid #fff;
   }
   #mobileContainer .mobile-background-dark:first-child, #mobileContainer .mobile-background-light:first-child {
-    height: 250px;
+    height: 275px;
+  }
+  #mobileContainer .mobile-background-dark:last-child p, #mobileContainer .mobile-background-light:last-child p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+  }
+  #mobileContainer .mobile-background-dark:last-child p a, #mobileContainer .mobile-background-light:last-child p a {
+    color: #FF851B;
   }
 }
 @media (min-width: 992px) {

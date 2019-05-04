@@ -27,7 +27,7 @@ title: Blog
       {% assign currentDate = post.date | date: "%Y" %}
       {% if currentDate != myDate %}
       {% unless forloop.first %}</ul>{% endunless %}
-      <h2 class="text-center">{{ currentDate }}</h2>
+      <h2 class="text-right">{{ currentDate }}</h2>
       <ul>
         {% assign myDate = currentDate %}
         {% endif %}

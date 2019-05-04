@@ -9971,4 +9971,36 @@ body .main-container .post-container h1 {
   margin-bottom: 25px;
 }
 
+/* Media queries */
+@media screen and (min-width: 1921px) {
+  .main-container h1 {
+    font-size: 48px;
+  }
+  .main-container h2 {
+    font-size: 32px;
+  }
+  .main-container p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .main-container {
+    padding: 50px 0 0 0 !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-container ul {
+    padding-left: 0;
+  }
+  .main-container h1 {
+    font-size: 24px;
+  }
+  .main-container h2 {
+    font-size: 18px;
+  }
+  .main-container p {
+    font-size: 14px;
+  }
+}
+
 /*# sourceMappingURL=blog.css.map */

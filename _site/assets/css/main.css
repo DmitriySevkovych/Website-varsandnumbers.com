@@ -10071,7 +10071,7 @@ footer {
     height: 255px;
   }
   #titleBox #title {
-    font-size: 22px;
+    font-size: 24px;
   }
   #titleBox #subtitle {
     font-size: 14px;
@@ -10100,7 +10100,7 @@ footer {
     top: 50%;
   }
   #contentBox #contentLead {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
   }
   #contentBox p {
