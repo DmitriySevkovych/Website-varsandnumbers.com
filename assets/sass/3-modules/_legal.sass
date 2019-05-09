@@ -6,7 +6,19 @@ body
   padding-top: 110px
   min-height: 100%
   padding-bottom: 50px
-
+  h1
+    letter-spacing: 0.5rem
+  #VAN
+    text-transform: uppercase
+  h4
+    font-weight: 400
+  ul
+    list-style: square
+  #aboutme
+    list-style: none
+  .highlighted
+    border: 1px solid $col_font
+    padding: 10px
 
 /*
  * Media queries
@@ -14,33 +26,43 @@ body
 @include media-breakpoint-down(md)
   .main
     padding-bottom: 50px
-  h2
-    margin-top: 30px
 
 @include media-breakpoint-down(sm)
-  h2
-    font-size: $mobile_biggest
-  p
-    font-size: $mobile_big
-
-@include media-breakpoint-down(xs)
   h1
     font-size: $mobile_biggest
+    letter-spacing: 0.15rem !important
   h2
     font-size: $mobile_big
-  p
+    margin-top: 30px
+  h3
     font-size: $mobile_normal
+    margin-top: 20px
+  h4, p, ul li
+    font-size: $mobile_normal
+    margin-top: 20px
+  ul
+    padding: 0
 
-@include media-breakpoint-up(lg)
+@include media-breakpoint-up(md)
   p
     padding-right: 20px
-  p, h2
+  p, h2, h3, h4
     padding-left: 10px
+  h2
+    margin-top: 50px
+    font-size: $desktop_big
+  h3, h4
+    margin-top: 20px
+    font-size: $desktop_normal
+  h4, p, ul li
+    font-size: $desktop_normal
 
 @media screen and (min-width: $retina)
   h1
     font-size: $fourK_biggest
   h2
     font-size: $fourK_big
-  p
+  h3
+    font-size: $fourK_normal
+  h4, p, ul li
     font-size: $fourK_normal

@@ -9953,6 +9953,25 @@ body {
   min-height: 100%;
   padding-bottom: 50px;
 }
+.main-container h1 {
+  letter-spacing: 0.5rem;
+}
+.main-container #VAN {
+  text-transform: uppercase;
+}
+.main-container h4 {
+  font-weight: 400;
+}
+.main-container ul {
+  list-style: square;
+}
+.main-container #aboutme {
+  list-style: none;
+}
+.main-container .highlighted {
+  border: 1px solid #222;
+  padding: 10px;
+}
 
 /* * Media queries
  * */
@@ -9960,40 +9979,53 @@ body {
   .main {
     padding-bottom: 50px;
   }
-
-  h2 {
-    margin-top: 30px;
-  }
 }
 @media (max-width: 767.98px) {
-  h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 575.98px) {
   h1 {
     font-size: 24px;
+    letter-spacing: 0.15rem !important;
   }
 
   h2 {
     font-size: 18px;
+    margin-top: 30px;
   }
 
-  p {
+  h3 {
     font-size: 14px;
+    margin-top: 20px;
+  }
+
+  h4, p, ul li {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  ul {
+    padding: 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   p {
     padding-right: 20px;
   }
 
-  p, h2 {
+  p, h2, h3, h4 {
     padding-left: 10px;
+  }
+
+  h2 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  h3, h4 {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  h4, p, ul li {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1921px) {
@@ -10005,7 +10037,11 @@ body {
     font-size: 32px;
   }
 
-  p {
+  h3 {
+    font-size: 24px;
+  }
+
+  h4, p, ul li {
     font-size: 24px;
   }
 }
