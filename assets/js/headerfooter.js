@@ -3,25 +3,11 @@ Document ready function
 */
 $(function() {
 
-  var animation_duration = 300;
-
   $('body').addClass('loaded');
 
   // Header
   $('.navbar-toggler').on('click', function() {
     $('.nav-blend').fadeToggle(300);
-  });
-
-  $('header a').on('click', function(event) {
-    event.preventDefault();
-
-    var href = this.href;
-
-    // $('body').removeClass('loaded');
-    $('body').addClass('leaving');
-    setTimeout(function() {
-      window.location.href = href;
-    }, animation_duration);
   });
 
   // Footer
@@ -30,7 +16,7 @@ $(function() {
     var to = this.dataset.lang;
     if (to != from) {
       $('body').addClass('leaving');
-      setTimeout(changeLanguage(from, to), animation_duration);
+      setTimeout(changeLanguage(from, to), 200);
     }
   });
 

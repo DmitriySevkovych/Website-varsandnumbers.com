@@ -19,8 +19,6 @@ var lock = false;
  * Document ready function
  */
 $(function() {
-  // $('body').addClass('loaded');
-
   var $services = $(".services-scrollable");
   var $servicesHeader = $(".services-header");
   var $servicesIcons = $(".services-icons");
