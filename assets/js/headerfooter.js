@@ -1,10 +1,18 @@
+if (document.documentElement.lang == 'en') {
+  document.getElementById('linkImprint').innerHTML = 'Imprint';
+  document.getElementById('linkPrivacy').innerHTML = 'Privacy Statement';
+} else if (document.documentElement.lang == 'de') {
+  document.getElementById('linkImprint').innerHTML = 'Impressum';
+  document.getElementById('linkPrivacy').innerHTML = 'Datenschutz';
+}
+
 /*
 Document ready function
 */
 $(function() {
 
   $('body').addClass('loaded');
-
+  
   // Header
   $('.navbar-toggler').on('click', function() {
     $('.nav-blend').fadeToggle(300);

@@ -9976,72 +9976,61 @@ body {
 /* * Media queries
  * */
 @media (max-width: 991.98px) {
-  .main {
+  .main-container {
     padding-bottom: 50px;
   }
 }
 @media (max-width: 767.98px) {
-  h1 {
+  .main-container h1 {
     font-size: 24px;
     letter-spacing: 0.15rem !important;
   }
-
-  h2 {
+  .main-container h2 {
     font-size: 18px;
     margin-top: 30px;
   }
-
-  h3 {
+  .main-container h3 {
     font-size: 14px;
     margin-top: 20px;
   }
-
-  h4, p, ul li {
+  .main-container h4, .main-container p, .main-container ul li {
     font-size: 14px;
     margin-top: 20px;
   }
-
-  ul {
+  .main-container ul {
     padding: 0;
   }
 }
 @media (min-width: 768px) {
-  p {
+  .main-container p {
     padding-right: 20px;
   }
-
-  p, h2, h3, h4 {
+  .main-container p, .main-container h2, .main-container h3, .main-container h4 {
     padding-left: 10px;
   }
-
-  h2 {
+  .main-container h2 {
     margin-top: 50px;
     font-size: 20px;
   }
-
-  h3, h4 {
+  .main-container h3, .main-container h4 {
     margin-top: 20px;
     font-size: 16px;
   }
-
-  h4, p, ul li {
+  .main-container h4, .main-container p, .main-container ul li {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1921px) {
-  h1 {
+  .main-container h1 {
     font-size: 48px;
   }
-
-  h2 {
+  .main-container h2 {
     font-size: 32px;
   }
-
-  h3 {
+  .main-container h3 {
     font-size: 24px;
   }
-
-  h4, p, ul li {
+  .main-container h4, .main-container p, .main-container ul li {
     font-size: 24px;
   }
 }

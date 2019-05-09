@@ -132,9 +132,9 @@
           <li class="nav-item mx-3 mx-xl-4">
             <a class="nav-link" href="blog.html">Blog</a>
           </li>
-          <li class="nav-item mx-3 ml-xl-4">
+          <!-- <li class="nav-item mx-3 ml-xl-4">
             <a class="nav-link" href="legal.html">Legal</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -167,7 +167,7 @@
 
   <div class="row text-center">
     <div class="w-100 my-3">
-      <h1>Imprint</h1>
+      <h1 id="imprint">Imprint</h1>
     </div>
   </div>
 
@@ -201,7 +201,7 @@
 
   <div class="row text-center">
     <div class="w-100 my-3">
-      <h1>Privacy statement <span id="VAN">Vars&Numbers</span></h1>
+      <h1 id="privacy">Privacy statement</h1>
     </div>
   </div>
 
@@ -250,15 +250,25 @@
   <footer class="container-fluid">
   <div class="row">
 
-    <div class="col-6 col-lg-6">
+    <div class="col-4">
       <div class="mx-2 mx-lg-3" id="langContainer">
-        <div class="lang px-1" data-lang="en"><div>EN</div></div>
-        <div class="lang px-1" data-lang="de"><div>DE</div></div>
+        <div class="lang px-1" data-lang="en">
+          <div>EN</div>
+        </div>
+        <div class="lang px-1" data-lang="de">
+          <div>DE</div>
+        </div>
         <!-- <div class="lang px-1" data-lang="ru"><div>RU</div></div> -->
       </div>
     </div>
 
-    <div class="col-6 col-lg-6">
+    <div class="col-4">
+      <div class="mx-auto">
+        <a id="linkImprint" href="legal.html"></a> | <a id="linkPrivacy" href="legal.html#privacy"></a>
+      </div>
+    </div>
+
+    <div class="col-4">
       <div class="mr-2 mb-2" id="logoContainer">
         <div class="footer-text">developed by</div>
         <div><?xml version="1.0" encoding="utf-8"?>
