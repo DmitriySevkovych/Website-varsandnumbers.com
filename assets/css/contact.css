@@ -9873,6 +9873,9 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 #langContainer {
@@ -9909,6 +9912,21 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+#linksContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#linksContainer a {
+  display: inline-block;
+  color: #222;
+}
+#linksContainer a:hover {
+  color: #FF851B;
+}
+
 #logoContainer {
   width: 55px;
   float: right !important;
@@ -9928,8 +9946,31 @@ footer {
     transform: scale(0.8);
   }
 
+  #linksContainer, #linksContainer a {
+    font-size: 14px !important;
+  }
+
   #langContainer {
     float: left;
+  }
+}
+@media (max-width: 767.98px) {
+  footer {
+    padding: 0 !important;
+  }
+
+  #linksContainer, #linksContainer a {
+    font-size: 10px !important;
+  }
+}
+@media (min-width: 992px) {
+  #leftContainer {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #linksContainer {
+    padding-left: 10px;
   }
 }
 @media screen and (min-width: 1921px) {
@@ -9954,10 +9995,10 @@ footer {
   border: 1px solid #fff;
 }
 
-#logoContainer .footer-text {
+#logoContainer, #linksContainer, #linksContainer a {
   color: #fff;
 }
-#logoContainer #logoFooter path {
+#logoContainer #logoFooter path, #linksContainer #logoFooter path, #linksContainer a #logoFooter path {
   fill: #cccccc;
 }
 

@@ -4,6 +4,10 @@ footer
   bottom: 0
   left: 0
   right: 0
+  margin: 0
+  display: flex
+  justify-content: space-between
+
 
 #langContainer
   height: 100%
@@ -29,6 +33,17 @@ footer
       left: 50%
       +transform(translate(-50%,-50%))
 
+#linksContainer
+  display: flex
+  align-items: center
+  height: 100%
+  font-weight: 500
+  text-transform: uppercase
+  a
+    display: inline-block
+    color: $col_font
+    &:hover
+      color: $col_accent
 
 #logoContainer
   width: 55px
@@ -47,8 +62,25 @@ footer
    #langContainer, #logoContainer
      +transform(scale(0.8))
 
+   #linksContainer, #linksContainer a
+     font-size: $tablet_small !important
+
    #langContainer
      float: left
+
++media-breakpoint-down(sm)
+  footer
+    padding: 0 !important
+  #linksContainer, #linksContainer a
+    font-size: 10px !important
+
++media-breakpoint-up(lg)
+  #leftContainer
+    display: flex
+    align-items: flex-start
+  #linksContainer
+    padding-left: 10px
+
 
 @media screen and (min-width: $retina)
    #langContainer, #logoContainer
