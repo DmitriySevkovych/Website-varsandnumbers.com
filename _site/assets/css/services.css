@@ -10198,7 +10198,7 @@ footer {
   }
 
   .services-icons {
-    max-height: 40vh;
+    max-height: 35vh;
   }
 
   .services-header {
@@ -10225,8 +10225,8 @@ footer {
 }
 @media screen and (min-width: 1921px) {
   .services-icons-container {
-    max-height: 500px !important;
-    max-width: 500px !important;
+    max-height: 450px !important;
+    max-width: 450px !important;
   }
 
   .services-header {
@@ -10235,6 +10235,14 @@ footer {
 
   .services-scrollable div {
     font-size: 32px;
+  }
+
+  .services-round-up p {
+    font-size: 32px !important;
+  }
+  .services-round-up #servicesPlain {
+    max-height: 500px !important;
+    max-width: 500px !important;
   }
 }
 
