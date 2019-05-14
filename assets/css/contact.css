@@ -9752,6 +9752,59 @@ hr {
   width: 100% !important;
 }
 
+/* Background animation for the main pages */
+@keyframes main-background {
+  0%, 60%, 100% {
+    -webkit-transform: rotate(15deg) translate(0, 0%);
+    -ms-transform: rotate(15deg) translate(0, 0%);
+    transform: rotate(15deg) translate(0, 0%);
+  }
+  20% {
+    -webkit-transform: rotate(15deg) translate(0, 15%);
+    -ms-transform: rotate(15deg) translate(0, 15%);
+    transform: rotate(15deg) translate(0, 15%);
+  }
+  80% {
+    -webkit-transform: rotate(15deg) translate(0, -15%);
+    -ms-transform: rotate(15deg) translate(0, -15%);
+    transform: rotate(15deg) translate(0, -15%);
+  }
+}
+@keyframes main-background-dark {
+  0%, 60%, 100% {
+    -webkit-transform: rotate(15deg) translate(0, 0%);
+    -ms-transform: rotate(15deg) translate(0, 0%);
+    transform: rotate(15deg) translate(0, 0%);
+  }
+  20% {
+    -webkit-transform: rotate(15deg) translateY(-15%);
+    -ms-transform: rotate(15deg) translateY(-15%);
+    transform: rotate(15deg) translateY(-15%);
+  }
+  40% {
+    -webkit-transform: rotate(15deg) translateY(5%);
+    -ms-transform: rotate(15deg) translateY(5%);
+    transform: rotate(15deg) translateY(5%);
+  }
+}
+@keyframes get-attention {
+  transform-origin: center center;
+  0%, 100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(1.05) translateY(10px);
+    -ms-transform: scale(1.05) translateY(10px);
+    transform: scale(1.05) translateY(10px);
+  }
+  66% {
+    -webkit-transform: scale(0.99) translateY(-5px);
+    -ms-transform: scale(0.99) translateY(-5px);
+    transform: scale(0.99) translateY(-5px);
+  }
+}
 header {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -9961,6 +10014,15 @@ footer {
 
   #linksContainer, #linksContainer a {
     font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #leftContainer, #rightContainer {
+    padding: 5px;
+  }
+
+  #langContainer {
+    margin: 0 !important;
   }
 }
 @media (min-width: 992px) {
@@ -10179,7 +10241,7 @@ body .main-container .info-container {
   }
 
   #contactText p {
-    font-size: 32px;
+    font-size: 24px;
   }
   #contactText .contact-header {
     font-size: 48px;

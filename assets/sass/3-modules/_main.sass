@@ -8,9 +8,6 @@
     #subtitle
       font-size: $subtitle-size
 
-// @keyframes logo-bounce
-//   0%
-
 
 /* General page style */
 .main-container
@@ -115,6 +112,12 @@
       font-weight: 500
       font-size: $tablet_normal
 
+  #darkBox
+    +animation($name: main-background-dark, $duration: 8s, $delay: 1000ms, $dir:both,$tf:linear)
+
+  #lightBox
+    +animation($name: main-background, $duration: 6s, $delay: 1000ms, $dir:both,$tf:linear)
+
 
 +media-breakpoint-up(lg)
   #contentBox
@@ -142,6 +145,8 @@
     top: 25%
     left: 0
     right: 0
+    transform-origin: center center
+    +animation($name: get-attention, $duration: 300ms, $delay: 1500ms, $ic:2,$dir:both,$tf:ease-in-out)
 
   #contentContainer
     min-width: 360px
