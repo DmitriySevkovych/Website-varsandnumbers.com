@@ -3,6 +3,10 @@
   display: none
 
 /* Customize the footer
+footer
+  background-color: $col_main_dark
+  padding-top: 25px
+
 #langContainer .lang
   background-color: transparent
   border: 1px solid $col_bg
@@ -23,21 +27,7 @@ body
     min-height: 100vh
     display: flex
     flex-direction: column
-    justify-content: flex-end
-
-    .text-container
-      display: flex
-      flex-direction: column
-      justify-content: center
-      flex-grow: 2
-
-    .form-container
-      flex-grow: 1
-
-    .info-container
-      flex-grow: 1
-      height: 25vh
-      max-height: 150px
+    justify-content: center
 
 #contactText
   z-index: 1010
@@ -47,56 +37,19 @@ body
   a
     display: inline
 
-#contactForm
-  form
-    height: 100%
-    margin-top: 10px
+#mailto
+  display: block !important
+  width: 100%
+  text-align: center
+  color: $col_main_light
+  font-weight: 500
+  &:hover
+    color: $col_font
 
-    label
-      width: 100%
-
-    textarea
-      height: 10em
-
-    input, textarea
-      border: 3px solid $col_main_dark
-      border-radius: 0
-      width: 100%
-      padding: 10px
-      margin-bottom: 1em
-
-      &:focus
-        outline: none
-        background-color: $col_main_light
-
-    [type="submit"]
-      width: 30%
-      min-width: 150px
-      float: right
-      text-transform: uppercase
-      font-weight: 500
-      background-color: $col_main_light
-
-      +transition
-
-      &:hover
-        background-color: $col_accent
-        color: $col_bg
-
-#contactInfo
-  width: 100vw
-  height: 100%
-  background-color: $col_main_dark
-  align-items: center
-
-  #mBig
-    color: $col_bg
-    font-weight: 300
-    text-align: center
-    color: darken($col_main_light, 20%)
-
-    span
-      color: $col_bg
+  span
+    color: $col_font
+    &:hover
+      color: $col_main_light
 
 /* Media queries
 +media-breakpoint-down(md)
@@ -107,10 +60,6 @@ body
     .contact-header
       font-size: $tablet_biggest
 
-  form
-    label, textarea
-      font-size: $tablet_normal
-
 
 +media-breakpoint-down(sm)
   body
@@ -118,10 +67,6 @@ body
 
     footer
       position: relative
-
-    .main-container .info-container
-      position: relative
-      top: 80px
 
   #contactText
     min-height: 50vh
@@ -133,54 +78,20 @@ body
     .contact-header
       font-size: $mobile_big
 
-  #contactForm
-    min-height: 50vh
 
-    form
-      label
-        display: block
-      textarea
-        height: 15em
-
-      input, textarea
-        font-size: $mobile_normal
-
-  #contactInfo
-    align-items: flex-start
-
-    #mBig
-      padding-top: 30px
-      font-size: $mobile_big
 
 +media-breakpoint-up(md)
-  .text-container
-    padding-top: 100px
-
-  form textarea
-      max-height: 15vh
-
-  form #customerContact label
-    width: 48%
-
-    &:last-child
-      float: right
-
-  .contact-header, #mBig
+  .contact-header, #mailto
     font-size: $desktop_biggest
 
 
 +media-breakpoint-up(lg)
-  .contact-header, #mBig
+  .contact-header, #mailto
     font-size: $desktop_biggest
 
 @media screen and (min-width: $retina)
-  .text-container
-    flex-grow: 1 !important
   #contactText
     p
       font-size: $fourK_normal
-    .contact-header
+    .contact-header, #mailto
       font-size: $fourK_biggest
-  #contactForm
-    input
-      font-size: $fourK_normal
