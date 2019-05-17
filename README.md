@@ -1,6 +1,6 @@
 ## VarsAndNumbers.com -- My Website
 
-This is the repository I use for the development of my professional () [website](https://varsandnumbers.com/).
+This is the repository I use for the development of my professional [website](https://varsandnumbers.com/).
 
 I have implemented a static website and a blog using the Jekyll framework. The website is fully responsive with the help of Bootstrap. Other than that, I have used the CSS-preprocessor Sass, a bit of jQuery here and there, and a few cool JavaScript packages. The design, the images and the video were all done "by ourselves", by which I mean with a lot of help, hints and feedback from my awesome wife.
 
