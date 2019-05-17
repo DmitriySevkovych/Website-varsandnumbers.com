@@ -2,7 +2,7 @@
 _site/
 node_modules/
 assets/css/
-assets/img
+assets/img_raw
 mail/
 
 #ignore files
