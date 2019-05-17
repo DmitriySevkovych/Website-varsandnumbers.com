@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <!-- English -->
   <url>
     <loc>https://varsandnumbers.com/</loc>
@@ -29,6 +29,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/aboutme.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/aboutme.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/aboutme.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://varsandnumbers.com/assets/img/me-1000.png</video:thumbnail_loc>
+      <video:title>Vars&amp;Numbers - My video CV</video:title>
+      <video:description>A little introduction to how I came to do mathematics and software development</video:description>
+      <video:content_loc>
+        https://varsandnumbers.com/assets/vid/video_cv.mp4</video:content_loc>
+      <video:duration>100</video:duration>
+      <video:publication_date>2019-05-15T19:20:30+08:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:restriction relationship="allow">IE GB US CA</video:restriction>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://varsandnumbers.com/">
+        {{site.title_tab}}
+      </video:uploader>
+      <video:live>no</video:live>
+    </video:video>
   </url>
 
   <url>
@@ -92,6 +108,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://varsandnumbers.com/aboutme.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://varsandnumbers.com/de/aboutme.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://varsandnumbers.com/aboutme.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://varsandnumbers.com/assets/img/me-1000.png</video:thumbnail_loc>
+      <video:title>Vars&amp;Numbers - My video CV</video:title>
+      <video:description>A little introduction to how I came to do mathematics and software development</video:description>
+      <video:content_loc>
+        https://varsandnumbers.com/assets/vid/video_cv.mp4</video:content_loc>
+      <video:duration>100</video:duration>
+      <video:publication_date>2019-05-15T19:20:30+08:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:restriction relationship="allow">IE GB US CA</video:restriction>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://varsandnumbers.com/">
+        {{site.title_tab}}
+      </video:uploader>
+      <video:live>no</video:live>
+    </video:video>
   </url>
 
   <url>

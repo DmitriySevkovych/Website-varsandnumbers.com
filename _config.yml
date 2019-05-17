@@ -15,6 +15,7 @@ gems:
   - jekyll-babel
 
 exclude:
+  - README.md
   - .gitignore
   - .htpasswd
   - .htaccess

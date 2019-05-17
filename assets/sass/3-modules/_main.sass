@@ -112,11 +112,23 @@
       font-weight: 500
       font-size: $tablet_normal
 
-  #darkBox
-    +animation($name: main-background-dark, $duration: 8s, $delay: 1000ms, $dir:both,$tf:linear)
+  .animate-dark-box
+    animation-name: main-bg-dark-1, main-bg-dark-2, main-bg-dark-3
+    animation-duration: 3s, 3s, 3s
+    animation-delay: 0s, 3s, 6s
+    animation-timing-function: ease-in-out, ease-in-out, ease-in-out
+    -webkit-animation-name: main-bg-dark-1, main-bg-dark-2, main-bg-dark-3
+    -webkit-animation-duration: 3s, 3s, 3s
+    -webkit-animation-delay: 0s, 3s, 6s
+    -webkit-animation-timing-function: ease-in-out, ease-in-out, ease-in-out
 
-  #lightBox
-    +animation($name: main-background, $duration: 6s, $delay: 1000ms, $dir:both,$tf:linear)
+  .animate-light-box
+    -webkit-animation-name: main-bg-1, main-bg-2, main-bg-3
+    -webkit-animation-duration: 3s, 3s, 3s
+    -webkit-animation-delay: 0s, 3s, 6s
+    -webkit-animation-timing-function: ease-in-out, ease-in-out, ease-in-out
+    // -webkit-animation-iteration-count: infinite,infinite,infinite
+
 
 
 +media-breakpoint-up(lg)

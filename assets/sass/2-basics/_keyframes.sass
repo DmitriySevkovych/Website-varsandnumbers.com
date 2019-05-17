@@ -1,39 +1,43 @@
 /* Background animation for the main pages
-@keyframes main-background
-  0%, 60%, 100%
+@keyframes main-bg-1
+  0%
+    +transform(rotate(15deg) translate(0,0%))
+  100%
+    +transform(rotate(15deg) translate(0,10%))
+@keyframes main-bg-2
+  0%
+    +transform(rotate(15deg) translate(0,10%))
+  100%
+    +transform(rotate(15deg) translate(0,-10%))
+@keyframes main-bg-3
+  0%
+    +transform(rotate(15deg) translate(0,-10%))
+  100%
     +transform(rotate(15deg) translate(0,0%))
 
-  20%
-    // +transform(rotate(13deg) scale(1.02) translate(5%,5%))
-    +transform(rotate(15deg) translate(0,15%))
 
-  80%
-    +transform(rotate(15deg) translate(0,-15%))
-    // +transform(rotate(16deg) scale(0.99) translate(10%,-5%))
 
-@keyframes main-background-dark
-  0%, 60%, 100%
+@keyframes main-bg-dark-1
+  0%
     +transform(rotate(15deg) translate(0,0%))
-
-  20%
-    // +transform(rotate(13deg) scale(1.02) translate(5%,5%))
-    +transform(rotate(15deg) translateY(-15%))
-
-  40%
-    +transform(rotate(15deg) translateY(5%))
-    // +transform(rotate(16deg) scale(0.99) translate(10%,-5%))
+  100%
+    +transform(rotate(15deg) translate(0,-10%))
+@keyframes main-bg-dark-2
+  0%
+    +transform(rotate(15deg) translate(0,-10%))
+  100%
+    +transform(rotate(15deg) translate(0,10%))
+@keyframes main-bg-dark-3
+  0%
+    +transform(rotate(15deg) translate(0,10%))
+  100%
+    +transform(rotate(15deg) translate(0,0%))
 
 
 
 @keyframes get-attention
-  transform-origin: center center
-  0%,100%
-    +transform(scale(1))
-
   33%
-    // +transform(scale(1.05) rotate(1deg))
-    +transform(scale(1.05) translateY(10px))
+    +transform(translateY(-10px))
 
   66%
-    // +transform(scale(0.99) rotate(-1deg))
-    +transform(scale(0.99) translateY(-5px))
+    +transform(translateY(0px))

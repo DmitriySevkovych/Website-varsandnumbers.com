@@ -9753,56 +9753,88 @@ hr {
 }
 
 /* Background animation for the main pages */
-@keyframes main-background {
-  0%, 60%, 100% {
+@keyframes main-bg-1 {
+  0% {
     -webkit-transform: rotate(15deg) translate(0, 0%);
     -ms-transform: rotate(15deg) translate(0, 0%);
     transform: rotate(15deg) translate(0, 0%);
   }
-  20% {
-    -webkit-transform: rotate(15deg) translate(0, 15%);
-    -ms-transform: rotate(15deg) translate(0, 15%);
-    transform: rotate(15deg) translate(0, 15%);
-  }
-  80% {
-    -webkit-transform: rotate(15deg) translate(0, -15%);
-    -ms-transform: rotate(15deg) translate(0, -15%);
-    transform: rotate(15deg) translate(0, -15%);
+  100% {
+    -webkit-transform: rotate(15deg) translate(0, 10%);
+    -ms-transform: rotate(15deg) translate(0, 10%);
+    transform: rotate(15deg) translate(0, 10%);
   }
 }
-@keyframes main-background-dark {
-  0%, 60%, 100% {
+@keyframes main-bg-2 {
+  0% {
+    -webkit-transform: rotate(15deg) translate(0, 10%);
+    -ms-transform: rotate(15deg) translate(0, 10%);
+    transform: rotate(15deg) translate(0, 10%);
+  }
+  100% {
+    -webkit-transform: rotate(15deg) translate(0, -10%);
+    -ms-transform: rotate(15deg) translate(0, -10%);
+    transform: rotate(15deg) translate(0, -10%);
+  }
+}
+@keyframes main-bg-3 {
+  0% {
+    -webkit-transform: rotate(15deg) translate(0, -10%);
+    -ms-transform: rotate(15deg) translate(0, -10%);
+    transform: rotate(15deg) translate(0, -10%);
+  }
+  100% {
     -webkit-transform: rotate(15deg) translate(0, 0%);
     -ms-transform: rotate(15deg) translate(0, 0%);
     transform: rotate(15deg) translate(0, 0%);
   }
-  20% {
-    -webkit-transform: rotate(15deg) translateY(-15%);
-    -ms-transform: rotate(15deg) translateY(-15%);
-    transform: rotate(15deg) translateY(-15%);
+}
+@keyframes main-bg-dark-1 {
+  0% {
+    -webkit-transform: rotate(15deg) translate(0, 0%);
+    -ms-transform: rotate(15deg) translate(0, 0%);
+    transform: rotate(15deg) translate(0, 0%);
   }
-  40% {
-    -webkit-transform: rotate(15deg) translateY(5%);
-    -ms-transform: rotate(15deg) translateY(5%);
-    transform: rotate(15deg) translateY(5%);
+  100% {
+    -webkit-transform: rotate(15deg) translate(0, -10%);
+    -ms-transform: rotate(15deg) translate(0, -10%);
+    transform: rotate(15deg) translate(0, -10%);
+  }
+}
+@keyframes main-bg-dark-2 {
+  0% {
+    -webkit-transform: rotate(15deg) translate(0, -10%);
+    -ms-transform: rotate(15deg) translate(0, -10%);
+    transform: rotate(15deg) translate(0, -10%);
+  }
+  100% {
+    -webkit-transform: rotate(15deg) translate(0, 10%);
+    -ms-transform: rotate(15deg) translate(0, 10%);
+    transform: rotate(15deg) translate(0, 10%);
+  }
+}
+@keyframes main-bg-dark-3 {
+  0% {
+    -webkit-transform: rotate(15deg) translate(0, 10%);
+    -ms-transform: rotate(15deg) translate(0, 10%);
+    transform: rotate(15deg) translate(0, 10%);
+  }
+  100% {
+    -webkit-transform: rotate(15deg) translate(0, 0%);
+    -ms-transform: rotate(15deg) translate(0, 0%);
+    transform: rotate(15deg) translate(0, 0%);
   }
 }
 @keyframes get-attention {
-  transform-origin: center center;
-  0%, 100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
   33% {
-    -webkit-transform: scale(1.05) translateY(10px);
-    -ms-transform: scale(1.05) translateY(10px);
-    transform: scale(1.05) translateY(10px);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   66% {
-    -webkit-transform: scale(0.99) translateY(-5px);
-    -ms-transform: scale(0.99) translateY(-5px);
-    transform: scale(0.99) translateY(-5px);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 header {
@@ -10175,38 +10207,22 @@ footer {
     font-size: 18px;
   }
 
-  #darkBox {
-    animation-name: main-background-dark;
-    animation-duration: 8s;
-    animation-delay: 1000ms;
-    animation-iteration-count: infinite;
-    animation-direction: both;
-    animation-timing-function: linear;
-    animation-fill-mode: none;
-    -webkit-animation-name: main-background-dark;
-    -webkit-animation-duration: 8s;
-    -webkit-animation-delay: 1000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: both;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-fill-mode: none;
+  .animate-dark-box {
+    animation-name: main-bg-dark-1, main-bg-dark-2, main-bg-dark-3;
+    animation-duration: 3s, 3s, 3s;
+    animation-delay: 0s, 3s, 6s;
+    animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    -webkit-animation-name: main-bg-dark-1, main-bg-dark-2, main-bg-dark-3;
+    -webkit-animation-duration: 3s, 3s, 3s;
+    -webkit-animation-delay: 0s, 3s, 6s;
+    -webkit-animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
   }
 
-  #lightBox {
-    animation-name: main-background;
-    animation-duration: 6s;
-    animation-delay: 1000ms;
-    animation-iteration-count: infinite;
-    animation-direction: both;
-    animation-timing-function: linear;
-    animation-fill-mode: none;
-    -webkit-animation-name: main-background;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-delay: 1000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: both;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-fill-mode: none;
+  .animate-light-box {
+    -webkit-animation-name: main-bg-1, main-bg-2, main-bg-3;
+    -webkit-animation-duration: 3s, 3s, 3s;
+    -webkit-animation-delay: 0s, 3s, 6s;
+    -webkit-animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
   }
 }
 @media (min-width: 992px) {

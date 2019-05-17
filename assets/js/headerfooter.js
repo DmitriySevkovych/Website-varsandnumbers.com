@@ -12,7 +12,7 @@ Document ready function
 $(function() {
 
   $('body').addClass('loaded');
-  
+
   // Header
   $('.navbar-toggler').on('click', function() {
     $('.nav-blend').fadeToggle(300);
@@ -34,5 +34,6 @@ $(function() {
     var folder = (to == 'en') ? '' : to + '/';
     var newUrl = '../' + folder + page;
     window.location.href = newUrl;
+    // $('body').removeClass('leaving');
   }
 });

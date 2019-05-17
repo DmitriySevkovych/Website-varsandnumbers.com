@@ -1,6 +1,9 @@
 #ignore folders
 _site/
 node_modules/
+assets/css/
+assets/img
+mail/
 
 #ignore files
 .htpasswd
