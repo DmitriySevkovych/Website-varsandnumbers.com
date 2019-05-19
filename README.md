@@ -11,6 +11,8 @@ Should you be interested in my implementation, feel free to comment it, copy it 
 * [Bootstrap 4](https://getbootstrap.com/)
 * [Sass](https://sass-lang.com/)
 * [jQuery](https://jquery.com/)
+* [jQuery UI](https://jqueryui.com/)
 * [Gulp.js](https://gulpjs.com/)
+* [Vivus](https://maxwellito.github.io/vivus/)
 * [t.js](https://mntn-dev.github.io/t.js/) (JS package for typewriter effects)
 * [Slick](http://kenwheeler.github.io/slick/) (JS carousel library)

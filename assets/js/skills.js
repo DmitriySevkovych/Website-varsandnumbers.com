@@ -2,6 +2,12 @@
 Document ready function
 */
 $(function() {
+  // Vivus: SVG animation
+  var vivus = new Vivus('vivusAll', {
+    animTimingFunction: Vivus.EASE_OUT
+  });
+
+  // Data toggle functionality
   $('[data-toggle="popup"]').on('click', function() {
     $popup = $('[data-popup="' + this.id + '"]');
     $popup.fadeIn(400);
