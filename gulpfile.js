@@ -9,13 +9,14 @@ var shell = require('gulp-shell');
 // var rename = require('gulp-rename');
 
 /* External libraries to be bundled */
-var bootstrapMinJs = './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
-var jqueryMinJs = './node_modules/jquery/dist/jquery.min.js';
-var touchswipeMinJs = './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js';
-var slickMinJs = './node_modules/slick-carousel/slick/slick.min.js';
-var jqueryUiMinJs = './assets/js/jquery-ui.min.js';
+var jquery = './node_modules/jquery/dist/jquery.min.js';
+var bootstrap = './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+var touchswipe = './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js';
+var slick = './node_modules/slick-carousel/slick/slick.min.js';
+// var jqueryUi = './assets/js/jquery-ui.min.js';
+var vivus = './node_modules/vivus/dist/vivus.min.js';
 
-var extLibs = [jqueryMinJs, bootstrapMinJs, touchswipeMinJs, slickMinJs];
+var extLibs = [jquery, bootstrap, touchswipe, slick, vivus];
 
 
 /* Gulp tasks */

@@ -12,7 +12,11 @@ title: Blog
     {% for post in site.posts limit:1 %}
     {% assign latestPost = post %}
     {% endfor %}
-    {{ latestPost | truncatewords: 350 }}
+
+    <p class="text-right">{{ latestPost.date | date_to_long_string }} - {{ latestPost.author }}</p>
+    <h1 class="text-center">{{ latestPost.title }}</h1>
+    {{ latestPost.excerpt | truncatewords: 350 }}
+
     <div class="align-self-bottom text-right">
       <a href="{{latestPost.url}}">READ POST</a>
     </div>
@@ -33,7 +37,7 @@ title: Blog
         {% endif %}
         <li>
           <p class="lead"><a href="{{ post.url }}">{{ post.date | date_to_long_string }} - {{ post.title }}</a></p>
-          <p>{{ post.excerpt | truncatewords: 50 }}</p>
+          <p>{{ post.excerpt | truncatewords: 25 }}</p>
         </li>
         {% if forloop.last %}</ul>{% endif %}
       {% endfor %}
