@@ -189,6 +189,9 @@ $(function() {
     } else if (newIndex === 8) {
       $servicesBlend.fadeIn(500);
       $servicesRoundUp.delay(300).fadeIn(500);
+      new Vivus('servicesPlain', {
+        duration: 100
+      });
     }
   }
 

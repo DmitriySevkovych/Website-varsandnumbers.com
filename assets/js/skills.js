@@ -5,11 +5,12 @@ $(function() {
   // Vivus: SVG animation
   var $sm = $(window).width() < 768;
   if ($sm) {
-    useVivusOn('svgSkillsSoft', true, function() {
-      useVivusOn('svgSkillsMaths', false, function() {
-        useVivusOn('svgSkillsBoth', false, function() {});
-      });
-    });
+    // TODO: breaks the on-click functionality for somer reason...
+    // useVivusOn('svgSkillsSoft', true, function() {
+    //   useVivusOn('svgSkillsMaths', false, function() {
+    //     useVivusOn('svgSkillsBoth', false, function() {});
+    //   });
+    // });
   } else {
     useVivusOn('svgSkillsAll', false, function() {});
   }
