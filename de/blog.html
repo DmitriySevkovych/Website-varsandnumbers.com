@@ -33,7 +33,7 @@ title: Blog
         {% endif %}
         <li>
           <p class="lead"><a href="{{ post.url }}">{{ post.date | date_to_long_string }} - {{ post.title }}</a></p>
-          <p>{{ post.excerpt | truncatewords: 50 }}</p>
+          <!-- <p>{{ post.excerpt | truncatewords: 25 }}</p> -->
         </li>
         {% if forloop.last %}</ul>{% endif %}
       {% endfor %}
