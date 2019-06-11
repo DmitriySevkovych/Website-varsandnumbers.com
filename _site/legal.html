@@ -2,6 +2,105 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <script type="text/javascript">
+    // Set to the same value as the web property used on the site
+    var gaProperty = 'UA-141695535-1';
+    // Disable tracking if the opt-out cookie exists.
+    var disableStr = 'ga-disable-' + gaProperty;
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+      window[disableStr] = true;
+    }
+
+    // Opt-out function
+    function gaOptout() {
+      document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+      window[disableStr] = true;
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141695535-1"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#ff851b",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "gray",
+            "text": "#ffffff"
+          }
+        },
+        "theme": "edgeless",
+        "type": "opt-in",
+        "position": "bottom-right",
+        "content": {
+          "message": "I would like to use Google Analytics on this website. Would you please allow me to do so?",
+          // "allow": "Yes, allow cookies",
+          // "deny": "decline cookies",
+          // "link": "Privacy statement",
+          "href": "https://varsandnumbers.com/legal.html#privacy"
+        },
+        revokable: true,
+       animateRevokable: true,
+        onInitialise: function(status) {
+          var type = this.options.type;
+          var didConsent = this.hasConsented();
+          if (type == 'opt-in' && didConsent) {
+            // enable cookies
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-141695535-1', {
+              'anonymize_ip': true
+            });
+          }
+        },
+
+        onStatusChange: function(status, chosenBefore) {
+          var type = this.options.type;
+          var didConsent = this.hasConsented();
+          if (type == 'opt-in' && didConsent) {
+            // enable cookies
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-141695535-1', {
+              'anonymize_ip': true
+            });
+          }
+        },
+
+        onRevokeChoice: function() {
+          var type = this.options.type;
+          if (type == 'opt-in') {
+            // Get an array of cookies
+            var arrSplit = document.cookie.split(";");
+            for (var i = 0; i < arrSplit.length; i++) {
+              var cookie = arrSplit[i].trim();
+              var cookieName = cookie.split("=")[0];
+              // If the prefix of the cookie's name matches the one specified, remove it
+              if (cookieName.indexOf("ssupp.") === 0) {
+                // Remove the cookie
+                document.cookie = cookieName + "=; Max-Age=-99999999;";
+              }
+            }
+          }
+        }
+      })
+    });
+  </script>
+
   <title>Legal Information &ndash; Vars&Numbers: Software Development and Mathematics</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +123,7 @@
       "sameAs": null
     }
   </script> -->
-  <!-- <link rel="canonical" href="https://varsandnumbers.com"> -->
+  <link rel="canonical" href="https://varsandnumbers.com">
   <link rel="icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
   <link rel="stylesheet" href="/assets/css/legal.css">
 </head>
@@ -202,7 +301,7 @@
 
   <div class="row text-center">
     <div class="mx-auto my-3">
-      <h1 id="privacy">Privace Statement</h1>
+      <h1 id="privacy">Privacy Statement</h1>
       <!-- <h1>Datenschutzerklärung <span id="VAN">Vars&Numbers</span></h1> -->
     </div>
   </div>
@@ -269,8 +368,8 @@
         days at the latest.
       </p>
 
-      <!-- <h4>2.1.2 Google Analytics</h4> -->
-      <!-- <p>
+      <h4>2.1.2 Google Analytics</h4>
+      <p>
         On our website we use Google Analytics, a web analysis service of Google
         Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland("Google"). <br>
         Google Analytics uses cookies and creates pseudonymised usage profiles.
@@ -305,11 +404,8 @@
         and installing the browser add-on available under the following link:
         <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de.</a> <br>
         As an alternative to the browser-add-on, you can also prevent the collection
-        of the data by Google Analytics by activating the following link <em>[Anm. OPP: An dieser Stelle
-        sollte ein sog. Google-Analytics-Script eingefügt werden, welches den im
-        Folgenden beschrieben Opt-Out-Cookie setzt. Ein solches Vorgehen ist erforderlich,
-        da das oben erwähnte Browser-Add-on nicht bei allen Endgeräten zuverlässig
-        funktioniert, insbes. nicht bei allen mobilen Endgeräten.]</em>.
+        of the data by Google Analytics by <a onclick="alert('Tracking by Google Analytics has been
+        deactivated in your browser for this website.');" href="javascript:gaOptout()">activating the following link</a>.
         This places an opt-out cookie on your terminal device which prevents the
         future collection of your data when you visit our website. Please note
         that this opt-out cookie applies only to this specific browser and only
@@ -318,7 +414,7 @@
         Further information on the data processing in connection with Google
         Analytics can be found on Google’s website under the following link:
         <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.
-      </p> -->
+      </p>
 
       <h3>2.2 Communication via Email or Other Channels</h3>
       <p>

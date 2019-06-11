@@ -6,12 +6,13 @@ categories: [projects]
 tags: [project, announcement, website, parallax, html, css]
 ref: blog
 discussable: true
+published: false
 ---
 Hello everybody!
 
 Since my *Vars&Numbers*-website is practically done and dusted, I have been thinking
 about what fun thing to do next. A lot of glorious-though-kinda-vague ideas came
-and went, and some may still be riping somewhere deep in my mind. But today I
+and went, and some may still be maturing somewhere deep in my mind. But today I
 would like to announce and explain a fairly simple idea for a project that I will
 implement together with my wife, Ivanna.
 
@@ -39,7 +40,7 @@ sure that we will introduce [jQuery](https://jquery.com/) and probably some othe
 cool JavaScript libraries along the way. On the backend-side we have a tiny bit
 of project management with [npm](https://www.npmjs.com/) and [Gulp](https://gulpjs.com/),
 and that's pretty much it. In fact, I have already set-up an empty project, which
-you can check out [here]().
+you can check out [here](https://github.com/DmitriySevkovych/DmitriySevkovych.github.io).
 
 Why am I writing all that? Well, for us this project is all about sharing with
 and learning from each other. Maybe some of you might want to join the party and
