@@ -12,7 +12,7 @@ title: Blog
     {% for post in site.posts limit:1 %}
     {% assign latestPost = post %}
     {% endfor %}
-    {{ latestPost | truncatewords: 350 }}
+    {{ latestPost | truncatewords: 175 }}
     <div class="align-self-bottom text-right">
       <a href="{{latestPost.url}}">READ POST</a>
     </div>

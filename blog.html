@@ -15,7 +15,7 @@ title: Blog
 
     <p class="text-right">{{ latestPost.date | date_to_long_string }} - {{ latestPost.author }}</p>
     <h1 class="text-center">{{ latestPost.title }}</h1>
-    {{ latestPost.excerpt | truncatewords: 350 }}
+    {{ latestPost.excerpt | truncatewords: 175 }}
 
     <div class="align-self-bottom text-right">
       <a href="{{latestPost.url}}">READ POST</a>

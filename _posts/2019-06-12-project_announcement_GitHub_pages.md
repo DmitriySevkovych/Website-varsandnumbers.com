@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Project announcement! A single-page website to be hosted on GitHub Pages."
+title: "Project announcement: A single-page website to be hosted on GitHub Pages."
 author: "Dmitriy Sevkovych"
 categories: [projects]
 tags: [project, announcement, website, parallax, html, css]
 ref: blog
 discussable: true
-published: false
 ---
 Hello everybody!
 
@@ -42,10 +41,15 @@ of project management with [npm](https://www.npmjs.com/) and [Gulp](https://gulp
 and that's pretty much it. In fact, I have already set-up an empty project, which
 you can check out [here](https://github.com/DmitriySevkovych/DmitriySevkovych.github.io).
 
-Why am I writing all that? Well, for us this project is all about sharing with
+Here is why I am telling you all that. For us this project is all about sharing with
 and learning from each other. Maybe some of you might want to join the party and
-learn something from us. Or teach us something. We won't say no. I imagine that
-we will go at not too fast a pace, since this is a leisure project, but this might
-be a good thing for you to follow along. Obviously the code will be pushed to
-GitHub, but if there should be anything you wish to tell us just hit the "Discuss"
-button below and let us know.
+learn something from and/or with us. Or maybe you can teach us something, we won't
+say no that. I assume that we will go at not too fast a pace, since this is a leisure
+project, but this might be a good thing for following along. Obviously the code
+will be pushed to GitHub continuously. However if there should be anything you
+wish to tell us, just hit the "Discuss" button below and let us know.
+
+And that's it for this post. So long, people, and happy coding to everyone!
+
+Greetings,
+Dmitriy and Ivanna
