@@ -28,7 +28,6 @@ body
         display: flex
         height: 60%
         width: 90%
-        opacity: 0.7
         margin-bottom: 25px
         background-color: $col_main_light
         .slick-list
@@ -41,6 +40,9 @@ body
           font-weight: 500
         h2
           text-align: center
+
+        hr
+          border-color: $col_font
 
         .focus-image
           margin: 50px auto
@@ -62,18 +64,19 @@ body
 
         .slick-slide
           position: relative
-          margin: 0 10px
+          margin: 10px
           padding: 15px auto
           height: 100px
+          width: 100px
           outline: none
           cursor: pointer
-          opacity: 0.3
+          opacity: 0.5
 
           +transition(opacity)
 
-          svg
-            max-height: 90px
-            max-width: 90px
+          svg, img
+            max-height: 100px
+            max-width: 100px
             position: absolute
             left: 50%
             top: 50%
@@ -86,11 +89,17 @@ body
   .customer-feedback-container
     margin-top: 30px
 
+    .customer-rep
+      float: left
+      margin-right: 2rem
+
     .customer-face
-      svg
-        margin: auto
-        display: block
-        max-height: 100px
+      position: relative
+      max-width: 150px
+      max-height: 150px
+      img
+        max-width: 100%
+        max-height: 100%
 
 
 /* Media queries
@@ -111,6 +120,7 @@ body
 
   #customers
     .customers-focus
+      order: 2
       height: auto !important
       +transition(height)
 
@@ -122,17 +132,19 @@ body
     .lead
       font-size: $mobile_normal
 
-  #customers .customers-focus
-    h1
-      font-size: $mobile_biggest
-    h2
-      font-size: $mobile_big
-    p
-      font-size: $mobile_normal
-    strong,em
-      font-size: $mobile_small
-    .slick-list
-      padding: 15px 20px !important
+  #customers
+    .customers-focus
+      h1
+        font-size: $mobile_biggest
+      h2
+        font-size: $mobile_big
+      p
+        font-size: $mobile_normal
+      strong,em
+        font-size: $mobile_small
+    .customer-face
+      max-width: 100px
+      max-height: 100px
 
 +media-breakpoint-up(lg)
   #vision
