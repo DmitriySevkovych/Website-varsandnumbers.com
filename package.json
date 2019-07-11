@@ -4,7 +4,7 @@
   "description": "I am a freelancer and this is my professional website.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp start"
   },
   "author": "Dmitriy Sevkovych",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-shell": "^0.7.0",
     "imagemin-optipng": "^6.0.0",
-    "vivus": "^0.4.4"
+    "vivus": "^0.4.4",
+    "lodash.template":"^4.5.0"
   }
 }
