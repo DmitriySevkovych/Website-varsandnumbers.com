@@ -23,8 +23,8 @@ var extLibs = [jquery, bootstrap, touchswipe, slick, vivus];
 // Startup task
 gulp.task('sass', shell.task('sass --watch assets/sass:assets/css'));
 gulp.task('jekyll', shell.task('jekyll serve --watch'));
-gulp.task('atom', shell.task('atom .'));
-gulp.task('start', gulp.parallel('sass', 'jekyll', 'atom'));
+gulp.task('code', shell.task('code .'));
+gulp.task('start', gulp.parallel('sass', 'jekyll', 'code'));
 
 // Concatenate and minify external js
 gulp.task('get-ext-js', function() {

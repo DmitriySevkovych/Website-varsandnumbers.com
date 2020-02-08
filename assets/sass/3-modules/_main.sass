@@ -1,13 +1,8 @@
 /* Local mixins */
-=titleSize($width, $title-size: $desktop_biggest, $subtitle-size: $desktop_big)
+=logoSize($width, $title-size: $desktop_biggest, $subtitle-size: $desktop_big)
   #titleBox
     width: $width
     height: $width
-    #title
-      font-size: $title-size
-    #subtitle
-      font-size: $subtitle-size
-
 
 /* General page style */
 .main-container
@@ -62,27 +57,18 @@
   top: 100px
   padding: 20px 0 0 100px
 
-  #titleBox
-    border: 5px solid $col_font
+  #logoMain
     +transition(all, 300ms, ease-in-out)
+    // +transition(all, 300ms, ease-in-out)
+    path
+      // +transition(all, 100ms, ease-in-out)
     &:hover
-      background-color: $col_font
-
-      #title, #subtitle
-        color: $col_main_light
-        border-color: $col_main_light
-        width: 100%
-
-    #title
-      padding-top: 10px
-      padding-left: 10px
-      text-transform: uppercase
-
-    #subtitle
-      position: absolute
-      bottom: 0
-      padding: 0 10px 10px 10px
-      font-weight: 300
+      #logoPartMain
+        path
+          fill: $col_accent
+      #logoPartSoftware, #logoPartMathematics
+        path
+          fill: $col_font
 
 #contentContainer
   position: absolute
@@ -102,7 +88,7 @@
 
 /* Media queries */
 +media-breakpoint-up(md)
-  +titleSize(350px, $desktop_biggest, $desktop_big)
+  +logoSize(350px, $desktop_biggest, $desktop_big)
   #contentBox
     #contentLead
       font-size: $desktop_biggest
@@ -136,7 +122,7 @@
     font-size: $desktop_normal
 
 @media screen and (min-width: $retina)
-  +titleSize(450px, $fourK_biggest, $fourK_normal)
+  +logoSize(450px, $fourK_biggest, $fourK_normal)
   #contentBox
       #contentLead
         font-size: $fourK_biggest
@@ -144,7 +130,7 @@
         font-size: $fourK_normal
 
 +media-breakpoint-down(sm)
-  +titleSize(255px, $mobile_biggest, $mobile_normal)
+  +logoSize(255px, $mobile_biggest, $mobile_normal)
 
   body
     max-width: 100%
@@ -152,13 +138,12 @@
     background-color: $col_bg
 
   #titleContainer
-    padding: 0
+    padding: 0 0 0 0.75rem
     position: absolute
     top: 25%
     left: 0
     right: 0
     transform-origin: center center
-    +animation($name: get-attention, $duration: 300ms, $delay: 1500ms, $ic:2,$dir:both,$tf:ease-in-out)
 
   #contentContainer
     min-width: 360px

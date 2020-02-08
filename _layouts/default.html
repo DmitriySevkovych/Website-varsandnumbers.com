@@ -20,10 +20,11 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141695535-1"></script>
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
   <script>
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       window.cookieconsent.initialise({
         "palette": {
           "popup": {
@@ -37,7 +38,7 @@
         },
         "theme": "edgeless",
         "type": "opt-in",
-        "position": "bottom-right",
+        "position": "bottom-left",
         "content": {
           "message": "I would like to use Google Analytics on this website. Would you please allow me to do so?",
           // "allow": "Yes, allow cookies",
@@ -46,8 +47,8 @@
           "href": "https://varsandnumbers.com/legal.html#privacy"
         },
         revokable: true,
-       animateRevokable: true,
-        onInitialise: function(status) {
+        animateRevokable: true,
+        onInitialise: function (status) {
           var type = this.options.type;
           var didConsent = this.hasConsented();
           if (type == 'opt-in' && didConsent) {
@@ -64,7 +65,7 @@
           }
         },
 
-        onStatusChange: function(status, chosenBefore) {
+        onStatusChange: function (status, chosenBefore) {
           var type = this.options.type;
           var didConsent = this.hasConsented();
           if (type == 'opt-in' && didConsent) {
@@ -81,7 +82,7 @@
           }
         },
 
-        onRevokeChoice: function() {
+        onRevokeChoice: function () {
           var type = this.options.type;
           if (type == 'opt-in') {
             // Get an array of cookies

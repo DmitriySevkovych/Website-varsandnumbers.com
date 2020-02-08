@@ -1,7 +1,13 @@
 header
   -webkit-tap-highlight-color: rgba(0,0,0,0)
+  
 
   nav
+    @if $use-rgba-header-bg
+      background-color: rgba(255,255,255,0.9)
+    @else
+      background-color: $col_bg
+    border-bottom: solid 2px $col_accent
     width: 100vw
     max-width: 100%
 
@@ -14,7 +20,6 @@ header
     outline: none
 
   .navbar-nav
-    height: 75px
     width: 100vw
     max-width: 100%
     a
@@ -31,14 +36,14 @@ header
 
 
 .logo-small
-  width: 75px
-  height: 75px
+  // width: 75px
+  // height: 75px
   cursor: pointer
   +transition()
   path
     +transition(fill)
 
-  &:hover
+  &:hover, &:focus
     path
       fill: $col_accent
 
@@ -77,9 +82,12 @@ header
     bottom: 0
     left: 0
     right: 0
-    background-color: $col_bg
+    background-color: $col_main_dark
     opacity: 0.9
     z-index: 1029
+
+  .logo-small
+    margin-bottom: 1rem
 
   #talk
     right: 0px

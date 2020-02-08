@@ -1,0 +1,16 @@
+.logo-pre-animation
+    #logoPartMain, #logoPartSoftware, #logoPartMathematics
+        stroke-width: 0.5px
+        fill-opacity: 0
+    #logoPartMain
+        path
+            stroke: $col_font
+    #logoPartSoftware, #logoPartMathematics
+        path
+            stroke: $col_accent
+
+.logo-post-animation
+    path
+        +transition(all, 300ms, ease-in-out)
+        stroke-opacity: 0 !important
+        fill-opacity: 1
